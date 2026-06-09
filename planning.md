@@ -43,16 +43,20 @@ The system will make this knowledge searchable through a retrieval-augmented que
     URL: https://www.nsf-shrec.org/sites/default/files/2024-03/Noise-impact-of-single-event-upsets-on-an-fpga-based-digital-filter.pdf
 
 11. X-ray Radiation Effects on SWCNT/PMMA Thin Film Nanocomposites
-    Authors: Guddi Suman, Merlyn Pulikkathara, Richard Wilkins
-    Source: IEEE Transactions on Nanotechnology, Vol. 20, 2021, pp. 517–523
+      Authors: Suman, G., Pulikkathara, M., & Wilkins, R.
+      Source: IEEE Transactions on Nanotechnology, Vol. 20, pp. 517–524, 2021.
+      DOI: 10.1109/TNANO.2021.3080624
 
-12. Ionizing Radiation Sensing with Functionalized and Copper-Coated SWCNT/PMMA Thin Film Nanocomposites
-    Authors: Guddi Suman, Merlyn Pulikkathara, Richard Wilkins, and LaRico J. Treadwell
-    Source: Nanomaterials, 2023
+12. Ionizing Radiation Sensing with Functionalized and Copper-Coated SWCNT/PMMA Thin Film Nanocomposites.
+    Authors: Suman, G., Pulikkathara, M., Wilkins, R., & Treadwell, L. J.
+    Source: Nanomaterials, Vol. 13, Article 2653, 2023.
+    DOI: 10.3390/nano13192653
 
 13. X-ray Radiation Effects on Thin Film Nanocomposites of Functionalized and Copper-Coated Multi-Walled Carbon Nanotube and Poly(Methyl Methacrylate)
-    Authors: Shubha Kyatsandra, Merlyn Pulikkathara, and Richard Wilkins
+    Authors: Kyatsandra, S., Pulikkathara, M., & Wilkins, R. 
     Source: Surfaces and Interfaces, Vol. 17, Article 100362, 2019
+     https://doi.org/10.1016/j.surfin.2019.100362
+
 
 ---
 
