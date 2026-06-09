@@ -77,3 +77,210 @@ The system will make this knowledge searchable through a retrieval-augmented que
 9. How do carbon nanotube nanocomposites respond to X-ray radiation?
 
 10. What properties make SWCNT/PMMA nanocomposites suitable for radiation sensing?
+
+## Chunking Strategy
+
+I will use fixed-size chunks of approximately 800 characters with an overlap of 150 characters.
+
+My document collection consists primarily of NASA radiation-test guidelines, AMD/Xilinx FPGA documentation, fault-injection reports, and academic research papers. These documents contain technical explanations that often span multiple paragraphs and include concepts such as Single Event Upsets (SEUs), Triple Modular Redundancy (TMR), fault injection, radiation testing procedures, and radiation-sensing materials.
+
+An 800-character chunk is large enough to preserve technical context while remaining small enough for precise semantic retrieval. A 150-character overlap helps ensure that important information is not lost when concepts cross chunk boundaries. For example, a discussion of TMR reliability, SEM operation, or FPGA fault injection may begin near the end of one chunk and continue into the next.
+
+If chunks are too small, important technical explanations may be fragmented and retrieved incompletely. If chunks are too large, retrieval may return broad sections of documents containing unrelated information, reducing answer precision.
+
+The overlap improves retrieval quality by ensuring that information located near chunk boundaries remains available in multiple chunks, increasing the likelihood that complete technical concepts can be retrieved.
+...
+
+## Retrieval Approach
+
+I will use the sentence-transformers embedding model all-MiniLM-L6-v2 together with ChromaDB as the vector database.
+
+For each user query, I will retrieve the top 5 most relevant chunks (top-k = 5). Retrieving too few chunks may omit important supporting information, while retrieving too many chunks may introduce unrelated content that can confuse the language model during answer generation.
+
+Semantic search enables retrieval based on meaning rather than exact keyword matching. For example, a query about "radiation-induced bit flips" may retrieve documents discussing "Single Event Upsets (SEUs)" even when the exact words do not appear in the source text.
+
+If this system were deployed in production, I would evaluate larger embedding models that offer higher retrieval accuracy, improved technical-language understanding, longer context support, and better performance on scientific documents. The tradeoff would be increased computational cost, memory requirements, and response latency.
+
+...
+## Evaluation Plan
+
+### Question 1
+
+Question: What is a Single Event Upset (SEU) in an FPGA?
+
+Expected Answer:
+An SEU is a radiation-induced change of state in a memory element, register, or configuration bit caused by a charged particle strike.
+
+### Question 2
+
+Question: What is Triple Modular Redundancy (TMR)?
+
+Expected Answer:
+TMR uses three identical copies of a circuit and a voting mechanism to mask errors caused by radiation-induced faults.
+
+### Question 3
+
+Question: What is the purpose of the Xilinx Soft Error Mitigation (SEM) Controller?
+
+Expected Answer:
+The SEM Controller detects, reports, and corrects configuration-memory upsets in Xilinx FPGAs.
+
+### Question 4
+
+Question: Why are SRAM-based FPGAs vulnerable to radiation?
+
+Expected Answer:
+Their configuration information is stored in SRAM cells that can be altered by radiation-induced particle strikes, causing soft errors and configuration upsets.
+
+### Question 5
+
+Question: How are fault-injection experiments used in FPGA radiation studies?
+
+Expected Answer:
+Fault injection deliberately introduces errors into FPGA designs to evaluate reliability, identify vulnerabilities, and assess mitigation techniques without requiring actual radiation exposure.
+...
+
+## Anticipated Challenges
+
+1. Technical information may span multiple paragraphs, causing important concepts to be split across chunk boundaries. Although overlap helps, some context may still be fragmented.
+
+2. Different documents may use different terminology for the same concept. For example, "Single Event Upset (SEU)," "soft error," and "configuration upset" may refer to related radiation-induced faults, which could affect retrieval quality.
+
+3. Retrieval may return chunks from radiation-sensing nanocomposite papers when the user intends to ask about FPGA mitigation techniques, since both document groups contain radiation-related terminology.
+
+4. Long NASA reports and FPGA user guides may contain tables, figures, equations, and references that do not convert cleanly into text during document ingestion.
+
+5. Grounding failures may occur if the language model attempts to answer using its general knowledge rather than the retrieved FPGA-radiation documents. Prompt design and source attribution will be used to reduce this risk.
+
+...
+
+## AI Tool Plan
+
+I will use Claude as my primary AI coding assistant throughout the project. I will provide specific sections of this planning document and implementation requirements rather than asking Claude to design the system for me.
+
+### Document Ingestion
+
+Input to Claude:
+
+* Domain description
+* Source document requirements
+
+Task:
+
+* Implement PDF loading and text extraction functions for NASA reports, AMD/Xilinx documentation, and academic papers.
+
+Expected Output:
+
+* Python functions for document ingestion and preprocessing.
+
+### Chunking
+
+Input to Claude:
+
+* Chunking Strategy section from this planning document.
+
+Task:
+
+* Implement chunking logic using 800-character chunks with 150-character overlap.
+
+Expected Output:
+
+* A chunking function that produces overlapping chunks suitable for embedding.
+
+### Embedding and Vector Storage
+
+Input to Claude:
+
+* Retrieval Approach section.
+
+Task:
+
+* Generate embeddings using all-MiniLM-L6-v2 and store them in ChromaDB.
+
+Expected Output:
+
+* Code for embedding generation and vector database storage.
+
+### Retrieval
+
+Input to Claude:
+
+* Retrieval Approach section.
+
+Task:
+
+* Implement semantic search that retrieves the top 5 most relevant chunks for a user query.
+
+Expected Output:
+
+* Retrieval function returning ranked chunks and metadata.
+
+### Grounded Response Generation
+
+Input to Claude:
+
+* Evaluation Plan
+* Grounding requirements
+
+Task:
+
+* Implement response generation that answers questions using only retrieved FPGA-radiation documents and includes source attribution.
+
+Expected Output:
+
+* Prompt construction and generation code that prevents the model from relying on outside knowledge.
+
+### Debugging and Refinement
+
+Input to Claude:
+
+* Error messages
+* Retrieval results
+* Evaluation outcomes
+
+Task:
+
+* Help diagnose chunking issues, retrieval failures, and grounding problems.
+
+Expected Output:
+
+* Debugging suggestions and revised code while preserving the original design decisions.
+....
+
+  ## Architecture
+
+```text
+FPGA Radiation Documents
+(NASA Reports, AMD/Xilinx Manuals, Research Papers)
+                     |
+                     v
+            Document Ingestion
+              (PDF Extraction)
+                     |
+                     v
+                 Chunking
+     (800 chars, 150-char overlap)
+                     |
+                     v
+               Embeddings
+       (all-MiniLM-L6-v2 Model)
+                     |
+                     v
+               Vector Store
+                 (ChromaDB)
+                     |
+                     v
+                 Retrieval
+       (Top-5 Semantic Search)
+                     |
+                     v
+          Grounded Generation
+                (Groq LLM)
+                     |
+                     v
+                User Answer
+          + Source Attribution
+```
+
+
+
