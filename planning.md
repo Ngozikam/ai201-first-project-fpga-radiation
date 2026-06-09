@@ -8,6 +8,9 @@ This system helps students, engineers, and researchers understand FPGA radiation
 
 The system will make this knowledge searchable through a retrieval-augmented question-answering interface. The knowledge base covers radiation-induced faults in FPGAs, mitigation techniques such as TMR and SEM, fault-injection methodologies, radiation-testing procedures, and radiation-sensing materials research.
 
+
+I selected all-MiniLM-L6-v2 because it provides strong semantic retrieval performance while running locally without API costs or rate limits, making it suitable for academic projects and offline experimentation.
+
 ---
 
 ## Source Documents
