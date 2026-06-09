@@ -1,0 +1,702 @@
+IEEE TRANSACTIONS ON NANOTECHNOLOGY , VOL. 20, 2021 517
+X-ray Radiation Effects on SWCNT/PMMA Thin
+Film Nanocomposites
+Guddi Suman , Member , IEEE, Merlyn Pulikkathara , and Richard Wilkins , Member , IEEE
+Abstract—This paper studies the response of a radiation sensor
+that was developed from single-walled carbon nanotube (SWCNT)
+and poly (methyl methacrylate) (PMMA) nanocomposite thin ﬁlms
+placed on an interdigitated electrode (IDE). We studied the effects
+of X-rays in real-time electrical resistance of the thin ﬁlm nanocom-
+posites. A 160 kV X-ray source irradiated the nanocomposite
+devices with ionizing X-ray radiation at different doses and dose
+rates, causing the decrease in resistance of thin ﬁlm through the
+production of charge carriers. The embedded SWCNT network
+helped transport radiation-induced electrons to the electrodes.
+Pre-irradiation resistance can be obtained rapidly from heat treat-
+ment of irradiated nanocomposite devices. It is observed that the
+required heat treatment time for thin ﬁlm device recovery increased
+almost linearly with applied radiation dose. The thin ﬁlm devices
+were operated at dc voltage as low as 0.05 V for reliable measure-
+ment of the radiation-induced change in electrical resistance. The
+results of this study suggest that SWCNT/PMMA thin ﬁlm devices
+could be used for sensing X-ray radiation, with signiﬁcantly higher
+sensitivity than comparable devices made with multi-walled CNT
+(MWCNT) based nanocomposites in a previous study.
+Index Terms —Single-walled carbon nanotube, poly (methyl
+methacrylate), interdigitated electrode, thin ﬁlm, nanocomposite,
+N, N- dimethylformamide, X-ray, radiation detection.
+I. I NTRODUCTION
+T
+HE DETECTION of ionizing radiation is essential for
+biological and nuclear research, medicine, aerospace and
+defense applications. V arious radiation detectors are used to
+measure and detect ionizing radiation. Many have several draw-
+backs: large volume, complicated instrumentation, incapability
+of producing a real-time signal, and low-temperature operation
+[1]. Thus, the search for real-time radiation detectors with ex-
+cellent lifetime performance, environmental ruggedness, high
+accuracy, small form factor, and that are relatively light and eco-
+nomical remains a work in progress. Carbon nanotubes (CNTs)
+Manuscript received March 24, 2021; accepted May 5, 2021. Date of pub-
+lication May 14, 2021; date of current version July 2, 2021. This work was
+supported in part by the U.S. Department of Education through the Minority
+Science Improvement Program award P120A090123 and the Historically Black
+Graduate Institutions Program, and by NASA through the University Research
+Center Program co-operative agreement NNX10AQ14A. The review of this
+article was arranged by Associate Editor S. Samukawa. (Corresponding author:
+Guddi Suman.)
+Guddi Suman is with Electrical and Computer Engineering De-
+partment, Prairie View A&M University, TX 77446 USA (e-mail:
+guddikarna@gmail.com).
+Merlyn Pulikkathara is with the Department of Chemistry and Physics, Prairie
+View A&M University, TX 77446 USA (e-mail: mepulikkathara@pvamu.edu).
+Richard Wilkins is with Electrical and Computer Engineering Department,
+Prairie View A&M University, TX 77446 USA (e-mail: rtwilkins@pvamu.edu).
+Digital Object Identiﬁer 10.1109/TNANO.2021.3080624
+are among the most explored nano-scale materials due to their
+unique electrical, thermal, and other physical properties [2]. Ex-
+traordinary properties such as the large length-to-diameter ratio,
+tunable bandgap, high electrical conductivity, high sensitivity
+to the surrounding environment, low cost, and functionalized
+ability make CNTs a promising nanomaterial for a variety of
+sensing applications [3]-[6], including ionizing radiation [1],
+[2]. According to previous research, CNTs are the most widely
+studied nanomaterials as gas sensors since they have chemically
+inert surfaces and a high surface area for adsorption sites for
+molecules [7]. For example, carbon nanotube-based sensors
+were used to detect SF 6 decomposed products and CNTs had
+shown to be sensitive to the presence of these gases [8]. Other
+gases such NO 2,H 2S, C 2H5OH, and others have also been
+studied [9].
+This paper studied the ionizing X-ray radiation effect on the
+electrical properties of SWCNT/PMMA thin ﬁlm nanocompos-
+ites. Previous researchers investigated CNT thin ﬁlm transistor
+(SWCNT-TFT), SWCNT thin ﬁlm, and MWCNT/PMMA thin
+ﬁlm composites as an X-ray radiation detector [10]-[12]. X-ray
+radiation effect on SWCNT was studied [13]. Numerical inves-
+tigations of radiation-induced conductivity changes of carbon
+nanotube ﬁlled polymers were performed, using a 3D model
+to describe ionizing radiation-induced electrical conductivity of
+carbon nanotube-based nanocomposite [14].
+The purpose of the continuing work described in this pa-
+per is to build a compact and durable radiation detector
+based on a rugged, thin ﬁlm nanocomposite with a nanoma-
+terial that provides real-time information. In previous work,
+MWCNT/PMMA thin ﬁlm composites were studied to detect
+X-ray ionizing radiation [12]. Being simple, cheap, and eas-
+ily processed, MWCNT nanocomposites could detect X-rays,
+but unfunctionalized MWCNT/PMMA thin ﬁlm nanocompos-
+ite devices were limited in sensitivity, requiring functional-
+ization to enhance X-ray response [16]. In the present work,
+SWCNT/PMMA thin ﬁlm nanocomposites were irradiated
+with from a 160 kV 3000W X-ray source (X-RAD iR-160)
+to study the dose and dose rate effect on the resistance of
+SWCNT/PMMA thin ﬁlm nanocomposites. The results showed
+a clear, repeatable, quasi-linear proportional response to ap-
+plied radiation exposures of various total doses at ﬁxed dose
+rates and of different dose rates to a speciﬁc total dose of
+X-rays. The observed results in this work showed similar re-
+sponse as reported in Ref. [12], with substantially increased
+sensitivity to X-ray exposure compared to unfunctionalized
+MWCNT/PMMA [12] and functionalized MWCNT/PMMA
+1536-125X © 2021 IEEE. Personal use is permitted, but republication/redistribution requires IEEE permission.
+See https://www.ieee.org/publications/rights/index.html for more information.
+Authorized licensed use limited to: Prairie View A M University. Downloaded on September 03,2025 at 16:51:55 UTC from IEEE Xplore.  Restrictions apply. 
+518 IEEE TRANSACTIONS ON NANOTECHNOLOGY, VOL. 20, 2021
+[16]. The results also showed that the SWCNT/PMMA thin
+ﬁlm composite is about ﬁve times more sensitive to X-rays
+than similar unfunctionalized MWCNT/PMMA nanocompos-
+ites [12] and about two times more sensitive to X-rays than
+that of functionalized MWCNT/PMMA nanocomposites [16].
+We further observed that post-irradiation heat treatment of the
+thin ﬁlm nanocomposite devices could anneal the device to a
+condition close to pre-irradiation. To our knowledge, this is the
+ﬁrst comprehensive study of X-ray radiation effects on thin ﬁlm
+nanocomposites of SWCNT/PMMA.
+II. M A TERIALS AND METHODS
+A. Materials to Make Thin Film Nanocomposite Device
+We used the commercial unfunctionalized SWCNT as a nano-
+scale ﬁller to prepare thin ﬁlm nanocomposite devices (produced
+by a thermal chemical vapor deposition method greater than 95%
+purity) were obtained from Nanolab, Inc. with length 1-5 µm
+and diameter ∼1.5 nm (D1.5L1-5-S, Nanolab, Inc.). Other ma-
+terials used are poly (methyl methacrylate) (PMMA) as a poly-
+mer matrix (182230, Sigma Aldrich), N,N-dimethylformamide
+(DMF) as solvent (319937, Sigma Aldrich), and acetone for
+cleaning purposes obtained from Sigma Aldrich. The purpose
+of using DMF for the nanocomposite fabrication process is to
+give uniform dispersion of CNTs [17] in the solvent. PMMA
+is used during the fabrication of nanocomposite due to its
+good spinning qualities [18], high ruggedness [19], and good
+chemical resistance [20], solubility in N, N-dimethylformamide
+(DMF) [18]. The gold IDEs (#106a Electrodes, Case Western
+Reserve University) are deposited on top of a silicon substrate
+and are 0.5mm thick. The silicon substrate has dimensions
+of 8 mm × 8 mm, with a top layer of 300 nm thick silicon
+dioxide. The interdigitated electrode (IDE) and bonding pads
+(1.75 mm × 1.75 mm) consist of 200 nm thick gold with a
+10 nm thick titanium adhesion layer. The electrodes run parallel
+to each other, with a line size spacing of 100 µm.
+B. Preparation of SWCNT/PMMA Thin Film
+Nanocomposite Device
+For the preparation of SWCNT/PMMA nanocomposite ,
+0.03g/cm3 concentration of PMMA in DMF was sonicated using
+a 750 W, 20 kHz probe sonicator (9810-24-750W, Ace Glass
+Inc.) for 15 minutes in an ice bath at 20% amplitude and 0.5 pulse
+rate. For the next step, 0.63 mg/cm3 concentration of SWCNT in
+DMF was added to the sonicated mixture of PMMA in DMF and
+sonicated in the ice bath again for 5 minutes at 20% amplitude
+and 0.5 pulse rate. The sonicated mixture of SWCNT/PMMA
+and DMF was deposited on the IDE by spin coating the mixture
+on the IDE at 1000 rpm with a ramp of 100 rpm/s for 30 seconds
+using a spin coater (model 200X, Brewer Science) to create
+a conducting SWCNT network atop the IDE gold electrode
+pattern, as shown in Fig. 1(a). The thin ﬁlm composite cast on
+the IDE was cured in a vacuum oven at 175 °C for one hour
+and allowed to cool under a fume hood overnight to remove
+excess solvent. This process is also detailed in [Ref. 12]. V ariable
+pressure scanning electron microscope (SEM, Hitachi SU3500)
+images of the SWCNT network are shown in Fig. 1(b) and of
+Fig. 1. (a) SEM image of IDE gold electrodes, (b) SEM image of unfunction-
+alized SWCNT powder, (c) SEM image of SWCNT/PMMA thin ﬁlm composite,
+and (d) SEM image of SWCNT/PMMA thin ﬁlm having a thickness in the range
+5 µmt o7 µm.
+the SWCNT /PMMA composite in Fig. 1(c). The nanocomposite
+thin ﬁlm prepared by the above method had a thickness of about
+5–7 µm as observed using a SEM, as shown in Fig. 1(d). The
+variable pressure SEM images are produced without any sample
+coating, and SEM voltages indicated in Fig. 1 are selected to op-
+timize image quality. Fabricated thin ﬁlm nanocomposites have
+2.1% by weight of SWCNT/PMMA with resistances in the range
+250–5000Ω. While straightforward, this process can sometimes
+give varying results. For example, it has been observed that the
+degree of roughness of the tip used in the sonication process
+could degrade the performance of probe and resulted in poor
+dispersion of nanotubes in the polymer-solvent.
+C. Experimental Setup
+A 160 kV , 3000 W X-ray source (X-RAD iR-160) was used to
+perform the radiation exposure characterization of the thin ﬁlm
+composites of nanomaterial [12]. The X-ray source has an X-ray
+tube with a tungsten target-anode at a focal spot of 7.5 mm.
+X-ray tube in which an energetic electron beam impinges a
+tungsten target, producing an X-ray spectrum that has sharply
+deﬁned peaks at 55.55 keV and 66.66 keV with a low-lying broad
+bremsstrahlung background [12]. The resulting X-ray beam has
+a uniform circular cross-section that is about 15.24 cm in diam-
+eter at the surface of the tray in which the thin ﬁlm device was
+positioned in the center of the tray. This beam diameter ensured
+that all irradiated thin ﬁlm devices were uniformly exposed to the
+ionizing X-ray radiation in all experiments reported. The source
+to sample distance (SSD) was varied at 30 cm, 50 cm and 70 cm
+to study the X-ray radiation dose rate effects on the thin ﬁlm
+nanocomposite devices. According to vendor’s speciﬁcation and
+calibration, the dose rate at 30 cm SSD is 5.92 krad /min. From
+the inverse square law, the calculated X-ray dose rates at 50 cm
+Authorized licensed use limited to: Prairie View A M University. Downloaded on September 03,2025 at 16:51:55 UTC from IEEE Xplore.  Restrictions apply. 
+SUMAN et al.: X-RA Y RADIA TION EFFECTS ON SWCNT/PMMA THIN FILM NANOCOMPOSITES 519
+SSD is 2.13 krad/min and at 70 cm SSD is 1.08 krad/min. Hence,
+the dose rates used are a function of calibrated measurements and
+the geometry of the X-ray machine. About 40 SWCNT/PMMA
+devices were used for this experiment.
+Two experiments were studied in this paper. The ﬁrst set
+of experiments was total dose effect on changes of resistance
+of the thin ﬁlm device. Total dose is deﬁned by varying the
+time the device was exposed from the source of X-rays. For
+example, when the device was placed at 30 cm from the center
+of the X-ray source this gives a dose rate of 5.92 krad/min. The
+device was irradiated to different X-ray total doses by varying
+sample exposure times. The second set of experiments was the
+dose rate effect on resistance of thin ﬁlm devices; the dose
+rate is deﬁned by varying the distance of the thin ﬁlm device
+from the source of the X-rays. For example, a dose rate of
+5.92 krad/min, 2.13 krad/min, and 1.08 krad/min is achieved by
+placing the thin ﬁlm device at a distance 30 cm, 50 cm and 70 cm
+respectively from the center of the X-ray source. A Keysight
+B1500A semiconductor device parametric analyzer was used
+to carry out the electrical measurements on nanocomposite
+devices. The device was placed at the center of the sample tray
+inside the X-ray chamber and connected to the device analyzer
+using a low noise cable to perform the electrical measurement
+during irradiation. The Keysight B1500A was programmed to
+perform the electrical measurement for thin ﬁlm device for
+pre-irradiation, during-irradiation, and post-irradiation. Except
+for results discussed in Section III C, all measurements were
+taken with an applied voltage of 0.5V and the current measured
+every second during an experiment. The experimental setup is
+described in further detail elsewhere Ref.12.
+III. R ESULTS
+The X-ray radiation effect on the electrical resistance of
+SWCNT/PMMA thin ﬁlm was obtained by measuring de-
+vice resistance change during X-ray exposure. For a given
+measurement, the percentage change in resistance (S) of the
+SWCNT/PMMA thin ﬁlm is deﬁned by:
+S =
+( Rf − Ri
+Ri
+)
+×100% (1)
+where R f is the ﬁnal resistance of SWCNT/PMMA thin ﬁlm
+nanocomposite when X-ray irradiation ends, and R i is the ini-
+tial resistance of SWCNT/PMMA thin ﬁlm before the X-ray
+irradiation. The calculated percentage change in nanocomposite
+resistance is the primary electrical characteristic used to show the
+effect of ionizing radiation on the nanocomposite ﬁlms studied
+in this paper.
+A. Total Dose Effect
+In this section, the total dose effects were studied by recording
+real-time changes in the electrical resistance of the thin ﬁlm
+device due to different total doses of X-ray radiation by varying
+the radiation exposure time at a constant dose rate. The devices
+used in the experiments had initial resistances in the range 2–3
+kΩ. The device was placed at 30 cm SSD giving a dose rate
+of 5.92 krad/min. The device was irradiated to different X-ray
+total doses of 40 krad, 100 krad, 200 krad, 500 krad, 750 krad
+and 1000 krad by varying exposure times 7 minutes, 17 min-
+utes, 34 minutes, 85 minutes, 128 minutes, and 170 minutes
+respectively.
+The electrical resistance of thin ﬁlm device and an identical
+thin ﬁlm control device (no X-ray exposure) were both recorded
+by the semiconductor device analyzer every second interval
+for pre-irradiation, during irradiation, and post-irradiation. The
+control device was not exposed to radiation. The pre-irradiation
+data typically recorded for 10 minutes and post-irradiation data
+for 80 minutes. Fig. 2(a) shows a typical data for an experiment.
+The resistance of the device substantially decreases continuously
+during irradiation for the different total doses, while the resis-
+tance of the control sample changes very little (typically less than
+0.5%) during the experiment. Fig. 2(b) showed the change in
+resistance of SWCNT/PMMA nanocomposite for varying total
+doses at a constant dose rate 5.92 krad/min in the bar graph.
+The percentage change from values obtained before irradia-
+tion is approximately directly proportional to applied radiation
+doses. Compared to the initial resistance before exposure, the
+thin ﬁlm device that showed the lowest decrease in resistance at
+7% was due to a total dose of 40 krad and the highest decrease
+in resistance at 58.1% was due to a total dose of 1000 krad.
+The post-irradiation data in Figs. 2(a) show that the device did
+not immediately recover the initial resistance after X-rays were
+turned off. Fig. 2(c) revealed the percentage change in resistance
+of thin ﬁlm devices during X-ray exposures with varying X-ray
+doses at constant dose rate from the data in Fig. 2(a). The data
+points represent the mean percentage change in resistance of
+one device for multiple exposures (40 krad, 100 krad, 200 krad,
+500 krad, 750 krad, and 1000 krad) with X-rays at dose rate
+5.92 krad/min. The vertical bars represent standard deviation.
+The experiment was repeated on four devices for multiple
+radiation exposures; all showed similar results. Fig. 2(c) showed
+that a linear equation could express the relationship between the
+change in resistance and X-ray radiation doses. The observed
+linear response is important for potential radiation detection
+applications of these nanocomposites.
+B. Dose Rate Effect
+The dose rate effect experiments were performed by varying
+the position of the device. For this set of experiments, we used
+the different dose rates based on the position of the device, to
+obtain a total dose of 100 krad for each dose rate. The dose
+rates that were studied were 5.92 krad/min, 2.13 krad/min, and
+1.08 krad/min by placing the thin ﬁlm device at 30 cm SSD,
+50 cm SSD and 70 cm SSD respectively from the X-ray source
+origin in the X-ray chamber (Section II C). Fig. 3 shows changes
+in the electrical resistance of SWCNT/PMMA thin ﬁlm device
+during exposure at the different dose rates to a total dose of
+100 krad for each exposure. The times required to irradiate the
+devices at 100 krad for the different dose rates were calculated
+to be 92 minutes for1.08 krad/min, 47 minutes for 2.13 krad/min
+and 17 minutes for 5.92 krad/min.
+In Fig. 3, the SWCNT/PMMA resistance of device decreases
+over time during irradiation to X-rays of 100 krad total dose at
+Authorized licensed use limited to: Prairie View A M University. Downloaded on September 03,2025 at 16:51:55 UTC from IEEE Xplore.  Restrictions apply. 
+520 IEEE TRANSACTIONS ON NANOTECHNOLOGY, VOL. 20, 2021
+Fig. 2. (a) Change in resistance over time for SWCNT/PMMA nanocomposite
+for various total doses at a constant dose rate of 5.92 krad/min. (b) Change in re-
+sistance of SWCNT/PMMA nanocomposite for varying doses at a constant dose
+rate 5.92 krad/min in bar graph. (c) Change in resistance of SWCNT/PMMA
+nanocomposite for varying doses at a constant dose rate of 5.92 krad/min.
+the different dose rates. The reduction in resistance of devices
+due to 100 krad X-ray exposure were 12.19% for 5.92 krad/min,
+19.79% for 2.13 krad/min, and 29.92% for 1.08 krad/min. The
+decrease in resistance of the control device was very small,
+typically less than 0.5% during the experiment. The magnitude
+of the percentage change in resistance showed a roughly inverse
+proportionate response to exposed dose rates. For each different
+dose rate, the device had been subjected to heat treatment to
+reset the device to pre-irradiation resistance as described in
+Fig. 3. Change in resistance of SWCNT/PMMA nanocomposite ﬁlm with
+varying X-ray dose rates at constant X-ray dose at 100 krad.
+Fig. 4. Change in resistance of SWCNT/PMMA nanocomposite device due
+to 100 krad X-rays at 5.92 krad/min with various applied voltage, where vertical
+bars showing the standard deviation.
+Section IV. The devices used for this experiment had initial
+resistances in the range 500–3000 Ω. This experiment was
+repeated on six devices for multiple exposures, which all showed
+similar results.
+C. Effect of Lower Applied V oltage
+In anticipation of using thin ﬁlm devices as a radiation sensor,
+X-ray experiments were conducted on devices that were biased
+at voltages from 0.05 to 1.00 V . Fig. 4 shows percentage changes
+in resistance of one nanocomposite thin ﬁlm device irradiated to
+100 krad at 5.92 krad/min for different applied voltages starting
+from 0.05 V to 1.00 V . The data points in Fig. 4 indicated the
+mean percentage change in resistance of the thin ﬁlm device,
+and vertical bars indicated standard deviation. It showed that
+the radiation-induced decrease in resistance of the thin ﬁlm
+nanocomposite device from initial resistance before irradiation
+is approximately between 12% to 13% at all different voltages
+with the largest standard deviation at 0.05 V and the least
+standard deviation at 1.00 V . Fig. 4 also showed that there is
+a large error bar at 0.05 V , due to increased noise at lower
+applied voltage. The experiment was repeated on ten devices
+and had produced similar results. This result is essential for
+Authorized licensed use limited to: Prairie View A M University. Downloaded on September 03,2025 at 16:51:55 UTC from IEEE Xplore.  Restrictions apply. 
+SUMAN et al.: X-RA Y RADIA TION EFFECTS ON SWCNT/PMMA THIN FILM NANOCOMPOSITES 521
+Fig. 5. Heat treatment recovery of SWCNT/PMMA device irradiated to
+200 krad X-ray at 5.92 krad/min.
+Fig. 6. Heat reset time variation with X-rays doses. The vertical bars represent
+standard deviation.
+practical applications as it indicates the devices can operate at
+low voltages and hence with lower power consumption.
+IV . HEA T TREA TMENT ANDRESET
+The data in Figs. 2(a) and 3 indicate slow recovery of the
+radiation exposed nanocomposite devices. An irradiated device
+at 40 krad at ambient conditions slowly regains a resistance
+approximately the same as its pre- irradiation value after a few
+weeks, which was also observed in [Ref. 12]. Higher recovery
+times were observed for nanocomposite devices irradiated at
+higher X-rays total doses.
+Heat treatment of the device based on nanotube and polymer
+reduces the naturally slow and long recovery time [12], [21].
+Thus, the irradiated SWCNT/PMMA nanocomposite devices
+were subjected to heat treatment at 175 °C in an oven to accel-
+erate the device recovery process after irradiation in this study.
+The radiated devices at 40 krad, 100 krad, 200 krad and 500 krad
+recovered their initial resistance prior to irradiation after heat
+treatment. Fig. 5 shows a typical heat treatment recovery of
+a device irradiated to 200 krad X-rays at 5.92 krad/min. The
+radiated device was heat treated for 45 minutes and then it took
+a further 8 minutes to recover the device. Fig. 6 shows the average
+heat reset times of the thin ﬁlm device with applied X-ray doses
+40 krad, 100 krad, 200 krad, 500 krad, 750 krad, and 1000 krad
+at 5.92 krad/min. The heat reset time of SWCNT/PMMA thin
+ﬁlm devices increases with increased X-ray total doses.The
+increase in X-ray radiation dose increased resistance change,
+requiring a longer heat treatment cycle as was seen also with
+the MWNT/PMMA, which observed in [Ref. 12]. In this work,
+the radiated device at 750 krad and 1000 krad did not fully
+recover the resistance to pre-irradiation value, which may be
+due to permanent damage of the thin ﬁlm device due to a very
+high X-ray dose. Lower dosed, up to 500 krad samples recovered
+within about 100% of their pre- irradiated resistance, however,
+the higher dosed devices irradiated to 750 krad and 1000 krad
+recovered to about 90% of their pre-irradiated resistances.
+The radiation exposure and heat treatment experiment was
+repeated for eight devices, and similar results were observed in
+all cases. The variation in the recovery time of devices was less
+than 4%. Fig. 6 shows a clear linear relationship with an R2 value
+of 0.9942 between heat reset time and applied X-ray total doses.
+V. D ISCUSSION
+The decrease in resistance of SWCNT/PMMA nanocompos-
+ite thin ﬁlm devices during X-ray exposure was observed, as
+shown in Figs. 2(a) and 3. The X-rays cause an ionization
+effect through the production of charge carriers and increase the
+conductivity of the nanocomposite ﬁlm, similar to that observed
+in carbon-ﬁber based devices [22]. The radiation generated
+charge carriers are transported to the electrodes by the network of
+nanotubes spanning between the electrodes [12]. The MWCNT
+network is essential for the charge transport; similar ﬁlms made
+from carbon black do not show a signiﬁcant response to X-ray
+radiation [12]. The decrease in resistance of SWCNT/PMMA
+nanocomposite thin ﬁlm devices (as shown in Figs. 2(a) and (3)
+is due to the X-ray irradiation is consistent with the result ob-
+served in SWCNT thin ﬁlms device [23] and MWCNT/PMMA
+nanocomposite device [12].
+Three feature effects were observed in Fig. 3:(1) the resistance
+of thin ﬁlms in this work decreases during X-ray exposure,
+(2) the rate of change in resistance is directly proportional to
+dose rate, and (3) the magnitude of the decrease in resistance
+is inversely proportional to X-ray dose rate. These effects were
+also observed in the case of MWCNT nanocomposite device
+[12]. In this work, the resistance of nanocomposite ﬁlm device
+continued decreasing very slowly even after the X-ray is turned
+off until it is stable, as shown in Fig. 2(a) and Fig. 3. This is likely
+due to the slow release of charges in the insulating polymer near
+the SWCNT-polymer interface. Fig. 2(a) and Fig. 3 also showed
+the decrease in resistance of less than 0.5% of the control sample
+during irradiation, which is very small compared to decrease in
+resistance of up to 58.1% due to 1000 krad X-ray irradiation.
+The reduction in resistance of the control device may be due
+to ambient humidity effects on SWCNTs [2]. Fig. 4 shows that
+the decrease in resistance of SWCNT/PMMA thin ﬁlm device
+that were operated at the low voltages ranging from 0.05V and
+1.00 V , was approximately 13% for all the applied voltages.
+However, the result showed more extensive scattered data at
+0.05 V compared to a 1.00 V applied voltage, as shown in Fig. 4
+is due to increased noise at a very low voltage signal.
+Authorized licensed use limited to: Prairie View A M University. Downloaded on September 03,2025 at 16:51:55 UTC from IEEE Xplore.  Restrictions apply. 
+522 IEEE TRANSACTIONS ON NANOTECHNOLOGY, VOL. 20, 2021
+Fig. 7. Comparison of unfunctionalized SWCNT/PMMA responses with un-
+functionalized MWCNT/PMMA [12] and ferrocene-doped MWCNT/PMMA
+[16] due to100 krad X-rays at 5.92 krad/min.
+In this work, the natural annealing of device at room tempera-
+ture is a long process of about several weeks. Fast response due
+to high surface area of SWCNTs and low mobility of trapped
+holes in the oxide layer of IDE and polymer matrix probably
+contribute to the slow recovery of the resistance of thin ﬁlm
+after irradiation [12], [25]. Thermal treatment is necessary to
+give sufﬁcient energy to trapped holes to free them from such
+traps and help irradiated thin ﬁlm nanocomposite to anneal in a
+much shorter time [12]. The higher the radiation dose the device
+is exposed to, the longer the device needs heat treatment during
+the annealing process, as shown in Fig. 6. This is consistent
+with the fact that higher doses would generate proportionally
+more trapped charges. In addition, the thin ﬁlm devices did not
+recover completely their initial resistance after X-ray exposure to
+750 krad and 1000 krad. This is likely because higher total X-ray
+doses cause destruction and disordering in polymeric structure
+[27]. X-ray exposure to nanotube reduces the sp 2 to sp3 nature
+of the nanotube bond structure, as well as causing an increase in
+defect density, affecting electrical properties of nanotubes [13].
+In addition, the heat treatment time for radiated nanocomposite
+device at 750 krad and 1000 krad are about 100 minutes and
+130 minutes respectively. As the glass transition temperature
+of PMMA is 100.01 °C and melting point is 165 °C, heating
+SWCNT/PMMA nanocomposite at 175 °C for such longer times
+causes decomposition of composites which is associated with
+mass loss of PMMA in nanocomposites [26].
+In this study, the X-ray radiation effect was studied in
+SWCNT/PMMA thin ﬁlm nanocomposite device. A mixed type
+SWCNT (semiconducting and metallic) and PMMA was used to
+form thin ﬁlm nanocomposite device. The reduction in resistance
+may be contributed by the ionization effect on both MWCNT
+and PMMA [16].
+The data shown in Fig. 7 shows a comparison between
+thin ﬁlm nanocomposite devices made from unfunctionalized
+SWCNT/PMMA and MWCNT/PMMA(both unfunctionalized
+and ferrocene-doped). There is a clear enhanced sensitivity
+(as characterized by the resistance change due to X-ray ex-
+posure) of unfunctionalized SWCNT/PMMA thin ﬁlm com-
+pared with functionalized MWCNT/PMMA as well as unfunc-
+tionalized MWCNT/PMMA to X-rays total dose of 100 krad
+at dose rate 5.92 krad/min. The overall superior sensitivity
+of the SWCNT/PMMA devices is also observed under other
+irradiation conditions. The decrease in resistance of unfunc-
+tionalized SWCNT/PMMA (Unf-SW) devices during X-ray
+exposure in this work was about ﬁve times higher than the
+MWCNT/PMMA (Unf-MW) device [12] and about two times
+higher than ferrocene-doped MWCNT/PMMA (ferrocene-MW)
+[16] due to 100 krad and 5.92 krad/min, as shown in Fig. 7.
+The ferrocene-MW data is shown because it had the highest
+sensitivity of MWCNT based devices previously studied [16].
+The electrical properties of the CNTs network within the ﬁlms
+are dependent on the chiralities; this effect is reduced when using
+MWCNT. Since the internal tubes are not connected to the outer
+tubes in MWCNTs, the contribution of the chirality of the inner
+tubes to their electrical properties are diminished and would have
+electronic distortion, in comparison to the singular chirality of
+SWCNT [24]. In addition, small diameter, larger aspect ratio,
+and larger surface area of SWCNTs compared with MWCNTs
+could be responsible for more charges produced and transported
+in SWCNT ﬁlms compared with MWCNT ﬁlms during radiation
+exposure. The morphological difference between SWCNTs and
+MWCNTs networks leads to more favorable conditions for
+forming crosslinks between SWCNTs than MWCNTs [2], pro-
+viding more current paths causing more change in conductivity
+in SWCNT based devices during X-ray exposure compared with
+MWCNT based devices.
+A 3D model to describe the electrical conductivity of CNT
+ﬁlled polymer polydimethylsiloxane (PDMS) during exposure
+to ionizing radiation was studied using the Monte Carlo method
+[14]. The researcher used this method to calculate CNT con-
+centration, alignment’s inﬂuence on electrical conductivity of
+carbon-ﬁlled polymer. A similar model cannot apply in this
+study due to several reasons: (1) during the fabrication of
+SWCNT/PMMA nanocomposite thin ﬁlm, the sonicated com-
+posite was spin-cast on IDE to form thin ﬁlm using a spin
+coater, which results in an indeﬁnite number of nanotubes
+trapped in thin ﬁlm, (2) SWCNTs used in this study is a
+mixed type containing semiconducting and metallic SWCNT
+and (3) SWCNT/PMMA is spin-coated on the interdigitated
+electrode, so there are a considerably large number of paths be-
+tween individual SWCNTs, SWCNTs/PMMA, and SWCNTs/
+IDE ﬁnger surface created which increases the conductivity of
+the nanocomposite and lowering the overall resistance of the
+composite. Further experimental studying may help control the
+number of SWCNTs trapped in the desired region and regular
+alignment of all SWCNTs across the electrodes.
+VI. C ONCLUSION
+This study shows that the percentage change in resistance
+of thin ﬁlm nanocomposite devices based on SWCNT/PMMA
+shows a repeatable quasi-linear response to various applied
+total doses and different dose rates of ionizing radiation in the
+form of X-rays. The percentage change in resistance of thin
+ﬁlm nanocomposites is directly proportional to total dose and
+Authorized licensed use limited to: Prairie View A M University. Downloaded on September 03,2025 at 16:51:55 UTC from IEEE Xplore.  Restrictions apply. 
+SUMAN et al.: X-RA Y RADIA TION EFFECTS ON SWCNT/PMMA THIN FILM NANOCOMPOSITES 523
+inversely proportional to the dose rate of X-rays which is consis-
+tent with the results observed in previous work [12]. In this work,
+the percentage of change in resistance of SWCNT/PMMA com-
+posite due to X-rays 100 krad at 1.08 krad/min and 5.92 krad/min
+are about ﬁve times and three times higher respectively than
+that observed in MWCNT/PMMA [12]. This demonstrates that
+composites made from SWCNT/PMMA are more sensitive to
+ionizing radiation than those made with MWCNT/PMMA [12].
+The devices can be reset with thermal treatment. However, the
+thin ﬁlm devices did not recover their initial resistance after 750
+and 1000 krad X-rays exposure. The sensors could operate at
+low voltage signals with low power consumption, a favorable
+result for future operational applications. The results discussed
+here show that SWCNT/PMMA thin ﬁlm devices effectively
+detect high dose rate X-rays ionizing radiation. Still, improve-
+ments for proper instrumentation of the device are necessary
+to isolate the device from environmental humidity and other
+environment factors that may change device resistance. The dose
+rates used in this experiment are comparatively much higher
+than those expected in the natural environment. Future work
+will include studying the lower dose rates radiation and gamma
+radiation effect on nanocomposite devices, which is essential
+to evaluate the performance of thin ﬁlm composites for many
+applications.
+ACKNOWLEDGMENT
+We would like to thank Dr. J. Zhou for useful discussions
+and support for this research. Dr. Zhou is with the Department
+of Mechanical Engineer, PV AMU. We express thanks to Dr. B.
+Gersey for providing substantial discussions on research and
+technical assistance throughout the experiments. Dr. Gersey is
+with Space Environment Technologies, Paciﬁc Palisades, CA.
+REFERENCES
+[1] J. M. Lobez, and T. M. Swager, “Radiation detection: Resistivity
+responses in functional poly (Oleﬁn sulfone)/carbon nanotube com-
+posites,” Angew. Chem. Int. Ed. , vol. 49, pp. 95–98, Jan. 2010, doi:
+10.1002/anie.200904936.
+[2] A. Nelson, “Carbon nanotube based dosimetry of neutron and gamma
+radiation,” Ph.D. dissertation, Eng. Mechanics, Virginia Polytech. Ins.
+and State Univ., Blacksburg, V A, Apr. 29, 2016. Accessed on: Oct. 22,
+2017. [Online]. Available: https://vtechworks.lib.vt.edu/bitstream/handle/
+10919/79732/Nelson_AJ_D_2016.pdf?sequence=1&isAllowed=y
+[3] C. Li, E. Thostenson, and T. Chou, “Sensors and actuators based on carbon
+nanotubes and their composites: A review,”Compos. Sci. Technol., vol. 68,
+no. 6, pp. 1227–1249, May 2008.
+[4] N. Sinha, J. Ma, and J. T. W. Y eow, “Carbon nanotube-based sensors,” J.
+Nanosci, Nanotechnol., vol. 6, no. 3, pp. 573–590, Feb. 2006.
+[5] B. Mahar, C. Laslau, R. Yip, and Y . Sun, “Development of carbon
+nanotube-based sensors- A review,” IEEE Sensors J. , vol. 7, no. 2,
+pp. 266–284, Feb. 2007.
+[6] D. Ziegler, E. Bekyarova, A. Marchisio, J. M. Tulliani, and K. Naishad-
+ham, “Highly selective ozone sensors based on functionalized carbon
+nanotubes,” in Proc. IEEE SENSORS, 2018, pp. 1–4.
+[7] R. Xuemei, C. Chen, M. Nagatsu, and X. Wang, “Carbon nanotube as
+adsorbents in environmental pollution management: A review,” Chem.
+Eng. J., vol. 170, no. 2-3, pp. 395–410, Jun. 2011.
+[8] X. Zhang, H. Cui, Y . Gui, and J. Tang, “Mechanism and application of
+carbon nanotubes sensors in SF6 decomposed production detection: A
+review,”Nanoscale Res. Lett., vol. 12, no. 177, pp. 1–12, Mar. 2017.
+[9] T. Han, A. Nag, S. C. Mukhopadhyay, and Y . Xu, “Carbon nanotubes
+and its gas-sensing applications: A review,” Sensors Actuators A: Phys. ,
+vol. 291, pp. 107–143, Jun. 2019, [Online]. Available: https://doi.org/10.
+1016/j.sna.2019.03.053
+[10] X. W. Tang, et al., “Measurement of ionizing radiation using carbon nan-
+otube ﬁeld effect transistor,”Phys. Med. Biol., vol. 50, no. 3, pp. N23–N31,
+Feb. 2005.
+[11] Q. Kang, and J. T. W. Y eow, “Electrical resistance response evaluation of
+semiconducting single-walled carbon nanotube ﬁlm for X-ray sensing,” in
+Proc. IEEE 11th Int. Conf. Nanotechnol. , 2011, pp. 387–391.
+[12] S. Kyatsandra, and R. Wilkins, “Total ionizing dose X-ray radiation effects
+on MWCNT/PMMA thin ﬁlm composites,” IEEE Trans. Nanotechnol. ,
+vol. 14, no. 1, pp. 152–158, Jan. 2015.
+[13] N. Bardi, I. Jurewicz, A. K. King, M. A. Alkhorayef, D. Bradley, and A. B.
+Dalton, “X-ray irradiation-induced structural changes on Single-wall car-
+bon nanotubes,”Radiat. Phys. Chem., vol. 140, pp. 34–37, Nov. 2017, [On-
+line]. Available: http://dx.doi.org/10.1016/j.radphyschem.2017.03.008
+[14] F. Liu, Y . Sun, W. Sun, Z. Sun, and J. T. W. Y eow, “Numerical and experi-
+mental study of radiation-induced conductivity change of carbon nanotube
+ﬁlled polymers,” Nanotechnology, vol. 28, Jun. 2017, Art. no. 255501.
+[15] E. X. Zhang, et al., “Low-energy X-ray and ozone-exposure induced defect
+formation in graphene materials and devices,” IEEE Trans. Nucl. Sci. ,
+vol. 58, no. 6, pp. 2961–2967, Dec. 2011.
+[16] S. Kyatsandra, M. Pulikkathara, and R. Wilkins, “X-ray radiation effects on
+thin ﬁlm nanocomposites of functionalized and copper coated multi-walled
+carbon nanotube and poly(methyl methacrylate),”Surf. Interfaces, vol. 17,
+Jul. 2019, Art. no. 100362, [Online]. Available: https://doi.org/10.1016/j.
+surﬁn.2019.100362Get
+[17] H. Ham, Y . Choi, and I. Chung, “An explanation of dispersion states
+of single-walled carbon nanotubes in solvents and aqueous surfactant
+solutions using solubility parameters,” J. Colloid Interface Sci. , vol. 286,
+no. 1, pp. 216–223, Jun. 2005.
+[18] F. Du, J. E. Fischer, and K. I. Winey, “Coagulation method for preparing
+single-walled carbon nanotube/poly (methyl methacrylate) composites
+and their modulus, electrical conductivity, and thermal stability,”J. Polym.
+Sci. B, Polym. Phys., vol. 41, no. 24, pp. 3333–3338, Dec. 2003.
+[19] J. E. Mark, “Poly (methyl methacrylate),” in Polymer Data Handbook,1 s t
+ed., L. Lu and A. G. Mikos, Eds., New Y ork, NY , USA: Oxford Univ.
+Press, pp. 655–657, 1999. [Online]. Available: http://www.toarplast.co.il/
+linksPage/Hand_Book.pdf
+[20] W. F. Smith, and J. Hashemi, “Polymeric materials,” in F oundations of
+Materials Science and Engineering , 4th ed., W. D. Callister and D. G.
+Rethwisch, Eds., New Y ork, NY , USA: McGraw-Hill, 2005, p. 510.
+[21] W. D. Zhang, and W.-H. Zhang, “Carbon nanotubes as active components
+for gas sensors,” J. Sens., vol. 2009, pp. 1–16, Apr. 2009, Art. no. 160698,
+doi: 10.1155/2009/160698.
+[22] J. Ma, J. Y eow, J. Chow, and R. B. Barnett, “A carbon ﬁber-based radiation
+sensor for dosimetric measurement in radiotherapy,” Carbon, vol. 46,
+no. 14, pp. 1869–1873, Nov. 2008.
+[23] J. Ma, J. Y eow, J. Chow, and R. B. Barnett, “A transparent carbon nanotube
+sensor for radiation detection,” inProc. IEEE Sens., 2008, pp. 1394–1397.
+[24] A. Lekawa-Raus, J. Patmore, L. Kurzepa, J. Bulmer, and K. Koziol.
+“Electrical properties of carbon nanotube-based ﬁbers and their future use
+in electrical wiring,” Adv. Funct. Mater ., vol. 24, pp. 3661–3682, 2014,
+[Online]. Available: https://doi.org/10.1016/j.sna.2019.03.053
+[25] L. Camilli, and M. Passacantando, “Advances on sensors based on carbon
+nanotubes,” Chemosensors, vol. 6, no. 4, p. 62, Dec. 2018.
+[26] S. Iqbal, M. S. Raﬁque, S. Anjum, A. Hayat, and N. Iqbal, “ Impact of X-ray
+irradiation on PMMA thin ﬁlms,” Appl. Surf. Sci., vol. 259, pp. 853–860,
+Aug. 2012, [Online]. Available: http://dx.doi.org/10.1016/j.apsusc.2012.
+07.146
+[27] P . Kalakonda, and S. Banne, “Thermomechanical properties of PMMA
+and modiﬁed SWCNT composites,” Nanotechnol., Sci. Appl. , vol. 10,
+pp. 45–52, Feb. 2017, [Online]. Available: http://dx.doi.org/10.2147/
+NSA.S123734
+Authorized licensed use limited to: Prairie View A M University. Downloaded on September 03,2025 at 16:51:55 UTC from IEEE Xplore.  Restrictions apply. 
+524 IEEE TRANSACTIONS ON NANOTECHNOLOGY, VOL. 20, 2021
+Guddi Suman (Member, IEEE) received the M.S.
+degree in physics from Tribhuvan University, Kath-
+mandu, Nepal, in 2009, and the M.S. degree in 2014
+in electrical engineering from Prairie View A&M
+University, Prairie View, TX, USA, where she is
+currently working towards the Ph.D. degree in elec-
+trical engineering. She is working as a Ph. D. Intern
+at Paciﬁc Northwest National Laboratory, Richland,
+W A. Since 2013, she has been a Research Assistant
+and a Teaching Assistant with the Department of
+Electrical Engineering, Prairie View. Her research
+interests include space radiation effects and characterization on electronics,
+nanomaterials, and thin ﬁlm nanofabrication.
+Merlyn Pulikkathara received the B.S. degree in
+physics and chemical engineering and the master’s
+degree in chemical engineering from Prairie View
+A&M University, Prairie View, TX, USA, and the
+Ph.D. degree in applied physics from Rice University,
+Houston, TX, USA, in 2009. She is currently an Assis-
+tant Professor with Physics Department, Prairie View
+A&M University and is the Faculty Senate Speaker.
+She has industrial experience with nanomaterials in
+the petroleum industry with patents. She has coau-
+thored more than 30 journal publications, including
+papers on radiation effects nano-scale materials on sensors or devices. Her
+research interests include nanotechnology, speciﬁcally chemically modifying
+them for aerospace and biomedical applications.
+Richard Wilkins (Member, IEEE) received the B.S.
+degree in physics from the University of Pittsburgh,
+Pittsburgh, PA, USA, and the Ph.D. degree in 1991 in
+physics from the University of Michigan, Ann Arbor,
+MI, USA, where he performed some of the ﬁrst ex-
+periments on single electron tunneling in nano-scale
+metal structures and tunneling spectroscopy on high-
+TC superconductors. He is currently the Director of
+the NASA Center for Radiation Engineering and Sci-
+ence for space Exploration and a Professor with the
+Department of Electrical and Computer Engineering
+and graduate coordinator with Prairie View A&M University, Prairie View, TX,
+USA. He has coauthored more than 50 journal publications, including several
+papers on radiation effects on SiC power devices, novel electronic materials, and
+quantum and nano-scale devices. His research interests include radiation effects
+on electronic devices and materials and radiation dosimetry.
+Authorized licensed use limited to: Prairie View A M University. Downloaded on September 03,2025 at 16:51:55 UTC from IEEE Xplore.  Restrictions apply. 

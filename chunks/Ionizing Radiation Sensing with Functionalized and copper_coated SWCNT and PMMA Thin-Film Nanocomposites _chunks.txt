@@ -1,0 +1,1362 @@
+
+=== CHUNK 1 ===
+Citation: Suman, G.; Pulikkathara,
+M.; Wilkins, R.; Treadwell, L.J.
+Ionizing Radiation Sensing with
+Functionalized and Copper-Coated
+SWCNT/PMMA Thin Film
+Nanocomposites. Nanomaterials 2023,
+13, 2653. https://doi.org/10.3390/
+nano13192653
+Academic Editor: Simone Morais
+Received: 6 September 2023
+Revised: 19 September 2023
+Accepted: 21 September 2023
+Published: 27 September 2023
+Copyright: © 2023 by the authors.
+Licensee MDPI, Basel, Switzerland.
+This article is an open access article
+distributed under the terms and
+conditions of the Creative Commons
+Attribution (CC BY) license (https://
+creativecommons.org/licenses/by/
+4.0/).
+nanomaterials 
+Article
+Ionizing Radiation Sensing with Functionalized and
+Copper-Coated SWCNT/PMMA Thin Film Nanocomposites
+Guddi Suman 1
+ , Merlyn Pulikkathara 2
+ , R
+
+=== CHUNK 2 ===
+ticle
+Ionizing Radiation Sensing with Functionalized and
+Copper-Coated SWCNT/PMMA Thin Film Nanocomposites
+Guddi Suman 1
+ , Merlyn Pulikkathara 2
+ , Richard Wilkins 3
+ and LaRico J. Treadwell 1,*
+1 Sandia National Laboratories, Albuquerque, NM 87106, USA; gksuman@sandia.gov
+2 Department of Chemistry and Physics, Prairie View A&M University, Prairie View, TX 77446, USA;
+mepulikkathara@pvamu.edu
+3 Electrical and Computer Engineering Department, Prairie View A&M University , Prairie View, TX 77446, USA;
+rtwilkins@pvamu.edu
+* Correspondence: ljtread@sandia.gov
+Abstract: This paper studies the ionizing radiation effects on functionalized single-walled carbon
+nanotube (SWCNT)/poly(methyl methacrylate) (PMMA) thin-ﬁlm nanocomposites [SWNT/PMMA].
+The functionalized thin-ﬁlm devices are made of fer
+
+=== CHUNK 3 ===
+lled carbon
+nanotube (SWCNT)/poly(methyl methacrylate) (PMMA) thin-ﬁlm nanocomposites [SWNT/PMMA].
+The functionalized thin-ﬁlm devices are made of ferrocene-doped SWCNTs, SWCNTs functionalized
+with carboxylic acid (COOH), and SWCNTs coated/ modiﬁed with copper. The nanocomposite was
+synthesized by the solution blending method and the resulting nanocomposite was spin-cast on
+interdigitated electrodes (IDEs). A 160 kV X-ray source was used to irradiate the thin ﬁlm and changes
+in the electrical resistance of the nanocomposites due to X-rays were measured using a semiconductor
+device analyzer. Carboxylic acid functionalized and copper-coated SWCNT/PMMA nanocomposite
+showed a reduced response to X-rays compared to unfunctionalized SWCNT/PMMA nanocomposite.
+Ferrocene-doped SWCNT showed a higher
+
+=== CHUNK 4 ===
+NT/PMMA nanocomposite
+showed a reduced response to X-rays compared to unfunctionalized SWCNT/PMMA nanocomposite.
+Ferrocene-doped SWCNT showed a higher sensitivity to X-rays at lower dose rates. This is in contrast
+to a previous study that showed that similar nanocomposites using functionalized multi-walled
+CNTs (MWCNTs) had demonstrated an improved response to X-rays ionizing radiation compared to
+unfunctionalized MWCNTs for all dose rates. Electrical measurements were also performed using
+the Arduino Nano microcontroller. The result showed that a relatively economical, lightweight-
+designed prototype radiation sensor based on SWCNT/PMMA thin-ﬁlm devices could be produced
+by interfacing the devices with a modest microcontroller. This work also shows that by encapsulating
+the SWCNT/PMMA thi
+
+=== CHUNK 5 ===
+-ﬁlm devices could be produced
+by interfacing the devices with a modest microcontroller. This work also shows that by encapsulating
+the SWCNT/PMMA thin-ﬁlm device in a plastic container, the effect of ambient humidity can be
+reduced and the device can still be used to detect X-ray radiation. This study further shows that the
+sensitivity of SWCNT to X-rays was dependent on both the functionalization of the SWCNT and the
+dose rate.
+Keywords: N, N-Dimethylformamide; functionalized SWCNT/PMMA thin-ﬁlm nanocomposites;
+X-ray; radiation sensor; COOH; copper-coated; ferrocene
+1. Introduction
+Carbon nanotubes (CNTs) are an allotrope of carbon, and they have exceptional
+electronic and mechanical properties [ 1,2]. Due to distinct properties such as a high
+aspect ratio, mechanical, electronic, and th
+
+=== CHUNK 6 ===
+y have exceptional
+electronic and mechanical properties [ 1,2]. Due to distinct properties such as a high
+aspect ratio, mechanical, electronic, and thermal properties, CNTs can be used for various
+applications, including radiation sensing for space and terrestrial applications. Carbon
+nanotubes have been studied as pressure, ﬂow, thermal, gas, and chemical sensors [3–5].
+Carbon nanotubes have also been found to be sensitive to low-dose ion radiation resulting
+in vacancies [ 6]. The covalent sidewall functionalization modiﬁes the electronic band
+structure of SWCNTs that help to control the electronic properties of the CNTs giving band
+structure engineering for electronic and chemical sensor applications [7].
+Recent advances in sensors based on CNTs show that they can be used for sensing
+bio
+
+=== CHUNK 7 ===
+e engineering for electronic and chemical sensor applications [7].
+Recent advances in sensors based on CNTs show that they can be used for sensing
+biomolecules, gas, light, or pressure changes [8–11]. Unfunctionalized CNTs have chem-
+ically inert surfaces and a high speciﬁc surface area that provides adsorption sites for
+Nanomaterials 2023, 13, 2653. https://doi.org/10.3390/nano13192653 https://www.mdpi.com/journal/nanomaterials
+Nanomaterials 2023, 13, 2653 2 of 16
+molecules to be adsorbed [ 8]. The charge transfer occurs between CNTs and adsorbed
+molecules, which increases or decreases the conductivity of CNTs. The functionalized car-
+bon nanotubes with polymers [8,12–14], functional groups [13,15,16], and metal nanoparti-
+cles [9,13] enhance the response of the sensor due to changes in t
+
+=== CHUNK 8 ===
+notubes with polymers [8,12–14], functional groups [13,15,16], and metal nanoparti-
+cles [9,13] enhance the response of the sensor due to changes in their electronic properties.
+Thin ﬁlms have been a way of creating sensors and have been studied in the literature,
+for example; the thin ﬁlms of the type CuX (X = Bi, Mg, Ni) studied the impact of the
+concentration of copper and phases containing copper on the degradation and oxidation
+of thin ﬁlms [ 17]. Another example of synthesis of NiFe ﬁlms using direct, pulse, and
+pulse-reverse electrodeposition modes studied the deposit composition, crystal structure,
+and surface microstructure [18]. There has been mechanical modeling of thin ﬁlms [ 19,20],
+PMMA [21] and a polymer/carbon nanotube [22]. The experimental thermomechanical
+property was st
+
+=== CHUNK 9 ===
+re has been mechanical modeling of thin ﬁlms [ 19,20],
+PMMA [21] and a polymer/carbon nanotube [22]. The experimental thermomechanical
+property was studied on materials such as ceramics [23], PMMA/SWCNT interfaces [24],
+and PMMA and modiﬁed SWCNT [ 25]. This work focuses on electrical properties of
+thin ﬁlm nanocomposites of PMMA/nanotubes. In previous work, unfunctionalized
+MWCNTs and functionalized MWCNT nanocomposites were studied as ionizing radia-
+tion sensors [26,27]. X-ray radiation effects on thin-ﬁlm nanocomposites of functionalized
+nanotubes with carboxylic acid, hydrogen peroxide, amine, ferrocene-doped, and copper-
+coated multi-walled carbon nanotubes, and poly (methyl methacrylate) (PMMA), that is
+(SWNT/PMMA), were studied in ref. [27]. The functionalized MWCNT nanocomposites
+
+
+=== CHUNK 10 ===
+lled carbon nanotubes, and poly (methyl methacrylate) (PMMA), that is
+(SWNT/PMMA), were studied in ref. [27]. The functionalized MWCNT nanocomposites
+were found to be more sensitive than the unfunctionalized MWCNTs. The sensitivity of the
+thin ﬁlm devices, as measured in a decrease in resistance of the devices, of ferrocene-doped
+MWCNT/PMMA nanocomposites was about three times greater in comparison to unfunc-
+tionalized MWCNT/PMMA devices due to incident X-ray radiation [27]. The presence of
+functional groups on MWCNTs caused a higher sensitivity to X-rays than unfunctionalized
+MWCNTs/PMMA [26]. The functional groups with MWCNTs provide an additional source
+of excess charge carriers, causing enhanced sensitivity of MWCNTs to X-rays. The func-
+tionalized carbon nanotubes have electronic, me
+
+=== CHUNK 11 ===
+ditional source
+of excess charge carriers, causing enhanced sensitivity of MWCNTs to X-rays. The func-
+tionalized carbon nanotubes have electronic, mechanical, and optical properties which are
+different from pristine nanotubes and can be useful for sensing applications [12]. In related
+work, highly sensitive real-time proton dosimeters functionalized SWCNTs were fabricated,
+such as ﬂuorinated SWCNT (F-SWCNTs), palladium doped SWCNTs (Pd-SWCNTs), and
+nanotubes non-covalently associated with cellulose (Cel-SWCNTs) were studied as proton
+detectors [28]. The result showed that they have good lifetime performance and can be
+used repeatedly.
+Unfunctionalized MWCNT, functionalized MWCNT, and unfunctionalized SWCNT
+thin ﬁlms showed a directly proportionate response to applied X-ray doses and dose
+
+
+=== CHUNK 12 ===
+tionalized MWCNT, functionalized MWCNT, and unfunctionalized SWCNT
+thin ﬁlms showed a directly proportionate response to applied X-ray doses and dose
+rates [26,27,29]. The functionalized MWCNT thin ﬁlm showed a higher response to X-rays
+than unfunctionalized MWCNTs. The present work presents the response of SWCNT func-
+tionalized nanocomposites with carboxylic acid, copper-coated SWCNTs, and ferrocene-
+doped SWCNTs to X-rays. The SWCNT/PMMA nanocomposite thin ﬁlms were irradiated
+with X-rays at different dose rates to a total dose of 100 krad. The observed results were
+compared with previous work with devices using unfunctionalized SWCNT/PMMA
+thin ﬁlms [ 29]. As observed in previous work, a decrease in the resistance of the thin
+ﬁlm was measured during X-ray exposure with the higher respon
+
+=== CHUNK 13 ===
+
+thin ﬁlms [ 29]. As observed in previous work, a decrease in the resistance of the thin
+ﬁlm was measured during X-ray exposure with the higher response of ferrocene-doped
+SWCNT/PMMA ﬁlm at a lower X-rays dose rate as compared with unfunctionalized
+SWCNT/PMMA ﬁlms. In contrast to the MWCNT work, SWCNT/PMMA ﬁlms composed
+of copper-coated and carboxylic acid functionalized SWCNT nanocomposites showed a
+lower response to X-rays than unfunctionalized SWCNT/PMMA ﬁlm.
+The ﬁndings in this study showed that functionalization is not as beneﬁcial for SWC-
+NTs as compared to MWCNTs, which is an important consideration in developing these
+nanocomposites for practical ionizing radiation sensors. Other practical aspects of using
+these thin ﬁlm nanocomposite devices to detect radiation were studied in th
+
+=== CHUNK 14 ===
+for practical ionizing radiation sensors. Other practical aspects of using
+these thin ﬁlm nanocomposite devices to detect radiation were studied in this work. The
+preliminary groundwork for producing a prototype instrument based on SWCNT/PMMA
+thin-ﬁlm nanocomposites and a common microcontroller was completed. The thin-ﬁlm
+device was interfaced with the Arduino Nano board with a supported microcontroller
+Nanomaterials 2023, 13, 2653 3 of 16
+to monitor the decrease in resistance of the thin ﬁlm during radiation exposure. In addi-
+tion, the thin-ﬁlm device was encapsulated to help isolate the device from the external
+ambient environment. The results showed that by encapsulating the device in a plastic
+container, the effect of humidity could be reduced and the device could still be used to
+det
+
+=== CHUNK 15 ===
+ults showed that by encapsulating the device in a plastic
+container, the effect of humidity could be reduced and the device could still be used to
+detect X-ray radiation.
+2. Materials and Methods
+2.1. Materials for the Fabrication of the Nanocomposite
+The commercial unfunctionalized SWCNT, carboxylic acid-functionalized SWCNT
+(D1.5L1-5-COOH), and copper-coated SWCNT (custom ordered) are produced by a thermal
+chemical vapor deposition method with greater than 95% purity, having a length of 1–5µm
+and a diameter of approximately 1.5 nm. These were purchased from NanoLab, Inc.,
+Waltham, MA, USA). Ferrocene, an organometallic compound, N, N-Dimethylformamide
+(DMF) (319937)), and PMMA (182230) were purchased from Sigma Aldrich. PMMA
+was chosen as the polymer for fabricating thin ﬁlms in this stu
+
+=== CHUNK 16 ===
+ylformamide
+(DMF) (319937)), and PMMA (182230) were purchased from Sigma Aldrich. PMMA
+was chosen as the polymer for fabricating thin ﬁlms in this study because of its good
+spinning qualities [30], solubility in DMF [29], its amorphous character (thereby avoiding
+crystallization during the cooling process) [31], high weatherability (durability) [32], and
+good chemical resistance [33]. While X-rays are known to damage PMMA [34] more than
+other polymers, PMMA was chosen for our work to facilitate device fabrication for the
+reasons given above. Future research may explore the utilization of other more radiation-
+tolerant polymers for the nanocomposite.
+The use of these particular modiﬁed SWCNTs was due to their ready availability
+as they were a subset of the MWCNTs used in ref. [27]. Interdig
+
+=== CHUNK 17 ===
+posite.
+The use of these particular modiﬁed SWCNTs was due to their ready availability
+as they were a subset of the MWCNTs used in ref. [27]. Interdigitated electrodes (IDEs),
+which were patterned on a silicon substrate, upon which the nanocomposite thin ﬁlms are
+cast and used to measure the ﬁlm resistance, were purchased from Case Western Reserve
+University. Silicon substrates with an IDE pattern are 8 mm × 8 mm, 0.3 mm thick, and
+have a 300 nm thick silicon dioxide layer on top. The electrodes (with a line size and spacing
+of 100 µm) and bonding pads (1.75 mm × 1.75 mm) patterned on top of the substrates
+are made of 200 nm-thick gold layers on top of a 10 nm-thick titanium adhesion layer,
+shown in Figure 1(Ai). Figure 1(Aii) shows a scanning electron microscope (SEM) image of
+a ferrocene
+
+=== CHUNK 18 ===
+ on top of a 10 nm-thick titanium adhesion layer,
+shown in Figure 1(Ai). Figure 1(Aii) shows a scanning electron microscope (SEM) image of
+a ferrocene-doped SWCNT/PMMA thin-ﬁlm nanocomposite deposited on an IDE.
+2.2. Fourier T ransform-Infrared (FTIR) Spectroscopy
+The FTIR spectroscopy analysis was carried out on the prepared samples with a
+Thermo Scientiﬁc Nicolet iS50 FTIR spectrometer to identify the functional groups present
+in the thin ﬁlm composites and their interaction mechanism with SWCNT and PMMA.
+PMMA, unfunctionalized SWCNT/PMMA, ferrocene-doped SWCNT/PMMA, copper-
+coated SWCNT/PMMA, carboxylic acid-functionalized SWCNT/PMMA thin ﬁlm com-
+posites and unfunctionalized SWCNT/PMMA composite were recorded in the wavelength
+region of 1800–600 cm−1 as shown in Figure 1B.
+PMMA powder 
+
+=== CHUNK 19 ===
+ﬁlm com-
+posites and unfunctionalized SWCNT/PMMA composite were recorded in the wavelength
+region of 1800–600 cm−1 as shown in Figure 1B.
+PMMA powder shows C–H stretching around 650–1000 cm−1, C–O stretching from 1060–
+1265 cm−1 which is in the range 1050–1260 cm−1 [35], and C=O stretching at 1715 cm−1 [35].
+Unfunctionalized SWCNT/PMMA, copper-coated, ferrocene-doped and carboxylic acid
+functionalized SWCNT/PMMA composite showed the presence of C–O and C=O stretch-
+ing due to PMMA as the concentration of PMMA was higher than functionalized SWCNT
+(SWCNT with functional groups/PMMA = 1:50 by weight). In the case of the ferrocene-doped
+SWCNT/PMMA composite, ferrocene was embedded into PMMA(ferrocene: PMMA = 1:100
+by weight) and the composite shows the presence of a weak band due to PMMA and t
+
+=== CHUNK 20 ===
+A composite, ferrocene was embedded into PMMA(ferrocene: PMMA = 1:100
+by weight) and the composite shows the presence of a weak band due to PMMA and the
+absence of C–C stretching (in-ring) from 1400–1500 cm−1 and 1585–1600 cm−1 due to the
+ferrocene [35]. There is a difference in IR spectra of unfunctionalized SWCNT/PMMA and
+copper-coated SWCNT/PMMA composites, which may be due to the presence of copper-
+coated SWCNT in the composite. The band around 1690–1760 cm −1 in carboxylic acid-
+functionalized SWCNT/PMMA composite corresponds to a carbonyl stretch C=O of car-
+boxylic acid [25,35].
+Nanomaterials 2023, 13, 2653 4 of 16
+Nanomaterials 2023, 13, x FOR PEER REVIEW 4 of 17 
+ 
+ 
+ 
+(i) (ii) 
+(A) 
+ 
+(B) 
+Figure 1. (A) SEM image of ( i) interdigitated electrode, and ( ii) ferrocene-doped SWCNT/
+
+=== CHUNK 21 ===
+ 13, x FOR PEER REVIEW 4 of 17 
+ 
+ 
+ 
+(i) (ii) 
+(A) 
+ 
+(B) 
+Figure 1. (A) SEM image of ( i) interdigitated electrode, and ( ii) ferrocene-doped SWCNT/PMMA 
+nanocomposite film. (B) FTIR spectrum of PMMA, unfunctionalized SWCNT/PMMA, ferrocene-
+doped SWCNT/PMMA, copper-coated SWCNT/PMMA, carboxylic acid-functionalized 
+SWCNT/PMMA thin film composites and unfunctionalized SWCNT/PMMA composite 
+2.2. Fourier Transform-Infrared (FTIR) Spectroscopy 
+The FTIR spectroscopy analysis was carried out on the prepared samples with a 
+Thermo Scientific Nicolet iS50 FTIR spectrometer to identify the functional groups present 
+in the thin film composites and their interaction mechanism with SWCNT and PMMA. 
+PMMA, unfunctionalized SWCNT/PMMA, ferrocene-doped SWCNT/PMMA, copper-
+coated SWCNT/PMMA, carboxylic
+
+=== CHUNK 22 ===
+their interaction mechanism with SWCNT and PMMA. 
+PMMA, unfunctionalized SWCNT/PMMA, ferrocene-doped SWCNT/PMMA, copper-
+coated SWCNT/PMMA, carboxylic acid-functionalized SWCNT/PMMA thin film compo-
+sites and unfunctionalized SWCNT/PMMA composite  were recorded in the wavelength 
+region of 1800–600 cm−1 as shown in Figure 1B.  
+Figure 1. (A) SEM image of (i) interdigitated electrode, and (ii) ferrocene-doped SWCNT/PMMA
+nanocomposite ﬁlm. ( B) FTIR spectrum of PMMA, unfunctionalized SWCNT/PMMA,
+ferrocene-doped SWCNT/PMMA, copper-coated SWCNT/PMMA, carboxylic acid-functionalized
+SWCNT/PMMA thin ﬁlm composites and unfunctionalized SWCNT/PMMA composite.
+2.3. Functionalized SWCNT/PMMA Nanocomposite Thin Film Preparation Method
+The functionalized SWCNT/PMMA nanocomposite thin ﬁlm (carboxylic aci
+
+=== CHUNK 23 ===
+posite.
+2.3. Functionalized SWCNT/PMMA Nanocomposite Thin Film Preparation Method
+The functionalized SWCNT/PMMA nanocomposite thin ﬁlm (carboxylic acid, copper-
+coated) was prepared in the same manner as the unfunctionalized SWCNT/PMMA ﬁlm [29]
+and the MWCNT nanocomposites were studied in ref. [27]. The PMMA dissolved in DMF
+with a concentration of 0.03 g/cm3 was tip-sonicated for 15 min at 20% amplitude using
+750 W, a 20 kHz probe sonicator at a pulse rate of 0.5. In this study, the loading of CNT was
+selected to ensure the consistent resistance of the thin-ﬁlm devices. The resistance range of
+Nanomaterials 2023, 13, 2653 5 of 16
+the devices was chosen for convenience of measurement; therefore, a maximum loading of
+CNT was not determined in our work.
+Functionalized copper-coated SWCNT in 
+
+=== CHUNK 24 ===
+ was chosen for convenience of measurement; therefore, a maximum loading of
+CNT was not determined in our work.
+Functionalized copper-coated SWCNT in DMF with a concentration of 2.29 mg/cm3
+was added to the above sonicated mixture of PMMA/DMF and was sonicated for 8 min.
+The sonicated mixture of copper-coated SWCNT/PMMA was deposited on IDEs using a
+spin coater at 1000 rpm at 100 rpm/s for 30 s to create a thin ﬁlm of nanocomposite with
+a network of nanotubes spanning the electrodes and bridging IDEs ﬁngers, Figure 1(Ai).
+After the thin ﬁlms were cast on IDEs, they were cured in a vacuum oven at 175 ◦C for
+1 hour. The resulting devices were taken out of the oven and left for cooling overnight
+to allow the excess solvent to evaporate from the nanocomposite thin ﬁlm. Carboxylic
+acid function
+
+=== CHUNK 25 ===
+aken out of the oven and left for cooling overnight
+to allow the excess solvent to evaporate from the nanocomposite thin ﬁlm. Carboxylic
+acid functionalized SWCNT/PMMA nanocomposite thin ﬁlm was prepared similarly with
+a variation in the concentration of carboxylic acid functionalized SWCNT and time for
+sonication. The variation in concentration was needed to ensure consistency of electrical
+resistance over all the devices. Carboxylic acid functionalized SWCNTs in DMF with a
+concentration of 6.03 mg/cm3 was added to the sonicated mixture of PMMA in DMF and
+sonicated again for 7 min.
+Ferrocene-doped SWCNT/PMMA nanocomposite thin ﬁlms were prepared by a
+similar method as the unfunctionalized SWCNT/PMMA thin ﬁlm [29], only with a slight
+variation in the process of sonication of PMMA in DMF. T
+
+=== CHUNK 26 ===
+ared by a
+similar method as the unfunctionalized SWCNT/PMMA thin ﬁlm [29], only with a slight
+variation in the process of sonication of PMMA in DMF. The ferrocene in the DMF with
+a concentration of 2.62 mg/cm 3 was added to a vial containing DMF and then PMMA
+was added to a vial containing ferrocene and DMF (concentration of PMMA in DMF was
+0.03 g/cm 3) and the mixture of ferrocene, PMMA, and DMF was tip-sonicated in the
+presence of ice for 15 min. Figure 1(Ai,Aii) shows an SEM image of IDE and ferrocene-
+doped SWCNT/PMMA nanocomposite thin ﬁlm deposited on the IDE pattern of the
+silicon substrate. Homogeneity and adequate dispersion of the nanocomposite samples
+were conﬁrmed by the SEM image of the ferrocene doped-SWCNT/PMMA, as shown in
+Figure 1A, and the EDS of the copper-coated nanotub
+
+=== CHUNK 27 ===
+anocomposite samples
+were conﬁrmed by the SEM image of the ferrocene doped-SWCNT/PMMA, as shown in
+Figure 1A, and the EDS of the copper-coated nanotubes are shown in the color mapping,
+which shows the distribution in Supplementary Figure S1 and of the ferrocene doped-
+SWCNT/PMMA in Supplementary Figure S2.
+3. Experimental Setup
+A 160 kV , 3000 W X-ray source (X-RAD iR-160) was used to irradiate the thin-ﬁlm
+nanocomposite devices with X-ray radiation. An X-ray tube in which an energetic electron
+beam impinges on a tungsten target produced an X-ray spectrum with sharply deﬁned
+peaks at 55.55 keV and 66.66 keV with a low-lying broad bremsstrahlung background. The
+resulting X-ray beam has a uniform circular cross-section that is about 15.24 cm in diameter
+at the surface of the tray in which th
+
+=== CHUNK 28 ===
+ng background. The
+resulting X-ray beam has a uniform circular cross-section that is about 15.24 cm in diameter
+at the surface of the tray in which the thin-ﬁlm device was positioned in the center of the
+tray. The dose rate effect on the resistance of these ﬁlm devices: the dose rate is deﬁned by
+changing the distance of the thin-ﬁlm device from the source of the X-rays. For example, a
+dose rate of 5.92 krad/min, 2.13 krad/min, and 1.08 krad/min is achieved by placing the
+thin-ﬁlm device at a distance of 30 cm, 50 cm, and 70 cm, respectively, from the center of
+the X-ray source. To perform the X-ray dose rate experiment, the nanocomposite thin-ﬁlm
+device was placed inside the X-ray chamber. The device was placed in the X-ray chamber
+to insure uniform irradiation at the prescribed dose rate
+
+=== CHUNK 29 ===
+n-ﬁlm
+device was placed inside the X-ray chamber. The device was placed in the X-ray chamber
+to insure uniform irradiation at the prescribed dose rate. The device was connected to
+source/measure units (SMUs) of a Keysight B1500A semiconductor device analyzer using
+a long, low noise cable. The control device was placed outside the X-ray machine and
+monitored concurrently with the irradiated device. The semiconductor device analyzer
+was programmed to apply a voltage and measure the current through the device every
+second. The data were collected simultaneously for pre-irradiation, during irradiation,
+and post-irradiation for the irradiated and control devices. The schematic diagram of the
+experiment is shown below in Figure 2A.
+Nanomaterials 2023, 13, 2653 6 of 16
+Nanomaterials 2023, 13, x F
+
+=== CHUNK 30 ===
+control devices. The schematic diagram of the
+experiment is shown below in Figure 2A.
+Nanomaterials 2023, 13, 2653 6 of 16
+Nanomaterials 2023, 13, x FOR PEER REVIEW  6  of  17 
+ 
+ 
+machine and monitored concurrently with the irradiated device. The semiconductor de‐
+vice analyzer was programmed to apply a voltage and measure the current through the 
+device every second. The data were collected simultaneously for pre‐irradiation, during 
+irradiation, and post‐irradiation for the irradiated and control devices. The schematic di‐
+agram of the experiment is shown below in Figure 2A. 
+Previously, a CNT‐based electrochemical biosensor and pressure sensor was studied 
+where  electrical  measurements  were  performed  using  an Arduino  [36,37].  While  most 
+data presented in this work were taken 
+
+=== CHUNK 31 ===
+ensor was studied 
+where  electrical  measurements  were  performed  using  an Arduino  [36,37].  While  most 
+data presented in this work were taken using a semiconductor parametric analyzer de‐
+scribed below, the thin‐ﬁlm devices were also interfaced with an Arduino Nano board. 
+The Arduino Nano board is a small, ﬂexible microcontroller board with microcontroller 
+ATmega328P developed by Arduino, as shown in Figure 2B. The microcontroller board 
+operates at 5 V and has 14 digital and 8 analog pins. These analog and digital pins can be 
+conﬁgured as input and output. Analog pins have a total resolution of 10 bits which meas‐
+ure the value from 0 to 5V. Arduino 1.8.19 software was installed on a laptop computer. 
+The source code to measure the change in resistance of the sample during radi
+
+=== CHUNK 32 ===
+om 0 to 5V. Arduino 1.8.19 software was installed on a laptop computer. 
+The source code to measure the change in resistance of the sample during radiation expo‐
+sure  was  written  on Arduino  software  downloaded  on  the  computer  and  the  software 
+communicated with the Arduino Nano board through a Mini‐B‐USB [38]. We repeated the 
+radiation experiment on a nanocomposite thin‐ﬁlm device using an Arduino Nano board, 
+described below. 
+(A)  (B) 
+Figure  2.  (A)  The  schematic  diagram  of  the  experiment.  (B)  (a)  Arduino  board  (picture  of  board 
+taken in experimental set up), (b) DHT11 Temperature & Humidity Sensor (picture of DHT11 taken 
+in experimental setup), (c) thin ﬁlm device, and (d) experimental setup using Arduino Nano board 
+and DHT11 connected to thin‐ﬁlm device. 
+
+
+=== CHUNK 33 ===
+T11 taken 
+in experimental setup), (c) thin ﬁlm device, and (d) experimental setup using Arduino Nano board 
+and DHT11 connected to thin‐ﬁlm device. 
+In this study, a thin‐ﬁlm nanocomposite device was interfaced with an Arduino Nano 
+microcontroller  board,  as  shown  in  Figure  2(Bd). An Arduino  Nano  platform  was  pro‐
+grammed to measure the resistance of the thin‐ﬁlm device. The circuit implemented to 
+measure the change in resistance was a simple voltage divider, where the nanocomposite 
+device was connected in series with a reference resistor, and the change in resistance of 
+the  nanocomposite  device  was  measured  during  irradiation  by  monitoring  the  voltage 
+across the reference resistor. 
+An Arduino microcontroller (Figure 2(Ba)) was wired with a DHT11 temperature/hu‐
+m
+
+=== CHUNK 34 ===
+tion  by  monitoring  the  voltage 
+across the reference resistor. 
+An Arduino microcontroller (Figure 2(Ba)) was wired with a DHT11 temperature/hu‐
+midity sensor (Figure 2(Bb)) to collect the temperature and humidity readings during the 
+experiment. DHT11 has a humidity sensing component that is a substrate that can hold 
+moisture  with  electrodes  connected  to  the  surface.  The  substrate  releases  ions  when  it 
+Figure 2. (A) The schematic diagram of the experiment. ( B) (a) Arduino board (picture of board
+taken in experimental set up), (b) DHT11 Temperature & Humidity Sensor (picture of DHT11 taken
+in experimental setup), (c) thin ﬁlm device, and (d) experimental setup using Arduino Nano board
+and DHT11 connected to thin-ﬁlm device.
+Previously, a CNT-based electrochemical biosens
+
+=== CHUNK 35 ===
+lm device, and (d) experimental setup using Arduino Nano board
+and DHT11 connected to thin-ﬁlm device.
+Previously, a CNT-based electrochemical biosensor and pressure sensor was studied
+where electrical measurements were performed using an Arduino [36,37]. While most data
+presented in this work were taken using a semiconductor parametric analyzer described
+below, the thin-ﬁlm devices were also interfaced with an Arduino Nano board. The Arduino
+Nano board is a small, ﬂexible microcontroller board with microcontroller ATmega328P
+developed by Arduino, as shown in Figure 2B. The microcontroller board operates at 5 V
+and has 14 digital and 8 analog pins. These analog and digital pins can be conﬁgured as
+input and output. Analog pins have a total resolution of 10 bits which measure the value
+from
+
+=== CHUNK 36 ===
+ pins. These analog and digital pins can be conﬁgured as
+input and output. Analog pins have a total resolution of 10 bits which measure the value
+from 0 to 5V . Arduino 1.8.19 software was installed on a laptop computer. The source code
+to measure the change in resistance of the sample during radiation exposure was written
+on Arduino software downloaded on the computer and the software communicated with
+the Arduino Nano board through a Mini-B-USB [38]. We repeated the radiation experiment
+on a nanocomposite thin-ﬁlm device using an Arduino Nano board, described below.
+In this study, a thin-ﬁlm nanocomposite device was interfaced with an Arduino
+Nano microcontroller board, as shown in Figure 2(Bd). An Arduino Nano platform was
+programmed to measure the resistance of the thin-ﬁlm device. The
+
+=== CHUNK 37 ===
+no
+Nano microcontroller board, as shown in Figure 2(Bd). An Arduino Nano platform was
+programmed to measure the resistance of the thin-ﬁlm device. The circuit implemented to
+measure the change in resistance was a simple voltage divider, where the nanocomposite
+device was connected in series with a reference resistor, and the change in resistance of the
+nanocomposite device was measured during irradiation by monitoring the voltage across
+the reference resistor.
+An Arduino microcontroller (Figure 2(Ba)) was wired with a DHT11 temperature/humidity
+sensor (Figure 2(Bb)) to collect the temperature and humidity readings during the experiment.
+DHT11 has a humidity sensing component that is a substrate that can hold moisture with
+electrodes connected to the surface. The substrate releases ions whe
+
+=== CHUNK 38 ===
+ has a humidity sensing component that is a substrate that can hold moisture with
+electrodes connected to the surface. The substrate releases ions when it absorbs water vapor
+resulting in an increase in conductivity between electrodes. It has an NTC temperature sensor
+(thermistor) to collect temperature data [39].
+4. Results
+The radiation effect on the SWCNT/PMMA thin ﬁlm due to X-ray radiation was
+studied through changes in the resistance of the thin ﬁlms such that the thin ﬁlm acts as
+Nanomaterials 2023, 13, 2653 7 of 16
+the sensing material. The following expression shows the change in resistance (S) of the
+SWCNT/PMMA thin ﬁlms due to radiation in this work:
+S =
+( Rf − Ri
+Ri
+)
+× 100%
+Rf indicates the ﬁnal resistance of the thin ﬁlm after radiation exposure at ﬁxed-dose
+and dose-rate con
+
+=== CHUNK 39 ===
+ation in this work:
+S =
+( Rf − Ri
+Ri
+)
+× 100%
+Rf indicates the ﬁnal resistance of the thin ﬁlm after radiation exposure at ﬁxed-dose
+and dose-rate conditions and R i is the initial resistance before radiation exposure. The
+resistance of the nanocomposite thin ﬁlms is measured by a semiconductor device analyzer
+(or the microcontroller) as a function of time at each second during a radiation experiment.
+4.1. Dose Rate Response
+The change in electrical resistance of a ferrocene-doped SWCNT/PMMA nanocom-
+posite thin-ﬁlm device, when irradiated to different X-ray dose rates 1.08 krad/min,
+2.13 krad/min, and 5.92 krad/min at a total dose of 100 krad, is shown in Figure 3. The
+results of this experiment show the continuous decrease in resistance of the device during
+the radiation exposure time an
+
+=== CHUNK 40 ===
+d, is shown in Figure 3. The
+results of this experiment show the continuous decrease in resistance of the device during
+the radiation exposure time and a prolonged decrease in resistance after radiation expo-
+sure. Because the polymer is an insulator, the electrons take some time to drain from the
+polymer, which is why the resistance continues to decrease after the irradiation stops. The
+magnitude of the decrease in resistance of the thin ﬁlm device was inversely proportional
+to the dose rates.
+Nanomaterials 2023, 13, x FOR PEER REVIEW 8 of 17 
+ 
+ 
+ 
+Figure 3. Ferrocene-doped SWCNT/PMMA nanocomposite irradiated to a total dose of 100 krad at 
+different dose rates. The color of the data points is coordinated with the dose rates and time se-
+quence of the exposures for clarity. 
+When these e
+
+=== CHUNK 41 ===
+
+different dose rates. The color of the data points is coordinated with the dose rates and time se-
+quence of the exposures for clarity. 
+When these experiments were repeated with copper-coated and functionalized car-
+boxylic acid SWCNT/PMMA nanocomposite thin-film devices as shown in Figures 4 and 
+5, similar responses were observed with significant differences in the magnitude of the 
+decrease in device resistance in comparison to ferrocene-doped SWCNT/PMMA at differ-
+ent dose rates. 
+ 
+Figure 3. Ferrocene-doped SWCNT/PMMA nanocomposite irradiated to a total dose of 100 krad at
+different dose rates. The color of the data points is coordinated with the dose rates and time sequence
+of the exposures for clarity.
+When these experiments were repeated with copper-coated and functionalized car-
+
+=== CHUNK 42 ===
+ed with the dose rates and time sequence
+of the exposures for clarity.
+When these experiments were repeated with copper-coated and functionalized car-
+boxylic acid SWCNT/PMMA nanocomposite thin-ﬁlm devices as shown in Figures 4 and 5,
+similar responses were observed with signiﬁcant differences in the magnitude of the de-
+crease in device resistance in comparison to ferrocene-doped SWCNT/PMMA at different
+dose rates.
+Nanomaterials 2023, 13, 2653 8 of 16
+Nanomaterials 2023, 13, x FOR PEER REVIEW 8 of 17 
+ 
+ 
+ 
+Figure 3. Ferrocene-doped SWCNT/PMMA nanocomposite irradiated to a total dose of 100 krad at 
+different dose rates. The color of the data points is coordinated with the dose rates and time se-
+quence of the exposures for clarity. 
+When these experiments were repeated with copper-coated
+
+=== CHUNK 43 ===
+a points is coordinated with the dose rates and time se-
+quence of the exposures for clarity. 
+When these experiments were repeated with copper-coated and functionalized car-
+boxylic acid SWCNT/PMMA nanocomposite thin-film devices as shown in Figures 4 and 
+5, similar responses were observed with significant differences in the magnitude of the 
+decrease in device resistance in comparison to ferrocene-doped SWCNT/PMMA at differ-
+ent dose rates. 
+ 
+Figure 4. Copper-coated SWCNT/PMMA nanocomposite irradiated to a total dose of 100 krad at
+different dose rates.
+Nanomaterials 2023, 13, x FOR PEER REVIEW 9 of 17 
+ 
+ 
+Figure 4. Copper-coated SWCNT/PMMA nanocomposite irradiated to a total dose of 100 krad at 
+different dose rates. 
+ 
+Figure 5. Carboxylic acid-functionalized SWCNT/PMMA nanocomposit
+
+=== CHUNK 44 ===
+MMA nanocomposite irradiated to a total dose of 100 krad at 
+different dose rates. 
+ 
+Figure 5. Carboxylic acid-functionalized SWCNT/PMMA nanocomposite irradiated to a total dose 
+of 100 krad X-rays at different dose rates. 
+Figure 6 shows the results of the dose rate experiment of functionalized and unfunc-
+tionalized SWCNT/PMMA thin-film devices at different dose rates to obtain a total dose 
+of 100 krad X-rays. Each device was irradiated to 100 krad at different dose rates of 5.92 
+krad/min, 2.13 krad/min, and 1.08 krad/min, respectively. The decrease in resistance of 
+the ferrocene-doped SWCNT/PMMA thin-film device was quite similar to unfunctional-
+ized (Un-func) at the highest dose rate of 5.92 krad/min as shown in Figure 6. 
+However, the magnitude of decrease in resistance of ferroc
+
+=== CHUNK 45 ===
+functional-
+ized (Un-func) at the highest dose rate of 5.92 krad/min as shown in Figure 6. 
+However, the magnitude of decrease in resistance of ferrocene -doped 
+SWCNT/PMMA was highest of all the other functionalized and unfunctionalized 
+SWCNT/PMMA thin-film devices at lower dose rates of 2.13 krad/min and 1.08 krad/min. 
+Figure 6 shows that the magnitude of decrease in the resistance of carboxylic acid -func-
+tionalized and copper -coated SWCNT/PMMA was significantly smaller than the ferro-
+cene-doped and unfunctionalized SWCNT/PMMA for all dose rate conditions, with al-
+most a factor of two. Six devices of each functionalization were subjected to radiation ex-
+posure, and similar results were observed for all devices. These experiments were  re-
+peated for all the dev ices, and the vert
+
+=== CHUNK 46 ===
+cted to radiation ex-
+posure, and similar results were observed for all devices. These experiments were  re-
+peated for all the dev ices, and the vertical bars show standard deviation. These results 
+show the reproducibility of the experimental results.  
+Figure 5. Carboxylic acid-functionalized SWCNT/PMMA nanocomposite irradiated to a total dose
+of 100 krad X-rays at different dose rates.
+Figure 6 shows the results of the dose rate experiment of functionalized and un-
+functionalized SWCNT/PMMA thin-ﬁlm devices at different dose rates to obtain a total
+dose of 100 krad X-rays. Each device was irradiated to 100 krad at different dose rates
+of 5.92 krad/min, 2.13 krad/min, and 1.08 krad/min, respectively. The decrease in re-
+sistance of the ferrocene-doped SWCNT/PMMA thin-ﬁlm device was quit
+
+=== CHUNK 47 ===
+5.92 krad/min, 2.13 krad/min, and 1.08 krad/min, respectively. The decrease in re-
+sistance of the ferrocene-doped SWCNT/PMMA thin-ﬁlm device was quite similar to
+unfunctionalized (Un-func) at the highest dose rate of 5.92 krad/min as shown in Figure 6.
+Nanomaterials 2023, 13, 2653 9 of 16
+Nanomaterials 2023, 13, x FOR PEER REVIEW 10 of 17 
+ 
+ 
+ 
+Figure 6. Responses of unfunctionalized [Un -func] and functionalized [Ferrocene, COOH, Cu] 
+SWCNT/PMMA at different dose rates to a total dose of 100 krad. 
+4.2. Thermal Treatment and Reset 
+When the thin film nanocomposite device was irradiated with X-rays, the thin film’s 
+resistance decreased, as shown in Figures 3–5. Unfunctionalized MWCNTs, and function-
+alized MWCNTs and unfunctionalized SWCNTs showed similar results [26,27,29] for the 
+dos
+
+=== CHUNK 48 ===
+ shown in Figures 3–5. Unfunctionalized MWCNTs, and function-
+alized MWCNTs and unfunctionalized SWCNTs showed similar results [26,27,29] for the 
+dose rate experiment. The nanocomposite device was reset by heat treatment at 175 °C in 
+24 min after X-ray exposure of a total dose of 100 krad at a dose rate of 1.08 krad/min. 
+Similar heat recovery responses of ferrocene -doped and copper -coated SWCNT/PMMA 
+were observed. Figure 7 shows the heat treatment data of the carboxylic acid functional-
+ized SWCNT/PMMA nanocomposite. 
+ 
+Figure 7. Heat reset cycle of carboxylic acid functionalized SWCNT/PMMA nanocomposite after 
+being irradiated to a total dose of 100 krad at a dose rate of 1.08 krad/min. 
+Figure 6. Responses of unfunctionalized [Un-func] and functionalized [Ferrocene, COOH, Cu]
+SWCNT
+
+=== CHUNK 49 ===
+al dose of 100 krad at a dose rate of 1.08 krad/min. 
+Figure 6. Responses of unfunctionalized [Un-func] and functionalized [Ferrocene, COOH, Cu]
+SWCNT/PMMA at different dose rates to a total dose of 100 krad.
+However, the magnitude of decrease in resistance of ferrocene-doped SWCNT/PMMA
+was highest of all the other functionalized and unfunctionalized SWCNT/PMMA thin-
+ﬁlm devices at lower dose rates of 2.13 krad/min and 1.08 krad/min. Figure 6 shows
+that the magnitude of decrease in the resistance of carboxylic acid-functionalized and
+copper-coated SWCNT/PMMA was signiﬁcantly smaller than the ferrocene-doped and
+unfunctionalized SWCNT/PMMA for all dose rate conditions, with almost a factor of two.
+Six devices of each functionalization were subjected to radiation exposure, and similar
+result
+
+=== CHUNK 50 ===
+ all dose rate conditions, with almost a factor of two.
+Six devices of each functionalization were subjected to radiation exposure, and similar
+results were observed for all devices. These experiments were repeated for all the devices,
+and the vertical bars show standard deviation. These results show the reproducibility of
+the experimental results.
+4.2. Thermal T reatment and Reset
+When the thin ﬁlm nanocomposite device was irradiated with X-rays, the thin ﬁlm’s
+resistance decreased, as shown in Figures 3–5. Unfunctionalized MWCNTs, and function-
+alized MWCNTs and unfunctionalized SWCNTs showed similar results [26,27,29] for the
+dose rate experiment. The nanocomposite device was reset by heat treatment at 175 ◦C
+in 24 min after X-ray exposure of a total dose of 100 krad at a dose rate of 1
+
+=== CHUNK 51 ===
+eriment. The nanocomposite device was reset by heat treatment at 175 ◦C
+in 24 min after X-ray exposure of a total dose of 100 krad at a dose rate of 1.08 krad/min.
+Similar heat recovery responses of ferrocene-doped and copper-coated SWCNT/PMMA
+were observed. Figure 7 shows the heat treatment data of the carboxylic acid functionalized
+SWCNT/PMMA nanocomposite.
+Initial average resistances and changes in resistance of fabricated devices due to total
+100 krad X-ray doses at dose rate of 5.92 krad/min are mentioned in Table 1.
+Table 1. Initial resistance and change in resistance of device due to X-ray radiation.
+Devices Initial Resistance (k Ω) Change in Resistance (%)
+Ferrocene-SWCNT/PMMA 3.316 ± 1.69 ( −)10 ± 3.32
+Copper-coated-SWCNT/PMMA 1.636 ± 1.30 ( −)4.7 ± 2.80
+COOH-SWCNT/PMMA 2.576 ± 1.
+
+=== CHUNK 52 ===
+ange in Resistance (%)
+Ferrocene-SWCNT/PMMA 3.316 ± 1.69 ( −)10 ± 3.32
+Copper-coated-SWCNT/PMMA 1.636 ± 1.30 ( −)4.7 ± 2.80
+COOH-SWCNT/PMMA 2.576 ± 1.25 ( −)4.5 ± 2.56
+Nanomaterials 2023, 13, 2653 10 of 16
+Nanomaterials 2023, 13, x FOR PEER REVIEW 10 of 17 
+ 
+ 
+ 
+Figure 6. Responses of unfunctionalized [Un -func] and functionalized [Ferrocene, COOH, Cu] 
+SWCNT/PMMA at different dose rates to a total dose of 100 krad. 
+4.2. Thermal Treatment and Reset 
+When the thin film nanocomposite device was irradiated with X-rays, the thin film’s 
+resistance decreased, as shown in Figures 3–5. Unfunctionalized MWCNTs, and function-
+alized MWCNTs and unfunctionalized SWCNTs showed similar results [26,27,29] for the 
+dose rate experiment. The nanocomposite device was reset by heat treatment at 175 °C in 
+
+=== CHUNK 53 ===
+ctionalized SWCNTs showed similar results [26,27,29] for the 
+dose rate experiment. The nanocomposite device was reset by heat treatment at 175 °C in 
+24 min after X-ray exposure of a total dose of 100 krad at a dose rate of 1.08 krad/min. 
+Similar heat recovery responses of ferrocene -doped and copper -coated SWCNT/PMMA 
+were observed. Figure 7 shows the heat treatment data of the carboxylic acid functional-
+ized SWCNT/PMMA nanocomposite. 
+ 
+Figure 7. Heat reset cycle of carboxylic acid functionalized SWCNT/PMMA nanocomposite after 
+being irradiated to a total dose of 100 krad at a dose rate of 1.08 krad/min. 
+Figure 7. Heat reset cycle of carboxylic acid functionalized SWCNT/PMMA nanocomposite after
+being irradiated to a total dose of 100 krad at a dose rate of 1.08 krad/min.
+4.3. Steps 
+
+=== CHUNK 54 ===
+arboxylic acid functionalized SWCNT/PMMA nanocomposite after
+being irradiated to a total dose of 100 krad at a dose rate of 1.08 krad/min.
+4.3. Steps towards a Practical Radiation Detection Instrument
+The dose-rate experiment was performed on the unfunctionalized SWCNT/PMMA
+device using a semiconductor device analyzer when the nanocomposite device was irra-
+diated to X-rays at a total dose of 100 krad at a dose rate of 5.92 krad/min. The same
+previously irradiated nanocomposite device, after a thermal reset, was connected to the
+Arduino Nano and irradiated to X-ray radiation at a total dose of 100 krad at the dose rate
+of 5.92 krad/min. The decrease in resistance during radiation exposure was recorded with
+the results shown in Figure 8. The reduction in resistance of the thin-ﬁlm nanocompo
+
+=== CHUNK 55 ===
+ecrease in resistance during radiation exposure was recorded with
+the results shown in Figure 8. The reduction in resistance of the thin-ﬁlm nanocomposite
+device in both cases was nearly the same during irradiation and varied somewhat (about
+1%) during post-irradiation measurements. These results indicate that the SWCNT/PMMA
+nanocomposite device interfaced with the Arduino Nano board, or a similar microcon-
+troller, may be used to build a lightweight radiation sensor instrument. This experiment
+was repeated for about ten devices and similar results were obtained.
+The response of the unfunctionalized SWCNT/PMMA thin-ﬁlm device to ambient
+humidity was studied. This study is essential for developing practical radiation detection
+instruments for terrestrial ﬁeld measurements. The data were col
+
+=== CHUNK 56 ===
+ity was studied. This study is essential for developing practical radiation detection
+instruments for terrestrial ﬁeld measurements. The data were collected using the Arduino
+Nano microcontroller to prototype a lightweight, prototype radiation sensing device. It
+is necessary to understand and mitigate the environmental humidity effect on the thin-
+ﬁlm device for radiation sensing application. The typical results when a ferrocene-doped
+SWCNT-PMMA thin-ﬁlm device under open and encapsulated (sealed) condition to the
+ambient environment is shown below in Figure 9. Together with changes in the device
+resistance, ambient temperature and humidity data are collected simultaneously. The
+change in resistance of the device under open condition without encapsulation was about
+−1% and with encapsulati
+
+=== CHUNK 57 ===
+ata are collected simultaneously. The
+change in resistance of the device under open condition without encapsulation was about
+−1% and with encapsulation was approximately less than −0.1%. The experiment was
+repeated with the unfunctionalized, copper-coated and carboxylic acid functionalized
+SWCNT/PMMA thin-ﬁlm device and similar results were observed.
+Nanomaterials 2023, 13, 2653 11 of 16
+Nanomaterials 2023, 13, x FOR PEER REVIEW 11 of 17 
+ 
+ 
+Initial average resistances and changes in resistance of fabricated devices due to total 
+100 krad X-ray doses at dose rate of 5.92 krad/min are mentioned in Table 1. 
+Table 1. Initial resistance and change in resistance of device due to X-ray radiation. 
+Devices Initial Resistance (kΩ) Change in Resistance (%) 
+Ferrocene-SWCNT/PMMA 3.316 ± 1.69 (−)1
+
+=== CHUNK 58 ===
+ange in resistance of device due to X-ray radiation. 
+Devices Initial Resistance (kΩ) Change in Resistance (%) 
+Ferrocene-SWCNT/PMMA 3.316 ± 1.69 (−)10 ± 3.32 
+Copper-coated-SWCNT/PMMA 1.636 ± 1.30 (−)4.7 ± 2.80 
+COOH-SWCNT/PMMA 2.576 ± 1.25 (−)4.5 ± 2.56 
+4.3. Steps towards a Practical Radiation Detection Instrument 
+The dose-rate experiment was performed on the unfunctionalized SWCNT/PMMA 
+device using a semiconductor device analyzer when the nanocomposite device was irra-
+diated to X-rays at a total dose of 100 krad at a dose rate of 5.92 krad/min. The same pre-
+viously irradiated nanocomposite device, after a thermal reset, was connected to the Ar-
+duino Nano and irradiated to X -ray radiation at a total dose of 100 krad at the dose rate 
+of 5.92 krad/min. The decrease in resistance du
+
+=== CHUNK 59 ===
+to the Ar-
+duino Nano and irradiated to X -ray radiation at a total dose of 100 krad at the dose rate 
+of 5.92 krad/min. The decrease in resistance during radiation exposure was recorded with 
+the results shown in Figure 8. The reduction in resistance of the thin-film nanocomposite 
+device in both cases was nearly the same during irradiation and varied somewhat (about 
+1%) during post -irradiation measurements. These results indicate that the 
+SWCNT/PMMA nanocomposite device interfaced with the Arduino Nano board, or a sim-
+ilar microcontroller, may be used to build a lightweight radiation sensor instrument. This 
+experiment was repeated for about ten devices and similar results were obtained. 
+ 
+Figure 8. SWCNT/PMMA device integrated with Arduino Nano microcontroller. 
+The response of the
+
+=== CHUNK 60 ===
+about ten devices and similar results were obtained. 
+ 
+Figure 8. SWCNT/PMMA device integrated with Arduino Nano microcontroller. 
+The response of the unfunctionalized SWCNT/PMMA thin -film device to ambient 
+humidity was studied. This study is essential for developing practical radiation detection 
+instruments for terrestrial field measurements. The data were collected using the Arduino 
+Nano microcontroller to prototype a lightweight, prototype radiation sensing device. It is 
+necessary to understand and mitigate the environmental humidity effect on the thin-film 
+device for radiation sensing application. The typical results when a ferrocene-doped 
+SWCNT-PMMA thin-film device under open and encapsulated (sealed) condition to  the 
+ambient environment is shown below in Figure 9. Together 
+
+=== CHUNK 61 ===
+e-doped 
+SWCNT-PMMA thin-film device under open and encapsulated (sealed) condition to  the 
+ambient environment is shown below in Figure 9. Together with changes in the device 
+Figure 8. SWCNT/PMMA device integrated with Arduino Nano microcontroller.
+Nanomaterials 2023, 13, x FOR PEER REVIEW 12 of 17 
+ 
+ 
+resistance, ambient temperature and humidity data are collected simultaneously. The 
+change in resistance of the device under open condition without encapsulation was about 
+−1% and with encapsulation was approximately less than −0.1%. The experiment was re-
+peated with the unfunctionalized, copper -coated and carboxylic acid functionalized 
+SWCNT/PMMA thin-film device and similar results were observed.  
+ 
+Figure 9. Ferrocene-doped SWCNT/PMMA thin -film device response to humidity in op
+
+=== CHUNK 62 ===
+ 
+SWCNT/PMMA thin-film device and similar results were observed.  
+ 
+Figure 9. Ferrocene-doped SWCNT/PMMA thin -film device response to humidity in open and 
+sealed devices. All data were recorded using an Arduino Nano microcontroller. 
+To further study the effects of encapsulation, unfunctionalized SWCNT/PMMA, fer-
+rocene-doped SWCNT/PMMA, copper-coated SWCNT/PMMA, and carboxylic acid 
+(COOH) functionalized SWCNT/PMMA thin -film devices under open condition s were 
+exposed to 100 krad X-rays at 5.92 krad/min and the decrease in resistance of the devices 
+due to X-ray radiation was monitored. All the devices were reset, encapsulated, and again 
+irradiated with 100 krad X-rays at 5.92 krad/min and the decrease in resistance of the de-
+vices due to X-rays was monitored; the result is shown i
+
+=== CHUNK 63 ===
+n 
+irradiated with 100 krad X-rays at 5.92 krad/min and the decrease in resistance of the de-
+vices due to X-rays was monitored; the result is shown in Figure 10. Figure 10 shows that 
+the encapsulation of the device reduces the amount of decrease in resistance of the device 
+due to X-rays at a maximum of 4%. The result showed that even encapsulated thin -film 
+devices could be used to detect X-rays radiation with energies produced by the source. It 
+can be observed that the highest decrease in resistance during X-ray exposure for the en-
+capsulated device was about 18%. However, it should be noted that similar experiments 
+that resulted in the data of Figures 9 and 10 were also repeated for functionalized 
+SWCNT/PMMA devices with similar results. 
+Figure 9. Ferrocene-doped SWCNT/PMMA thin
+
+=== CHUNK 64 ===
+he data of Figures 9 and 10 were also repeated for functionalized 
+SWCNT/PMMA devices with similar results. 
+Figure 9. Ferrocene-doped SWCNT/PMMA thin-ﬁlm device response to humidity in open and
+sealed devices. All data were recorded using an Arduino Nano microcontroller.
+To further study the effects of encapsulation, unfunctionalized SWCNT/PMMA,
+ferrocene-doped SWCNT/PMMA, copper-coated SWCNT/PMMA, and carboxylic acid
+(COOH) functionalized SWCNT/PMMA thin-ﬁlm devices under open conditions were
+exposed to 100 krad X-rays at 5.92 krad/min and the decrease in resistance of the devices
+due to X-ray radiation was monitored. All the devices were reset, encapsulated, and again
+irradiated with 100 krad X-rays at 5.92 krad/min and the decrease in resistance of the
+Nanomaterials 2023, 13, 2653 12 o
+
+=== CHUNK 65 ===
+eset, encapsulated, and again
+irradiated with 100 krad X-rays at 5.92 krad/min and the decrease in resistance of the
+Nanomaterials 2023, 13, 2653 12 of 16
+devices due to X-rays was monitored; the result is shown in Figure 10. Figure 10 shows
+that the encapsulation of the device reduces the amount of decrease in resistance of the
+device due to X-rays at a maximum of 4%. The result showed that even encapsulated
+thin-ﬁlm devices could be used to detect X-rays radiation with energies produced by the
+source. It can be observed that the highest decrease in resistance during X-ray exposure for
+the encapsulated device was about 18%. However, it should be noted that similar experi-
+ments that resulted in the data of Figures 9 and 10 were also repeated for functionalized
+SWCNT/PMMA devices with simi
+
+=== CHUNK 66 ===
+d be noted that similar experi-
+ments that resulted in the data of Figures 9 and 10 were also repeated for functionalized
+SWCNT/PMMA devices with similar results.
+Nanomaterials 2023, 13, x FOR PEER REVIEW 13 of 17 
+ 
+ 
+ 
+Figure 10. Unfunctionalized SWCNT/PMMA, ferrocene-doped SWCNT/PMMA, copper-coated 
+SWCNT/PMMA, and carboxylic acid (COOH) functionalized SWCNT/PMMA thin -film device re-
+sponses under open and encapsulated conditions to X-rays. 
+The experiments reported here have not focused on the aging effects on the devices. 
+However, we used devices over a period of at least 1.5 years without substantial loss of 
+sensitivity to X-rays. In the low-dose-rate environments that exist in space and some other 
+terrestrial environments, the nanocomposite devices may be suitable for long-term 
+
+=== CHUNK 67 ===
+ the low-dose-rate environments that exist in space and some other 
+terrestrial environments, the nanocomposite devices may be suitable for long-term sensor 
+applications. 
+5. Discussion 
+The decrease in thin film resistance was inversely proportional to the applied X-ray 
+dose rates, as shown in Figures 3 –5. X-rays caused an ionization effect both in SWCNT 
+and PMMA, which generated radiation-induced excess charge carriers, an increase in the 
+conductivity and decrease in the resistance of the nanocomposite film [26,27,32,33] with 
+the slow release of charges in the insulating polymer near the CNT-polymer interface. The 
+radiation-induced charged carriers are transported to electrodes of the IDEs through the 
+networking of nanotubes between the electrodes. Electrons transport contributes
+
+=== CHUNK 68 ===
+harged carriers are transported to electrodes of the IDEs through the 
+networking of nanotubes between the electrodes. Electrons transport contributes to con-
+ductivity, and holes are more likely to become trapped in the polymer matrix and the 
+oxide layer of the IDE. This could explain the decrease in the resistance of the nanocom-
+posite thin-film device during X-ray exposure and the slow recovery of the nanocomposite 
+after the X-rays have been turned off [27,29]. It should be noted that devices made f rom 
+carbon black with similar initial device resistance showed no significant response to the 
+same X-ray environment indicating the importance of the nanotube network within the 
+thin films [26]. It is noted in the data that there are instances where the resistance of the 
+samples conti
+
+=== CHUNK 69 ===
+tance of the nanotube network within the 
+thin films [26]. It is noted in the data that there are instances where the resistance of the 
+samples continues to decrease even after the X-rays were turned off (for example, the data 
+in Figure 3 for each dose rate). This is likely due to the relatively slow drift conduction to 
+the CNT network of charge carriers generated in the po lymer matrix (a poor conductor) 
+during irradiation. Some charges likely become trapped and the thermal treatment dis-
+cussed in Section 4.2 provides sufficient thermal energy to these trapped charges in the 
+Figure 10. Unfunctionalized SWCNT/PMMA, ferrocene-doped SWCNT/PMMA, copper-coated
+SWCNT/PMMA, and carboxylic acid (COOH) functionalized SWCNT/PMMA thin-ﬁlm device
+responses under open and encapsulated conditions
+
+=== CHUNK 70 ===
+/PMMA, copper-coated
+SWCNT/PMMA, and carboxylic acid (COOH) functionalized SWCNT/PMMA thin-ﬁlm device
+responses under open and encapsulated conditions to X-rays.
+The experiments reported here have not focused on the aging effects on the devices.
+However, we used devices over a period of at least 1.5 years without substantial loss
+of sensitivity to X-rays. In the low-dose-rate environments that exist in space and some
+other terrestrial environments, the nanocomposite devices may be suitable for long-term
+sensor applications.
+5. Discussion
+The decrease in thin ﬁlm resistance was inversely proportional to the applied X-ray
+dose rates, as shown in Figures 3–5. X-rays caused an ionization effect both in SWCNT
+and PMMA, which generated radiation-induced excess charge carriers, an increase in the
+
+=== CHUNK 71 ===
+n Figures 3–5. X-rays caused an ionization effect both in SWCNT
+and PMMA, which generated radiation-induced excess charge carriers, an increase in the
+conductivity and decrease in the resistance of the nanocomposite ﬁlm [ 26,27,32,33] with
+the slow release of charges in the insulating polymer near the CNT-polymer interface. The
+radiation-induced charged carriers are transported to electrodes of the IDEs through the
+networking of nanotubes between the electrodes. Electrons transport contributes to con-
+ductivity, and holes are more likely to become trapped in the polymer matrix and the oxide
+layer of the IDE. This could explain the decrease in the resistance of the nanocomposite
+thin-ﬁlm device during X-ray exposure and the slow recovery of the nanocomposite after
+the X-rays have been turne
+
+=== CHUNK 72 ===
+ the resistance of the nanocomposite
+thin-ﬁlm device during X-ray exposure and the slow recovery of the nanocomposite after
+the X-rays have been turned off [27,29]. It should be noted that devices made from carbon
+black with similar initial device resistance showed no signiﬁcant response to the same X-ray
+Nanomaterials 2023, 13, 2653 13 of 16
+environment indicating the importance of the nanotube network within the thin ﬁlms [26].
+It is noted in the data that there are instances where the resistance of the samples continues
+to decrease even after the X-rays were turned off (for example, the data in Figure 3 for each
+dose rate). This is likely due to the relatively slow drift conduction to the CNT network
+of charge carriers generated in the polymer matrix (a poor conductor) during irradiatio
+
+=== CHUNK 73 ===
+due to the relatively slow drift conduction to the CNT network
+of charge carriers generated in the polymer matrix (a poor conductor) during irradiation.
+Some charges likely become trapped and the thermal treatment discussed in Section 4.2
+provides sufﬁcient thermal energy to these trapped charges in the IDE oxide and polymer
+matrix so that the sample resistance relaxes to a pre-irradiation condition in a relatively
+short time [27].
+The increased rate in the change of resistance of the thin ﬁlm at higher dose rates,
+as shown in Figures 3 and 5, is caused by the larger electron and hole pair production.
+The large electron-hole pair production in the thin ﬁlm during X-ray exposure also results
+in the formation of defect sites [ 40,41] along the sidewalls of the nanotubes. However,
+Figure 4, f
+
+=== CHUNK 74 ===
+n the thin ﬁlm during X-ray exposure also results
+in the formation of defect sites [ 40,41] along the sidewalls of the nanotubes. However,
+Figure 4, for the nanocomposite with copper-coated nanotubes, shows that the higher dose
+rate caused a change in resistance slower compared to the other two dose rates. There
+may be other inﬂuences due to the presence of copper-coating on SWCNTs. A previous
+study mentioned that SWCNTs cause a reduction in oxidation of the copper affecting the
+electrical conductivity of the copper-coated SWCNT/PMMA nanocomposite [42] and this
+may indicate the possibility of a slower rate of change in the resistance of copper-coated
+SWCNT/PMMA at higher dose rates of X-ray exposure. Another study mentioned the
+X-ray photoelectron spectroscopy (XPS) for elemental analysis 
+
+=== CHUNK 75 ===
+r-coated
+SWCNT/PMMA at higher dose rates of X-ray exposure. Another study mentioned the
+X-ray photoelectron spectroscopy (XPS) for elemental analysis of Cu-SWCNT compos-
+ites produced by electroless plating. XPS detects the presence of copper (II) hydroxide
+and cuprous oxide. The reaction of copper oxide and atmospheric moisture may have
+caused the presence of Cu (OH) 2 [42]. The complex transition metal compounds easily
+cause the oxygen excess and/or deﬁcit [ 20,43]. In addition, the PMMA matrix itself has
+a stoichiometric formula (C5O2H8)n, and it breaks down to monomers at 1650C causing
+oxygen diffusion [44,45]. The decrease in resistance of the ferrocene-doped SWCNT was
+signiﬁcantly greater than all other types of SWCNT studied at the lowest dose rate, as
+shown in Figure 6. The presenc
+
+=== CHUNK 76 ===
+of the ferrocene-doped SWCNT was
+signiﬁcantly greater than all other types of SWCNT studied at the lowest dose rate, as
+shown in Figure 6. The presence of ferrocene groups with SWCNT/PMMA increased
+the sensitivity to X-rays at lower dose rates, even in comparison with unfunctionalized,
+COOH functionalized and copper-coated SWCNT/PMMA devices. The bonds connecting
+ferrocene and CNT are broken during the X-ray exposure, which generated additional
+charge carriers for conduction [ 26,46]. The change in resistance of copper-coated and
+carboxylic acid functionalized SWCNT/PMMA is signiﬁcantly less than the unfunction-
+alized SWCNT/PMMA and ferrocene-doped SWCNT/PMMA thin-ﬁlm devices. Thus,
+the pristine nature of the unfunctionalized SWCNT outweighs any beneﬁt of additional
+charge carriers for th
+
+=== CHUNK 77 ===
+e-doped SWCNT/PMMA thin-ﬁlm devices. Thus,
+the pristine nature of the unfunctionalized SWCNT outweighs any beneﬁt of additional
+charge carriers for the COOH and copper-coated SWNT nanocomposite sites. For higher
+dose rates, the ferrocene-doped and unfunctionalized devices were the most sensitive,
+and for lower dose rates, the ferrocene-doped devices were the most sensitive. This ob-
+servation would be critical in optimizing radiation sensors based on these CNT/PMMA
+nanocomposite thin ﬁlms for any radiation detection instrument.
+The functional group attached to CNTs causes modiﬁcation on the electronic properties
+of nanotubes which is independent of the type of functional groups and the variation in
+the C–C bonding structure from the sp2 bonding conﬁguration. However, the thin-ﬁlm
+devices c
+
+=== CHUNK 78 ===
+ent of the type of functional groups and the variation in
+the C–C bonding structure from the sp2 bonding conﬁguration. However, the thin-ﬁlm
+devices consisting of functionalized MWCNTs showed greater sensitivity to X-rays than
+devices consisting of unfunctionalized MWCNTs [25]. The functional group attached to
+CNTs also results in the generation of an impurity state in the gap region. The impurity
+state acts as a scattering center for the conduction carriers around the Fermi level, and
+thus changes the ballistic transport of metallic nanotubes, electronic states, and conducting
+properties of CNTs [ 7]. The effect of the reduction in conductivity in SWCNT due to
+functionalization may be more in SWCNT/PMMA nanocomposites than MWCNT/PMMA
+due to differences in their morphological structures. F
+
+=== CHUNK 79 ===
+ity in SWCNT due to
+functionalization may be more in SWCNT/PMMA nanocomposites than MWCNT/PMMA
+due to differences in their morphological structures. For the low-dose radiation detection
+application, the SWCNT/PMMA thin-ﬁlm device showed a stepwise electrical resistance
+due to ambient humidity and temperature. However, when the device was encapsulated
+Nanomaterials 2023, 13, 2653 14 of 16
+within an airtight plastic container, the effect of ambient conditions was mitigated, resulting
+in the stable electrical resistance of the device, as shown in Figure 9. The airtight plastic
+container not only controlled the environmental humidity but also allowed the device to
+detect X-ray radiation, as shown in Figure 10. Further experiments with a larger airtight
+plastic container that could hold a DHT11
+
+=== CHUNK 80 ===
+owed the device to
+detect X-ray radiation, as shown in Figure 10. Further experiments with a larger airtight
+plastic container that could hold a DHT11 temperature and humidity sensor would show
+the stable conditions within the container.
+6. Conclusions
+This study performed dose-rate experiments on functionalized SWCNT/PMMA thin-
+ﬁlm devices that were performed by irradiating the thin-ﬁlm devices with X-ray radiation at
+different dose rates of 5.92 krad/min, 2.13 krad/min, and 1.08 krad/min to the total dose of
+100 krad. The results showed that ferrocene-doped and unfunctionalized SWCNT/PMMA
+devices were more sensitive to X-rays compared with the devices containing copper-coated
+or COOH functional groups. The addition of ferrocene groups increased the sensitivity of
+the SWCNT/PMMA nanocompo
+
+=== CHUNK 81 ===
+the devices containing copper-coated
+or COOH functional groups. The addition of ferrocene groups increased the sensitivity of
+the SWCNT/PMMA nanocomposite at lower X-ray dose rates. From an engineering point
+of view, the ferrocene-doped SWCNT/PMMA thin-ﬁlm device may be best for the actual
+detector system, at least for lower dose rate applications such as the aerospace environment.
+The thin-ﬁlm nanocomposite device can be heat-treated to recover the initial resistance.
+The ﬁndings in this study also showed that the environmental humidity effect on thin-ﬁlm
+devices could be reduced by encapsulating the device and the device can still be used to
+detect radiation. The response of thin-ﬁlm SWCNT/PMMA nanocomposites monitored
+by a semiconductor device analyzer and Arduino Nano produced similar 
+
+=== CHUNK 82 ===
+o
+detect radiation. The response of thin-ﬁlm SWCNT/PMMA nanocomposites monitored
+by a semiconductor device analyzer and Arduino Nano produced similar results during
+irradiation. While device aging was not explicitly studied here, our experiments showed
+that the nanocomposite devices remained tolerant to X-ray exposures up to 1000 krad
+and that the devices remained functional for at least 1.5 years. Future work may include
+exploring other functionalized SWCNT and other nano-scale materials such as graphene
+together with more radiation-tolerant polymers to produce a lightweight, portable sensor
+device with high sensitivity for X-ray studies for space and terrestrial applications.
+Supplementary Materials: The following supporting information can be downloaded at: https://
+www.mdpi.com/article
+
+=== CHUNK 83 ===
+ space and terrestrial applications.
+Supplementary Materials: The following supporting information can be downloaded at: https://
+www.mdpi.com/article/10.3390/nano13192653/s1, EDS characterization was performed to provide
+evidence on materials surface characterization of the thin-ﬁlm composites.
+Author Contributions: G.S. designed the experiments, performed the data analysis and interpreta-
+tions, performed the SEM analysis, and wrote the manuscript. R.W. contributed to the experiment
+design, planning, discussion, and interpretation and revised the manuscript. M.P . contributed to
+the paper discussion and provided revision of the manuscript. L.J.T. contributed to the planning,
+paper discussion and provided revision of the manuscript. All authors have read and agreed to the
+published versio
+
+=== CHUNK 84 ===
+L.J.T. contributed to the planning,
+paper discussion and provided revision of the manuscript. All authors have read and agreed to the
+published version of the manuscript.
+Funding: This research was supported in part by the US Department of Education through the
+Minority Science Improvement Program award and the Historically Black Graduate Institutions
+Program.
+Data Availability Statement: The data presented in this study are available on request from the
+corresponding author.
+Acknowledgments: The authors would like to thank Shuza Binzaid for useful discussions, technical
+assistance on interfacing thin-ﬁlm devices with an Arduino Nano microcontroller. Binzaid is with
+the Electrical and Computer Engineering Department, PVAMU. This work was also supported
+by Sandia National Laboratories, a mu
+
+=== CHUNK 85 ===
+troller. Binzaid is with
+the Electrical and Computer Engineering Department, PVAMU. This work was also supported
+by Sandia National Laboratories, a multimission laboratory managed and operated by National
+Technology & Engineering Solutions of Sandia, LLC, a wholly owned subsidiary of Honeywell
+International Inc., for the U.S. Department of Energy’s National Nuclear Security Administration
+under contract DE-NA0003525.
+Conﬂicts of Interest: The authors declare no conﬂict of interest.
+Nanomaterials 2023, 13, 2653 15 of 16
+References
+1. Avouris, P .; Appenzeller, J.; Martel, R.; Wind, S.J. Carbon Nanotube Electronics. Proc. IEEE 2003, 91, 1772–1784. [CrossRef]
+2. Anantram, M.P .; L éonard, F. Physics of carbon nanotube electronic devices. Rep. Prog. Phys. 2006, 69, 3507–3561. [CrossRef]
+3. Li,
+
+=== CHUNK 86 ===
+84. [CrossRef]
+2. Anantram, M.P .; L éonard, F. Physics of carbon nanotube electronic devices. Rep. Prog. Phys. 2006, 69, 3507–3561. [CrossRef]
+3. Li, C.; Thostenson, E.; Chou, T.-W. Sensors and actuators based on carbon nanotubes and their composites: A review. Compos. Sci.
+T echnol.2008, 68, 1227–1249. [CrossRef]
+4. Sinha, N.; Ma, J.; Yeow, J.T.W. Carbon nanotube-based sensors. J. Nanosci. T echnol. 2006, 6, 573–590. [CrossRef]
+5. Zhou, Y.; Jiang, Y.; Xie, G.; Du, X.; Tai, H. Gas sensors based on multiple-walled carbon nanotubes-polyethylene oxide ﬁlms for
+toluene vapor detection. Sens. Actuators B Chem. 2014, 191, 24–30. [CrossRef]
+6. Krasheninnikov, A.V .; Nordlund, K.; Sirviö, M.; Salonen, E.; Keinonen, J. Formation of ion-irradiation-induced atomic-scale
+defects on walls of carbon na
+
+=== CHUNK 87 ===
+heninnikov, A.V .; Nordlund, K.; Sirviö, M.; Salonen, E.; Keinonen, J. Formation of ion-irradiation-induced atomic-scale
+defects on walls of carbon nanotubes. Phys. Rev. B 2001, 63, 245405. [CrossRef]
+7. Zhao, J.; Park, H.; Han, J.; Lu, J.P . Electronic Properties of Carbon Nanotubes with Covalent Sidewall Functionalization.J. Phys.
+Chem. B 2004, 108, 4227–4230. [CrossRef]
+8. Malekie, S.; Ziaie, F.; Esmaeli, A. Study on dosimetry characteristics of polymer-CNT nanocomposite: Effect of polymer matrix.
+Nucl. Instrum. Methods Phys. Res. A Accel. Spectrometers Detect. Assoc. Equip. 2016, 816, 101–105. [CrossRef]
+9. Nie, Q.; Zhang, W.; Wang, L.; Guo, Z.; Li, C.; Yao, J.; Li, M.; Wu, D.; Zhou, L. Sensitivity enhanced, stability improved ethanol gas
+sensor based on multi-wall carbon nanotubes fun
+
+=== CHUNK 88 ===
+uo, Z.; Li, C.; Yao, J.; Li, M.; Wu, D.; Zhou, L. Sensitivity enhanced, stability improved ethanol gas
+sensor based on multi-wall carbon nanotubes functionalized with Pt-Pd nanoparticles. Sens. Actuators B Chem. 2018, 270, 140–148.
+[CrossRef]
+10. Camilli, L.; Passacantando, M. Advances on Sensors Based on Carbon Nanotubes. Chemosensors 2018, 6, 62. [CrossRef]
+11. Han, T.; Nag, A.; Mukhopadhyay, S.C.; Xu, Y. Carbon nanotubes and its gas-sensing applications: A review.Sens. Actuators A
+Phys. 2019, 291, 107–143. [CrossRef]
+12. Malekie, S.; Ziaie, F.; Feizi, S.; Esmaeli, A. Dosimetry characteristics of HDPE-SWCNT nanocomposite for real-time application.
+Nucl. Instrum. Methods Phys. Res. A Accel. Spectrometers Detect. Assoc. Equip. 2016, 833, 127–133. [CrossRef]
+13. Zhang, W.D.; Zhang, W.-H. Ca
+
+=== CHUNK 89 ===
+cation.
+Nucl. Instrum. Methods Phys. Res. A Accel. Spectrometers Detect. Assoc. Equip. 2016, 833, 127–133. [CrossRef]
+13. Zhang, W.D.; Zhang, W.-H. Carbon nanotubes as active components for gas sensors. J. Sens. Apr. 2009, 2009, 160698. [CrossRef]
+14. Mosayebi, A.; Malekie, S.; Rahimi, A.; Ziaie, F. Experimental study on polystyrene-MWCNT nanocomposite as a radiation
+Dosimeter. Radiat. Phys. Chem. 2019, 164, 108362. [CrossRef]
+15. Ribeiro, M.S.; Pascoini, A.L.; Knupp, W.G.; Camps, I. Effects of surface functionalization on the electronic and structural properties
+of carbon nanotubes: A computational approach. Appl. Surf. Sci. 2017, 426, 781–787. [CrossRef]
+16. Ziegler, D.; Bekyarova, E.; Marchisio, A.; Tulliani, J.M.; Naishadham, K. Highly selective ozone sensors based on functionalized
+ca
+
+=== CHUNK 90 ===
+87. [CrossRef]
+16. Ziegler, D.; Bekyarova, E.; Marchisio, A.; Tulliani, J.M.; Naishadham, K. Highly selective ozone sensors based on functionalized
+carbon nanotubes. In Proceedings of the 2018 IEEE SENSORS, New Delhi, India, 28–31 October 2018; pp. 1–4.
+17. Kozlovskiy, A.L.; Zdorovets, M.V . Synthesis, structural, strength and corrosion properties of thin ﬁlms of the type CuX (X = Bi,
+Mg, Ni). J. Mater. Sci. Mater. Electron. 2019, 30, 11819–11832. [CrossRef]
+18. Kotelnikova, A.; Zubar, T.; Vershinina, T.; Panasyuk, M.; Kanafyev, O.; Fedkin, V .; Kubasov, I.; Trukhanov, A.; Trukhanov, S.;
+Tishkevich, D.; et al. The inﬂuence of saccharin adsorption on NiFe alloy ﬁlm growth mechanisms during electrodeposition. RSC
+Adv. 2022, 12, 35722–35729. [CrossRef]
+19. Trukhanov, A.V .; Panina, L.V .; Tru
+
+=== CHUNK 91 ===
+tion on NiFe alloy ﬁlm growth mechanisms during electrodeposition. RSC
+Adv. 2022, 12, 35722–35729. [CrossRef]
+19. Trukhanov, A.V .; Panina, L.V .; Trukhanov, S.V .; Kostishyn, V .G.; Turchenko, V .A.; Vinnik, D.A.; Trukhanova, E.L. Critical inﬂuence
+of different diamagnetic ions on electromagnetic properties of BaFe12O19. Ceram. Int. 2018, 44, 13520–13529. [CrossRef]
+20. Kozlovskiy, A.; Egizbek, K.; Zdorovets, M.V .; Ibragimova, M.; Shumskaya, A.; Rogachev, A.A.; Ignatovich, V .Z.; Kadyrzhanov, K.
+Evaluation of the efﬁciency of detection and capture of manganese in aqueous solutions of FeCeOx nanocomposites doped with
+Nb2O5. Sensors 2020, 20, 4851. [CrossRef]
+21. Medvedev, N.; Chalupsk ý, J.; Juha, L. Microscopic Kinetics in Poly(Methyl Methacrylate) Exposed to a Single Ultra-Short
+XUV/X-r
+
+=== CHUNK 92 ===
+ 4851. [CrossRef]
+21. Medvedev, N.; Chalupsk ý, J.; Juha, L. Microscopic Kinetics in Poly(Methyl Methacrylate) Exposed to a Single Ultra-Short
+XUV/X-ray Laser Pulse. Molecules 2021, 26, 6701. [CrossRef]
+22. Zhao, J.; Song, M. A computer simulation of stress transfer in carbon nanotube/polymer nanocomposites. Compos. Part B Eng.
+2019, 163, 236–242. [CrossRef]
+23. Shlimas, D.I.; Kozlovskiy, A.L.; Zdorovets, M.V . Study of the formation effect of the cubic phase of LiTiO2 on the structural,
+optical, and mechanical properties of Li2±x Ti1±xO3 ceramics with different contents of the X component. J. Mater. Sci. Mater.
+Electron. 2021, 32, 7410–7422. [CrossRef]
+24. Harmon, J.P .; Muisener, P .A.O.; Clayton, L.; D’Angelo, J.; Sikder, A.K.; Kumar, A.; Meyyappan, M.; Cassell, A.M. Ionizing
+radiation 
+
+=== CHUNK 93 ===
+ [CrossRef]
+24. Harmon, J.P .; Muisener, P .A.O.; Clayton, L.; D’Angelo, J.; Sikder, A.K.; Kumar, A.; Meyyappan, M.; Cassell, A.M. Ionizing
+radiation effects on interfaces in carbon nanotube-polymer composites. MRS Online Proc. Library (OPL) 2001, 697, 97. [CrossRef]
+25. Kalakonda, P .; Banne, S. Thermomechanical properties of PMMA and modiﬁed SWCNT composites. Nanotechnol. Sci. Appl.
+2017, 10, 45–52. [CrossRef] [PubMed]
+26. Kyatsandra, S.; Wilkins, R. Total Ionizing Dose X-ray Radiation Effects on MWCNT/PMMA thin ﬁlm Composites. IEEE T rans.
+Nanotechnol. 2015, 14, 152–158. [CrossRef]
+27. Kyatsandra, S.; Pulikkathara, M.; Wilkins, R. X-ray radiation effects on thin ﬁlm nanocomposites of functionalized and copper-
+coated multi-walled carbon nanotube and poly(methyl methacrylate). Surf. Inte
+
+=== CHUNK 94 ===
+diation effects on thin ﬁlm nanocomposites of functionalized and copper-
+coated multi-walled carbon nanotube and poly(methyl methacrylate). Surf. Interfaces 2019, 17, 100362. [CrossRef]
+28. Boul, P .J.; Turner, K.; Li, J.; Pulikkathara, M.X.; Dwivedi, R.C.; Sosa, E.D.; Lu, Y.; Kuznetsov, O.V .; Moloney, P .; Wilkins, R.; et al.
+Single-wall carbon nanotube response to proton radiation. J. Phys. Chem. C 2009, 113, 14467–14473. [CrossRef]
+29. Suman, G.; Pulikkathara, M.; Wilkins, R. X-ray Radiation Effects on SWCNT/PMMA Thin Film Nanocomposite. IEEE T rans.
+Nanotechnol. 2021, 20, 517–524. [CrossRef]
+Nanomaterials 2023, 13, 2653 16 of 16
+30. Du, F.; Fisher, J.E.; Winey, K.I. Coagulation Method for Preparing Single-Walled Carbon Nanotube/Poly(methyl methacrylate)
+Composites and Their Modulus, E
+
+=== CHUNK 95 ===
+F.; Fisher, J.E.; Winey, K.I. Coagulation Method for Preparing Single-Walled Carbon Nanotube/Poly(methyl methacrylate)
+Composites and Their Modulus, Electrical Conductivity, and Thermal Stability. J. Polym. Sci. Part B Polym. Phys. 2003, 41,
+3333–3338. [CrossRef]
+31. Placido, A.J. Characterization of Poly (Methyl Methacrylate) Based Nanocomposites Enhanced with Carbon Nanotubes. Ph.D.
+Thesis, University of Kentucky, Lexington, KY, USA, 2010.
+32. Mark, J.E. Poly (methyl methacrylate). In Polymer Data Handbook, 1st ed.; Oxford University Press: New York, NY, USA, 1999;
+pp. 655–657.
+33. Smith, W.F.; Javad, H. Polymeric Materials. In Foundations of Materials Science and Engineering , 4th ed.; McGraw-Hill: New York,
+NY, USA, 2005; p. 510.
+34. Iqbal, S.; Raﬁque, M.S.; Anjum, S.; Hayat, A.; Iqbal
+
+=== CHUNK 96 ===
+of Materials Science and Engineering , 4th ed.; McGraw-Hill: New York,
+NY, USA, 2005; p. 510.
+34. Iqbal, S.; Raﬁque, M.S.; Anjum, S.; Hayat, A.; Iqbal, N. Impact of X-ray irradiation on PMMA thin ﬁlms. Appl. Surf. Sci. 2012, 259,
+853–860. [CrossRef]
+35. Structure Determination—Mass Spectrometry and Infrared Spectroscopy. Available online: :https://chem.libretexts.
+org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(Morsch_et_al.)/12%3A_Structure_Determina-tion_Mass_
+Spectrometry_and_Infrared_Spectroscopy/12.08%3A_Infrared_Spectra_of_Some_Common_Functional_Groups (accessed on 7
+January 2023).
+36. Janssen, J.; Lameta, M.; White, P .; Byagowi, A. Carbon Nanotube-Based Electrochemical Biosensor for Label-Free Protein Detection.
+Biosensors 2019, 9, 144. [CrossRef]
+37. Andrews, J.B.; Cardenas, 
+
+=== CHUNK 97 ===
+A. Carbon Nanotube-Based Electrochemical Biosensor for Label-Free Protein Detection.
+Biosensors 2019, 9, 144. [CrossRef]
+37. Andrews, J.B.; Cardenas, J.A.; Lim, C.J.; Noyce, S.J.; Mullett, J.; Franklin, A.D. Fully Printed and Flexible Carbon Nanotube
+Transistors for Pressure Sensing in Automobile Tires. IEEE Sens. 2018, 18, 7875–7880. [CrossRef]
+38. Introduction to Arduino Nano. Available online: https://www.theengineeringprojects.com/2018/06/introduction-to-Arduino-
+nano.html (accessed on 22 October 2010).
+39. DHT11 Humidity & Temperature Sensor. Available online: https://www.circuitbasics.com/how-to-set-up-the-dht11-humidity-
+sensor-on-an-Arduino/ (accessed on 18 March 2021).
+40. Zhang, E.X.; Newaz, A.K.M.; Wang, B.; Bhandaru, S.; Zhang, C.X.; Fleetwood, D.M.; Bolotin, K.I.; Pantelides, 
+
+=== CHUNK 98 ===
+rduino/ (accessed on 18 March 2021).
+40. Zhang, E.X.; Newaz, A.K.M.; Wang, B.; Bhandaru, S.; Zhang, C.X.; Fleetwood, D.M.; Bolotin, K.I.; Pantelides, S.T.; Alles, M.L.;
+Schrimpf, R.D.; et al. Low-energy X-ray, and ozone-exposure induced defect formation in graphene materials and devices.
+IEEE T rans. Nucl. Sci. 2011, 58, 2961–2967. [CrossRef]
+41. Childres, I.; Jauregui, L.A.; Foxe, M.; Tian, J.; Jalilian, R.; Jovanovic, I.; Chen, Y.P . Effect of electron-beam irradiation on graphene
+ﬁeld-effect devices. Appl. Phys. Lett. 2010, 97, 1731091–1731093. [CrossRef]
+42. Raja, P .M.; Esquenazi, G.L.; Jones, D.R.; Li, J.; Brinson, B.E.; Wright, K.; Gowenlock, C.E.; Barron, A.R. Electroless deposition of
+Cu-SWCNT composites. C-J. Carbon Res. 2019, 5, 61. [CrossRef]
+43. Trukhanov, S.V .; Trukhanov, A.
+
+=== CHUNK 99 ===
+enlock, C.E.; Barron, A.R. Electroless deposition of
+Cu-SWCNT composites. C-J. Carbon Res. 2019, 5, 61. [CrossRef]
+43. Trukhanov, S.V .; Trukhanov, A.V .; Vasiliev, A.N.; Balagurov, A.M.; Szymczak, H. Magnetic state of the structural separated
+anion-deﬁcient La 0.70Sr0.30MnO2.85 manganite. J. Exp. Theor. Phys. 2011, 113, 819–825. [CrossRef]
+44. Korobeinichev, O.P .; Paletsky, A.A.; Gonchikzhapov, M.B.; Glaznev, R.K.; Gerasimov, I.E.; Naganovsky, Y.K.; Shundrina, I.K.;
+Snegirev, A.Y.; Vinu, R. Kinetics of thermal decomposition of PMMA at different heating rates and in a wide temperature range.
+Thermochim. Acta 2019, 671, 17–25. [CrossRef]
+45. Dickens, B.; Martin, J.W.; Waksman, D. Thermal and photolytic degradation of plates of poly (methyl methacrylate) containing
+monomer. Polymer 1984, 25
+
+=== CHUNK 100 ===
+Dickens, B.; Martin, J.W.; Waksman, D. Thermal and photolytic degradation of plates of poly (methyl methacrylate) containing
+monomer. Polymer 1984, 25, 706–715. [CrossRef]
+46. Guldi, D.M.; Marcaccio, M.; Paolucci, D.; Francesco Paolucci, F.; Tagmatarchis, N.; Tasis, D.; Vaquez, E.; Prato, M. Single-Wall
+Carbon Nanotube–Ferrocene Nanohybrids: Observing Intramolecular Electron Transfer in Functionalized SWNTs. A J. Ger. Chem.
+Soc. 2003, 115, 4338–4341.
+Disclaimer/Publisher’s Note: The statements, opinions and data contained in all publications are solely those of the individual
+author(s) and contributor(s) and not of MDPI and/or the editor(s). MDPI and/or the editor(s) disclaim responsibility for any injury to
+people or property resulting from any ideas, methods, instructions or products ref
+
+=== CHUNK 101 ===
+MDPI and/or the editor(s) disclaim responsibility for any injury to
+people or property resulting from any ideas, methods, instructions or products referred to in the content.
+

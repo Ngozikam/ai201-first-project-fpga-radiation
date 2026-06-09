@@ -1,0 +1,594 @@
+
+=== CHUNK 1 ===
+Melanie Berg, SSAI, Inc.
+Contractor in support of NASA/GSFC          
+Melanie.D.Berg@NASA.gov
+To be presented by Melanie Berg at the Hardened Electronics and Radiation Technology (HEART) Conference, Omaha NE, April 27th, 2023 1
+To be presented by Melanie Berg at the Hardened Electronics and Radiation Technology (HEART) Conference, Omaha NE, April 27th, 2023
+ 2
+Acronym Description Acronym Description Acronym Description
+AI Artificial Intelligence IP Intellectual property SEE single event effect
+BRAM embedded static random-access memory lb lower bound SEF single event failure
+CCIX Interconnect consortium LBNL Lawrence Berkeley National Laboratory SEFI
+single event functional 
+interrupt
+CLB confgiurable logic block LET linear event tranfer SERDES serializer -deserializer
+CXL Compute express l
+
+=== CHUNK 2 ===
+ry SEFI
+single event functional 
+interrupt
+CLB confgiurable logic block LET linear event tranfer SERDES serializer -deserializer
+CXL Compute express link LVDS low Voltage Differ- ential Signaling SET single event transient
+DDR4
+Double Data Rate 4 Synchronous Dynamic Random-
+Access Memory MFTF mean fluence to failure SEU single even upset
+DSP Digital signal processor MIPI mobile industry processor interface SoC system on chip
+DUT device under test n number of events SRAM
+static random access 
+memory
+FPGA Field programmable gate array
+NoC network on chip T number of experiments
+FTF fluence to failure P probability ub upper bound
+G Giga PCIe Peripheral Component Interconnect Express wDMA Direct memory access
+Gb/s Gigabits/second Peffect Probability and event can occur from ionization and syst
+
+=== CHUNK 3 ===
+ipheral Component Interconnect Express wDMA Direct memory access
+Gb/s Gigabits/second Peffect Probability and event can occur from ionization and system topologyμ mean   
+GPIO general purpose input/output Pgen Probability and event can occur from ionization σ cross section
+GR global route Pobserve
+Probability and event can occur from ionization and system topology 
+and can be observed Φ fluence  
+HBM High Bandwidth Memory RF radio frequency
+I/O input/output RTD representative tactical design
+To be presented by Melanie Berg at the Hardened Electronics and Radiation Technology (HEART) Conference, Omaha NE, April 27th, 2023
+ 3
+𝝈𝝈𝑺𝑺𝑺𝑺𝑺𝑺 = 𝒇𝒇 𝝈𝝈𝒄𝒄𝒄𝒄𝒄𝒄𝒇𝒇𝒄𝒄𝒄𝒄𝒄𝒄𝒄𝒄𝒄𝒄𝒄𝒄𝒄𝒄𝒄𝒄𝒄𝒄, 𝝈𝝈𝑩𝑩𝑩𝑩𝑩𝑩𝑩𝑩, 𝝈𝝈𝒇𝒇𝒄𝒄𝒄𝒄𝒄𝒄𝒄𝒄𝒄𝒄𝒄𝒄𝒄𝒄𝒄𝒄𝒇𝒇𝒇𝒇𝒄𝒄𝒄𝒄𝒄𝒄𝒄𝒄, 𝝈𝝈𝑯𝑯𝒄𝒄𝑯𝑯𝑯𝑯𝑯𝑯𝒄𝒄𝒇𝒇𝒄𝒄𝒄𝒄𝒄𝒄𝒄𝒄
+ Cannot test every basic 
+mechanism.
+ Not all basic
+
+=== CHUNK 4 ===
+𝒄𝒄𝒄𝒄𝒇𝒇𝒄𝒄𝒄𝒄𝒄𝒄𝒄𝒄𝒄𝒄𝒄𝒄𝒄𝒄𝒄𝒄𝒄𝒄, 𝝈𝝈𝑩𝑩𝑩𝑩𝑩𝑩𝑩𝑩, 𝝈𝝈𝒇𝒇𝒄𝒄𝒄𝒄𝒄𝒄𝒄𝒄𝒄𝒄𝒄𝒄𝒄𝒄𝒄𝒄𝒇𝒇𝒇𝒇𝒄𝒄𝒄𝒄𝒄𝒄𝒄𝒄, 𝝈𝝈𝑯𝑯𝒄𝒄𝑯𝑯𝑯𝑯𝑯𝑯𝒄𝒄𝒇𝒇𝒄𝒄𝒄𝒄𝒄𝒄𝒄𝒄
+ Cannot test every basic 
+mechanism.
+ Not all basic mechanisms are 
+linearly extrapolatable (topology 
+matters). 
+ For most blocks, bit counting 
+does not apply.
+ SoCs contain significant 
+amount of embedded circuitry 
+(hidden logic).
+ Hidden circuits are extremely 
+complex and require complex 
+test methods.
+ Increased focus on 𝝈𝝈𝑯𝑯𝒄𝒄𝑯𝑯𝑯𝑯𝑯𝑯𝒄𝒄𝒇𝒇𝒄𝒄𝒄𝒄𝒄𝒄𝒄𝒄
+To be presented by Melanie Berg at the Hardened Electronics and Radiation Technology (HEART) Conference, Omaha NE, April 27th, 2023 3
+To be presented by Melanie Berg at the Hardened Electronics and Radiation Technology (HEART) Conference, Omaha NE, April 27th, 2023
+ Methods for calculating Single Event error rates rely on cross-sections.
+◦
+
+=== CHUNK 5 ===
+s and Radiation Technology (HEART) Conference, Omaha NE, April 27th, 2023
+ Methods for calculating Single Event error rates rely on cross-sections.
+◦ Conventionally, 𝜎𝜎𝑆𝑆𝑆𝑆𝑆𝑆s are metrics that describe a sensitive area (SEE susceptibility) of a device.  
+◦ The concept of sensitive area/volume works well for transistor or bit-level component metrics.
+◦ This concept has been extrapolated to systems:
+ Low-level component cross-sections (bit-level/basic mechanisms) are obtained and are usually 
+extrapolated to characterize system SEE behavior.
+ Challenges: 
+◦ Low-level metrics do not consider circuit topology.  In this case, systems are poorly characterized 
+under the conventional cross-section metric definition. 
+◦ Modern devices contain a significant amount of hidden logic… bit level eval
+
+=== CHUNK 6 ===
+ characterized 
+under the conventional cross-section metric definition. 
+◦ Modern devices contain a significant amount of hidden logic… bit level evaluation is impossible.
+ Approach to Solution: Supplement classical system-level failure methodologies with (FTF) 
+methodologies (top-down) and test-as-you-fly techniques.
+4
+𝜎𝜎𝑆𝑆𝑆𝑆𝑆𝑆 =
+#𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒
+�#𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖
+𝑐𝑐𝑐𝑐2
+=
+#𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒
+𝐹𝐹𝐹𝐹𝐹𝐹𝑒𝑒𝑒𝑒𝐹𝐹𝑒𝑒
+ FTF: fluence-to-failure 𝜎𝜎𝑆𝑆𝑆𝑆𝐹𝐹 =
+1
+𝐹𝐹𝐹𝐹𝐹𝐹𝑒𝑒𝑒𝑒𝐹𝐹𝑒𝑒
+To be presented by Melanie Berg at the Hardened Electronics and Radiation Technology (HEART) Conference, Omaha NE, April 27th, 2023
+Modern FPGA and SoCs have complex states that cannot be characterized by countable basic mechanism SEUs: e.g., IP 
+cores, complex logic blocks, blocks with hidden logic, or systems with functional state space.
+FTF: meas
+
+=== CHUNK 7 ===
+ by countable basic mechanism SEUs: e.g., IP 
+cores, complex logic blocks, blocks with hidden logic, or systems with functional state space.
+FTF: measure fluence to inoperable states.
+ FTF is used when events are not countable per experiment.
+◦ However, FTF events are countable across experiments
+◦ The question changes from how many events per ion (countable) to how many ions until event (FTF).
+ FTF and Test-as-you-fly are not synonymous:
+◦ FTF is a metric; Test-as-you-fly is an experimental approach.
+ FTF is not a replacement to traditional testing.  It is applied when necessary.
+ FTF and Statistics: 
+◦ FTF requires more experiments than conventional tests (countable basic mechanisms).
+◦ For a good test system, 5 -10 tests (per energy or LET) will suffice.
+◦ Any ionizing particle can 
+
+=== CHUNK 8 ===
+ conventional tests (countable basic mechanisms).
+◦ For a good test system, 5 -10 tests (per energy or LET) will suffice.
+◦ Any ionizing particle can cause an SEF.  However, the majority of FTFs will occur near the mean (most likely events).
+◦ Dominant mechanisms of failure will override.
+ FTF may require complex test systems:
+◦ FTF usually requires a robust real-time test system.
+◦ Design experience is required.
+ FTF Event Recovery
+◦ The test developer defines failures/upsets/events that will be monitored/characterized.
+◦ The system should be brought back to its original working state (this might include autonomous diagnostics to signify 
+system health) after an event has been detected; to prepare monitor/capture systems for the next event.
+ Not easy – consider the following prior to t
+
+=== CHUNK 9 ===
+system health) after an event has been detected; to prepare monitor/capture systems for the next event.
+ Not easy – consider the following prior to test development. 5
+𝜎𝜎𝑆𝑆𝑆𝑆𝐹𝐹 =
+1
+𝐹𝐹𝐹𝐹𝐹𝐹
+To be presented by Melanie Berg at the Hardened Electronics and Radiation Technology (HEART) Conference, Omaha NE, April 27th, 2023
+ 6
+Be careful… your test system can greatly 
+impact the quality of your cross-section data.
+Raw Probability 
+(failure rate)
+Measured Probability 
+(failure rate)H(s)
+Probability a transistor 
+is affected (lowest 
+level of upset… 
+sensitive area)
+Probability the system 
+malfunctions AND your 
+test can observe/report 
+the failure
+To be presented by Melanie Berg at the Hardened Electronics and Radiation Technology (HEART) Conference, Omaha NE, April 27th, 2023
+ 7
+Many assume, Po
+
+=== CHUNK 10 ===
+To be presented by Melanie Berg at the Hardened Electronics and Radiation Technology (HEART) Conference, Omaha NE, April 27th, 2023
+ 7
+Many assume, Pobserve = 1; and
+Many assume they are measuring 
+critical charge(Pgen )
+Pgen
+Poor test systems, Pobserve → 0:
+• Test system adds noise to data (bad system design, dosimetry, flux control) 
+• Inability to reliably observe and report failures: 
+• Missed events/upsets
+• Latency from event to observation
+• False events
+• Flux/fluence control
+For a system, these 
+assumptions are not 
+true
+Probability ionization 
+will cause an event
+PEffect
+Probability ionization + design 
+topology will cause an effect
+σSEF
+Pobserve
+Probability test system can report event
+DUT SYSTEM TEST SYSTEM
+Empirical cross sections are not pure
+σ𝑆𝑆𝑆𝑆𝑆𝑆 = 𝑃𝑃𝑔𝑔𝑒𝑒𝑒𝑒 × 𝑃𝑃𝑆𝑆𝐸𝐸𝐸𝐸𝑒𝑒𝐹𝐹
+
+=== CHUNK 11 ===
+
+σSEF
+Pobserve
+Probability test system can report event
+DUT SYSTEM TEST SYSTEM
+Empirical cross sections are not pure
+σ𝑆𝑆𝑆𝑆𝑆𝑆 = 𝑃𝑃𝑔𝑔𝑒𝑒𝑒𝑒 × 𝑃𝑃𝑆𝑆𝐸𝐸𝐸𝐸𝑒𝑒𝐹𝐹𝑒𝑒 × 𝑃𝑃𝑜𝑜𝑜𝑜𝑒𝑒𝑒𝑒𝑜𝑜𝑒𝑒𝑒𝑒
+To be presented by Melanie Berg at the Hardened Electronics and Radiation Technology (HEART) Conference, Omaha NE, April 27th, 2023
+ Homogenous Cells:
+◦ Copies of a simple structure (inverters, buffers, 
+memory cells)
+◦ Each test has many targets (that are the same 
+components) and hence increases statistics.
+◦ In most cases, FTF is not the best approach.  
+Instead, use a countable metric.
+ Complex systems:
+◦ Many variables, moving parts, and state space 
+exploration paths
+◦ Difficult to test and requires strategic planning.
+◦ Planning includes taking advantage of dominant 
+mechanisms of failure.
+◦ Alternatively, the t
+
+=== CHUNK 12 ===
+s
+◦ Difficult to test and requires strategic planning.
+◦ Planning includes taking advantage of dominant 
+mechanisms of failure.
+◦ Alternatively, the tests are evaluating probabilities 
+of failure with respect to fluence exposure.
+8
+Countable systems (how many events per ion)         Poisson distribution
+FTF (how many ions until event)            Exponential distribution
+
+To be presented by Melanie Berg at the Hardened Electronics and Radiation Technology (HEART) Conference, Omaha NE, April 27th, 2023
+Exponential Distribution Variables
+Fluence-to-failure (FTF) Φi
+SEF Cross-section
+(rate w.r.t. fluence)
+𝜎𝜎𝑆𝑆𝑆𝑆𝑆𝑆𝑖𝑖 =
+1
+Φi
+Sample mean (MFTF)
+Mean SEF 𝜎𝜎𝑆𝑆𝑆𝑆𝑆𝑆μ = 1
+μ
+Standard deviation μ = MFTF
+Standard error of the mean (SEM) 𝜇𝜇
+𝑛𝑛
+Exponential PDF
+Probability distribution function
+1
+𝑛𝑛 �
+𝑖𝑖=𝑖𝑖
+
+=== CHUNK 13 ===
+ SEF 𝜎𝜎𝑆𝑆𝑆𝑆𝑆𝑆μ = 1
+μ
+Standard deviation μ = MFTF
+Standard error of the mean (SEM) 𝜇𝜇
+𝑛𝑛
+Exponential PDF
+Probability distribution function
+1
+𝑛𝑛 �
+𝑖𝑖=𝑖𝑖
+𝐹𝐹
+Φ 𝑖𝑖
+Average of fluence-to-failure test results.
+n = number of events
+T = number of experiments
+μ =
+Use of exponential population standard deviation 
+definition
+Classical Reliability: Constant per LET
+Classical Reliability : transformation from the time domain to the fluence domain. 
+9
+𝜎𝜎𝑆𝑆𝑆𝑆𝐹𝐹μ𝑒𝑒−𝜎𝜎𝑆𝑆𝑆𝑆𝑆𝑆μΦ 1
+𝜇𝜇 𝑒𝑒
+−1
+𝜇𝜇Φ
+Generally used for error bars
+or
+Random Variable: per experiment-i for a selected LET
+
+To be presented by Melanie Berg at the Hardened Electronics and Radiation Technology (HEART) Conference, Omaha NE, April 27th, 2023
+0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+0.8
+0.9
+1
+0 1 2 3 4 5 6
+Fluence (Φ)
+10
+μ
+P(Φlb < Φi < Φub)= 𝑒𝑒
+−Φ𝑙𝑙𝑙𝑙
+𝜇𝜇
+
+=== CHUNK 14 ===
+ (HEART) Conference, Omaha NE, April 27th, 2023
+0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+0.8
+0.9
+1
+0 1 2 3 4 5 6
+Fluence (Φ)
+10
+μ
+P(Φlb < Φi < Φub)= 𝑒𝑒
+−Φ𝑙𝑙𝑙𝑙
+𝜇𝜇 - 𝑒𝑒
+−Φ𝑢𝑢𝑙𝑙
+𝜇𝜇
+𝑩𝑩𝑺𝑺𝑴𝑴𝑺𝑺 = 𝝁𝝁
+For each experiment, most FTF data points (Φ𝑖𝑖) will occur near the mean, for a well-
+made test system.  The goal is to design a test system where Φ𝐹𝐹𝑜𝑜 is close to Φ𝐹𝐹𝑜𝑜
+Φ𝑙𝑙𝑙𝑙
+Concerns…deviation from the mean depends on:
+• Mechanisms of SEF in the DUT (homogenous, multi-modal)
+• Integrity and expediency to detect and report SEF
+• Dosimetry
+• Flux control
+𝑺𝑺𝑬𝑬𝑬𝑬𝑯𝑯𝒄𝒄𝒄𝒄𝑬𝑬𝑯𝑯𝒄𝒄𝒄𝒄 𝒇𝒇𝒇𝒇𝒄𝒄𝑯𝑯𝒄𝒄𝒄𝒄𝑯𝑯 𝒄𝒄𝒄𝒄 𝒇𝒇𝒄𝒄𝒄𝒄𝒇𝒇𝒄𝒄𝒄𝒄𝑯𝑯 = Φi = 𝟏𝟏
+𝝈𝝈𝑺𝑺𝑺𝑺𝑺𝑺𝒄𝒄
+𝒇𝒇 Φ = 𝝈𝝈𝑺𝑺𝑺𝑺𝑺𝑺μ𝑯𝑯−𝝈𝝈𝑺𝑺𝑺𝑺𝑺𝑺μ𝜱𝜱
+The reality is: increasing the number of tests will not bring your empirical mean closer to 
+the actual mean if concerns are not controlled.
+Φ𝑢𝑢𝑙𝑙
+Probabi
+
+=== CHUNK 15 ===
+reality is: increasing the number of tests will not bring your empirical mean closer to 
+the actual mean if concerns are not controlled.
+Φ𝑢𝑢𝑙𝑙
+Probability Density
+ub: upper bound
+lb: lower bound
+To be presented by Melanie Berg at the Hardened Electronics and Radiation Technology (HEART) Conference, Omaha NE, April 27th, 2023
+ 11
+1.0E-08
+1.0E-07
+1.0E-06
+1.0E-05
+1.0E-04
+1.0E-03
+1.0E-02
+1.0E-01
+1.0E+00
+0 2 4 6 8 10 12
+σconfiguration (cm2/device)
+LET (MeV·cm2/mg)
+LET
+Number of Experiments (82 
+total tests)
+0.1 3
+1.16 21
+1.54 16
+2.39 15
+4.35 12
+7.27 12
+10.9 3
+SEFI
+All 82 tests are represented in the 
+graph.  The results are so close 
+that it is difficult to decipher 
+between each experiment per LET.
+• SEFIs can occur, however, they have a low event probability 
+during testing (depending on flue
+
+=== CHUNK 16 ===
+fficult to decipher 
+between each experiment per LET.
+• SEFIs can occur, however, they have a low event probability 
+during testing (depending on fluence)
+• If the experiments go to a high enough fluence, it is highly 
+likely that a SEFI will occur… yet its σ
+SEFI will be low
+
+To be presented by Melanie Berg at the Hardened Electronics and Radiation Technology (HEART) Conference, Omaha NE, April 27th, 2023
+ 12
+• FTF cross section data are within a decade and are sufficient for calculating SEF cross-section means
+• Calculate mean per LET analyzing each experiment i : 
+• No event for experiment i: n=0 and Φ 𝒄𝒄 = fluence for experiment i
+• Event for experiment i: n=1 and Φ 𝒄𝒄 = recorded fluence for event occurrence
+• If n=0 for a majority of tests, increase fluence (and check your tests syste
+
+=== CHUNK 17 ===
+ for experiment i: n=1 and Φ 𝒄𝒄 = recorded fluence for event occurrence
+• If n=0 for a majority of tests, increase fluence (and check your tests system).
+1.00E-09
+1.00E-08
+1.00E-07
+1.00E-06
+1.00E-05
+1.00E-04
+1.00E-03
+1.00E-02
+1.00E-01
+1.00E+00
+0 5 10 15 20 25 30
+SEF(#/fluecne)
+LET(MeV·cm2/mg)
+MicroBlaze SEF Cross Sections
+1.00E-09
+1.00E-08
+1.00E-07
+1.00E-06
+1.00E-05
+1.00E-04
+1.00E-03
+1.00E-02
+1.00E-01
+1.00E+00
+0 2 4 6 8
+SEF (#/fluence)
+LET (MeV∙cm2/mg)
+Aurora SERDES SEF Cross Sections
+1
+𝑛𝑛 �
+𝑖𝑖=𝑖𝑖
+𝐹𝐹
+Φ 𝑖𝑖μ =
+𝜎𝜎𝑆𝑆𝑆𝑆𝑆𝑆μ =
+1
+μ
+To be presented by Melanie Berg at the Hardened Electronics and Radiation Technology (HEART) Conference, Omaha NE, April 27th, 2023
+ DUT: Microchip RTProASIC3 mission critical.
+ Mission Requirement: work through worst-week 
+with ground intervention restricted to 0.01/
+
+=== CHUNK 18 ===
+ 27th, 2023
+ DUT: Microchip RTProASIC3 mission critical.
+ Mission Requirement: work through worst-week 
+with ground intervention restricted to 0.01/day.
+ DUT area constraints limit mitigation.
+ Extrapolated (upper-bound) Error rates do not
+meet requirements (use of shift register data).
+ Test-as-you-fly heavy-ion testing required (FTF
+data refinement).
+𝝈𝝈𝑺𝑺𝑺𝑺𝑺𝑺 = 𝒇𝒇 𝝈𝝈𝒄𝒄𝒄𝒄𝒄𝒄𝒇𝒇𝒄𝒄𝒄𝒄𝒄𝒄𝒄𝒄𝒄𝒄𝒄𝒄𝒄𝒄𝒄𝒄𝒄𝒄, 𝝈𝝈𝑩𝑩𝑩𝑩𝑩𝑩𝑩𝑩, 𝝈𝝈𝒇𝒇𝒄𝒄𝒄𝒄𝒄𝒄𝒄𝒄𝒄𝒄𝒄𝒄𝒄𝒄𝒄𝒄𝒇𝒇𝒇𝒇𝒄𝒄𝒄𝒄𝒄𝒄𝒄𝒄, 𝝈𝝈𝑯𝑯𝒄𝒄𝑯𝑯𝑯𝑯𝑯𝑯𝒄𝒄𝒇𝒇𝒄𝒄𝒄𝒄𝒄𝒄𝒄𝒄
+Texas A&M Cyclotron Facility
+Multi-use Test Platform enabled testing the DUT with the NASA flight image.  DUT was controlled 
+and operated (at speed) as it would be in flight.  FTF data were successfully obtained.
+A robust complex system was developed:
+13To be presented by Melanie Berg at the Hardened Electronics and Radiat
+
+=== CHUNK 19 ===
+  FTF data were successfully obtained.
+A robust complex system was developed:
+13To be presented by Melanie Berg at the Hardened Electronics and Radiation Technology (HEART) Conference, Omaha NE, April 27th, 2023 13
+To be presented by Melanie Berg at the Hardened Electronics and Radiation Technology (HEART) Conference, Omaha NE, April 27th, 2023
+1.0E-06
+1.0E-04
+1.0E-02
+1.0E+00
+1.0E+02
+1.0E+04
+1.0E+06
+1.0E+08Binned Flux (#/(cm2·day)
+LET Bins (MeV∙cm2/mg)
+Worst Week 350 mils
+LET Range Fluence/Day
+0.1 …0.5 1.8×106
+0.5 …1.0 7.6×103
+1.0…5.0 1.0×103
+5.0…10.0 4.2×101
+10.0…20.0 8.4×100
+SEF: single event failure LET: Linear energy transfer
+• FTF experiments were RTD-Test-as-you-fly.
+• SEF data for a specified function within the NASA flight design is illustrated.  
+Extrapolated data cannot be refine
+
+=== CHUNK 20 ===
+ments were RTD-Test-as-you-fly.
+• SEF data for a specified function within the NASA flight design is illustrated.  
+Extrapolated data cannot be refined to specific function.
+1.E-10
+1.E-09
+1.E-08
+1.E-07
+1.E-06
+1.E-05
+1.E-04
+1.E-03
+1.E-02
+0 5 10 15 20 25 30 35 40 45
+SEF (#/fluence-Design)
+LET
+SEF vs LET
+Experiment Data
+ Weibull Curve Fit
+NASA DATA Extrapolated (All DFFs)
+NASA DATA Extrapolated (Estimated DFFs)
+Large number of low LET Particles per day during worst week.
+RTD: representative tactical design
+14
+To be presented by Melanie Berg at the Hardened Electronics and Radiation Technology (HEART) Conference, Omaha NE, April 27th, 2023
+SEF: single event failure LET: Linear energy transfer
+Extrapolated data do not meet requirements while Test-as-you-fly data do.
+Paramete
+r
+Extrapolated Test
+
+=== CHUNK 21 ===
+ingle event failure LET: Linear energy transfer
+Extrapolated data do not meet requirements while Test-as-you-fly data do.
+Paramete
+r
+Extrapolated Test-As-You-Fly
+LETonset 0.5 MeV·cm2/mg 2.0 MeV·cm2/mg
+σSAT 60 μm2 6000 μm2
+W 42.58 MeV·cm2/mg 30 MeV·cm2/mg
+S 2.0 2.8 
+Multiplier 15200 1
+Error rate 2.1×10-1 errors/day 2.3×10-3
+errors/day
+Does not meet 
+requirements
+Does meet 
+requirements
+1.E-10
+1.E-09
+1.E-08
+1.E-07
+1.E-06
+1.E-05
+1.E-04
+1.E-03
+1.E-02
+0 5 10 15 20 25 30 35 40 45
+SEF (#/fluence-Design)
+LET
+SEF vs LET
+Experiment Data
+ Weibull Curve Fit
+NASA DATA Extrapolated (All DFFs)
+NASA DATA Extrapolated (Estimated DFFs)
+Weibull 
+Parameter
+Description
+LETonset Onset LET
+σSAT Saturation cross-
+section
+W width
+S shape
+15
+To be presented by Melanie Berg at the Hardened Electronics and Radiation 
+
+=== CHUNK 22 ===
+iption
+LETonset Onset LET
+σSAT Saturation cross-
+section
+W width
+S shape
+15
+To be presented by Melanie Berg at the Hardened Electronics and Radiation Technology (HEART) Conference, Omaha NE, April 27th, 2023
+ Modern FPGA and SoCs have complex states that cannot 
+be characterized by countable basic mechanism SEUs:
+◦ IP cores, complex blocks, blocks with hidden logic, 
+systems with functional state space, etc.
+ FTF is not a replacement for traditional testing.  It is 
+supplementary and is applied when necessary.
+ FTF and Statistics: 
+◦ FTF requires more experiments than conventional tests.
+◦ For a good test system, 5 -10 tests (per energy or LET) will 
+suffice.
+◦ Any ionizing particle can cause an SEF.  However, the 
+majority of FTFs will occur by the mean (most likely 
+events).
+◦ Dominan
+
+=== CHUNK 23 ===
+ LET) will 
+suffice.
+◦ Any ionizing particle can cause an SEF.  However, the 
+majority of FTFs will occur by the mean (most likely 
+events).
+◦ Dominant mechanisms of failure will override.
+ FTF may require complex test systems:
+◦ FTF usually requires a robust real-time test system.
+◦ Design experience is required.
+ FTF has been successfully applied to NASA test systems 
+since 2010.
+16
+To be presented by Melanie Berg at the Hardened Electronics and Radiation Technology (HEART) Conference, Omaha NE, April 27th, 2023 16
+

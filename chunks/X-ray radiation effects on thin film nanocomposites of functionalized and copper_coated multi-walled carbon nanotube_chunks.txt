@@ -1,0 +1,804 @@
+
+=== CHUNK 1 ===
+Contents lists available at ScienceDirect
+Surfaces and Interfaces
+journal homepage: www.elsevier.com/locate/sur ﬁn
+X-ray radiation e ﬀects on thin ﬁlm nanocomposites of functionalized and
+copper coated multi-walled carbon nanotube and poly(methyl methacrylate)
+Shubha Kyatsandra a, Merlyn Pulikkathara b, Richard Wilkins a,c,⁎
+a Department of Electrical and Computer Engineering, Prairie View A&M University, Prairie View, TX 77446, USA
+b Department of Chemistry and Physics, Prairie View A&M University, Prairie View, TX 77446, USA
+c NASA Center for Radiation Engineering and Science for Space Exploration, Prairie View A&M University, Prairie View, TX 77446, USA
+ARTICLE INFO
+Keywords:
+Functionalized multiwalled carbon nanotube
+Ferrocene
+Poly (methyl methacrylate)
+Nanocomposite
+Ionizing radiation
+
+=== CHUNK 2 ===
+ TX 77446, USA
+ARTICLE INFO
+Keywords:
+Functionalized multiwalled carbon nanotube
+Ferrocene
+Poly (methyl methacrylate)
+Nanocomposite
+Ionizing radiation
+X-ray detection
+ABSTRACT
+Multi-walled carbon nanotube (MWCNT) and poly(methyl methacrylate) (PMMA) nanocomposites have the
+potential to be deployed as sensing elements for various applications including ionizing radiation detection. In
+this work, a 160 kV x-ray ionizing radiation source has been used to study the ionizing radiation dose rate e ﬀects
+on Ferrocene doped MWCNTs, MWCNTs functionalized with - carboxylic acid (COOH), hydrogen peroxide,
+amine, and MWCNTs coated/ modi ﬁed with copper. Solution blending method was used in synthesizing the
+nanocomposites and the synthesized composites were cast on interdigitated electrodes (IDEs) to p
+
+=== CHUNK 3 ===
+Solution blending method was used in synthesizing the
+nanocomposites and the synthesized composites were cast on interdigitated electrodes (IDEs) to perform ra-
+diation sensing experiments by monitoring changes in the ﬁlms’ resistance. We have observed a clear, repeatable
+and proportionate response curve for radiation dose rate measurements with Ferrocene doped MWCNT/PMMA
+thin ﬁlm composites. A weaker response is observed for functionalized MWCNT/PMMA ﬁlms. Ferrocene doped
+MWCNT/PMMA composite showed the most increased sensitivity to x-ray radiation when compared to all other
+functional groups reported here and as compared to unfunctionalized MWCNT/PMMA composites. Ferrocene
+doped MWCNT/PMMA ﬁlms’ resistance changed over 18% compared to changes observed for unfunctionalized
+MWCNT/PMMA ﬁlms
+
+=== CHUNK 4 ===
+ MWCNT/PMMA composites. Ferrocene
+doped MWCNT/PMMA ﬁlms’ resistance changed over 18% compared to changes observed for unfunctionalized
+MWCNT/PMMA ﬁlms of about 6%. Accelerated post radiation recovery of Ferrocene doped MWCNT/PMMA
+composites using a heat treatment technique is presented. The results of this study suggest that simple sensor
+elements based on relatively economical MWCNTs could be useful for the detection of ionizing radiation.
+1. Introduction
+Characterizing and monitoring the radiation environment for
+aerospace and terrestrial applications requires sensitive, light weight,
+rugged and compact instrumentation. Some existing sensor types used
+to measure radiation [1] are problematic because they are bulky and
+provide non-instantaneous response characteristics [2]. Some of the
+ex
+
+=== CHUNK 5 ===
+ types used
+to measure radiation [1] are problematic because they are bulky and
+provide non-instantaneous response characteristics [2]. Some of the
+exceptional properties of carbon nanotubes (CNTs), such as very high
+surface area, high surface to volume ratio, electrical properties, and
+chemical reactivity, make CNTs an excellent potential candidate ma-
+terial for small and robust sensors for various applications [3].
+Many studies have used CNTs as active components in detecting
+various gases due to their low power consumption, high response, re-
+peatability, and low temperature operation properties [4]. Conductivity
+change is detected in the nanotube when there is transfer of electrons
+between CNTs and the adsorbed gas molecule [5]. CNTs functionally
+modiﬁed with polymer additives [4], fu
+
+=== CHUNK 6 ===
+ nanotube when there is transfer of electrons
+between CNTs and the adsorbed gas molecule [5]. CNTs functionally
+modiﬁed with polymer additives [4], functional groups [4,6], and
+metal nanoparticles [4] have shown enhanced conductivity response
+when used as sensor elements due to the increase in the electron
+transfer rate [7].
+Several studies have been performed on carboxylic acid (COOH)
+[6,8–10], polyethyleneimine [11], and copper nano-particle [12]
+functionalized or modi ﬁed CNTs for sensing chloroform, ethanol, glu-
+cose, and various gases. CNTs functionalized or modi ﬁed with various
+groups such as COOH [13,14], copper [15], and 3-aminopropyl-
+triethoxysilane [16] have shown increased sensitivity to alcohol vapors,
+glucose and various gases compared to unfunctionalized CNTs. Various
+type
+
+=== CHUNK 7 ===
+yl-
+triethoxysilane [16] have shown increased sensitivity to alcohol vapors,
+glucose and various gases compared to unfunctionalized CNTs. Various
+types of functionalized SWCNT response to proton radiation have also
+been studied [2]. These studies show that the use of functionalized
+CNTs in sensor application studies tend to increase sensitivity with
+respect to unfunctionalized CNTs. These works motivated us to explore
+the possibility of exploiting the same property for a radiation sensing
+element for aerospace and other applications.
+Multi-walled carbon nanotubes (MWCNTs), which are generally
+considered cheaper and/or easier to process than graphene or SWCNTs,
+are used here to study the response of a nano-scaled carbon material to
+https://doi.org/10.1016/j.surﬁn.2019.100362
+Received 3 July
+
+=== CHUNK 8 ===
+raphene or SWCNTs,
+are used here to study the response of a nano-scaled carbon material to
+https://doi.org/10.1016/j.surﬁn.2019.100362
+Received 3 July 2019; Accepted 21 July 2019
+⁎ Corresponding author at: P.O. Box 519, Prairie View, TX 77446, USA.
+E-mail address: rtwilkins@pvamu.edu (R. Wilkins).
+Surfaces and Interfaces 17 (2019) 100362
+Available online 22 July 2019
+2468-0230/ © 2019 Elsevier B.V. All rights reserved.
+T
+ionizing radiation in the form of x-rays. In previous work, it was ob-
+served that unfunctionalized MWCNT/PMMA ﬁlms showed a clear,
+repeatable and proportional response to various doses and dose rates of
+x-rays [17]. In the present work, a 160 kV x-ray ionizing radiation
+source has been used to study the radiation dose rate e ﬀects on nano-
+composites made with ferrocene d
+
+=== CHUNK 9 ===
+resent work, a 160 kV x-ray ionizing radiation
+source has been used to study the radiation dose rate e ﬀects on nano-
+composites made with ferrocene doped MWCNTs, MWCNTs functio-
+nalized with carboxylic acid, hydrogen peroxide, amine, and MWCNTs
+coated/modiﬁed with copper. The response of these nanocomposites
+are compared to similar nanocomposites made with unfunctionalized
+MWCNTs [17]. The speci ﬁc functionalized and modi ﬁed MWCNTs used
+for this study were determined by those used in previous literature and
+those that were readily available commercially and inexpensively. In
+addition, the commercially functionalized MWCNTs used here are from
+the same source as the unfunctionalized MWCNT, thus making a more
+straightforward comparison with data from unfunctionalized [17]
+MWCNT/PMMA thin ﬁl
+
+=== CHUNK 10 ===
+m
+the same source as the unfunctionalized MWCNT, thus making a more
+straightforward comparison with data from unfunctionalized [17]
+MWCNT/PMMA thin ﬁlm nanocomposites. Similar to the composites
+made with unfunctionalized MWCNT, all composites with the func-
+tional groups and copper coated (modi ﬁed) MWCNTs exhibited smaller
+change in the ﬁlm resistance for higher x-ray dose rates. Ferrocene
+doped MWCNT showed increased sensitivity to x-ray radiation com-
+pared to unfunctionalized MWCNT [17] and all other functional groups
+and copper-coated MWCNTs used in this study. To our knowledge, this
+is the ﬁrst study of the electrical conductivity e ﬀects on functionalized
+and modi ﬁed MWCNT/PMMA composites when exposed to x-rays.
+2. Materials and methods
+2.1. Raw materials
+Unfunctionalized and funct
+
+=== CHUNK 11 ===
+ts on functionalized
+and modi ﬁed MWCNT/PMMA composites when exposed to x-rays.
+2. Materials and methods
+2.1. Raw materials
+Unfunctionalized and functionalized/modi ﬁed MWCNT (COOH,
+hydrogen peroxide, amine and copper coated) used in this study were
+commercially produced by the thermal chemical vapor deposition
+method with inner diameter of 10 nm, outer diameter of 30 ± 15 nm,
+length of 1– 5 μm, total number of walls 10– 15 and purity >95%, and
+were obtained from Nanolab, Inc. Ferrocene, an organo-metallic com-
+pound was purchased from Sigma Aldrich. To obtain uniform nanotube
+dispersion [18], N,N-Dimethylformamide (DMF) purchased from Sigma
+Aldrich was used as the solvent. PMMA purchased from Sigma Aldrich
+[Tg = 105°] was chosen as the polymer because of its spinning qualities
+[19], solub
+
+=== CHUNK 12 ===
+Aldrich was used as the solvent. PMMA purchased from Sigma Aldrich
+[Tg = 105°] was chosen as the polymer because of its spinning qualities
+[19], solubility in DMF [19], high weatherability [20], and good che-
+mical resistance [21]. Inter-digitated electrodes (IDE), supplied by Case
+Western Reserve University shown in Fig. 1(a), were used as the sub-
+strate to cast the synthesized thin ﬁlm composite. The IDE is patterned
+on an 8 mm x 8 mm, 0.3 mm thick silicon substrate with a top 300 nm
+thick silicon dioxide layer. The electrodes and bonding pads
+(1.75 x 1.5 mm) on the IDE are made from 200 nm thick gold with a
+10 nm thick titanium adhesion layer. The electrodes run parallel to each
+other with a line size and spacing of 100 μm.
+2.2. Functionalized MWCNT/PMMA nanocomposite preparation
+Ferro
+
+=== CHUNK 13 ===
+ayer. The electrodes run parallel to each
+other with a line size and spacing of 100 μm.
+2.2. Functionalized MWCNT/PMMA nanocomposite preparation
+Ferrocene doped MWCNT/PMMA nanocomposites were prepared
+by solution blending technique [22]. Ferrocene in DMF solution with a
+concentration
+of 2.62 mg/cm 3 was dissolved and tip sonicated in the
+presence of an ice bath with 0.03 g/cm 3 of PMMA in DMF solution for
+15 min at 20% amplitude and a pulse rate of 0.5 using a 750 W, 20 khz
+GENEC probe sonicator. To the above solution, 1 mg/cm 3 of un-
+functionalized MWCNT in DMF solution was mixed and sonicated in the
+presence of an ice bath for an additional 5 min. The sonicated mixture
+was then spin coated at 1000 rpm, with a ramp of 100 rpm/s for 30 s on
+the IDE using a Brewer Science spin coater to fo
+
+=== CHUNK 14 ===
+l 5 min. The sonicated mixture
+was then spin coated at 1000 rpm, with a ramp of 100 rpm/s for 30 s on
+the IDE using a Brewer Science spin coater to form a carbon nanotube
+network bridging the IDE ﬁngers. The cast ﬁlm was cured in a vacuum
+oven at 175 °C for 1 h and cooled under a fume hood overnight to
+remove excess solvent.
+The functionalized and modi ﬁed MWCNT (COOH, hydrogen per-
+oxide, amine and copper coated) were prepared in a similar manner as
+ferrocene doped MWCNT/PMMA composite, but without incorporating
+ferrocene into the composite and with di ﬀerent MWCNT weight and
+sonication times as described in Table 1.
+2.3. Experimental setup
+Radiation dose rate experiments were performed using a 160 kV,
+3000 W “X-RAD iR-160 ″ x-ray source with a tungsten target (anode) at
+a focal spot of 7
+
+=== CHUNK 15 ===
+Radiation dose rate experiments were performed using a 160 kV,
+3000 W “X-RAD iR-160 ″ x-ray source with a tungsten target (anode) at
+a focal spot of 7.5 mm purchased from Precision X-Ray. The x-ray
+source produces a broad spectra with well-deﬁ ned peaks at 55.55 and
+66.66 keV.
+Radiation dose rate e ﬀects were studied by varying the source to
+sample distance (SSD) (30, 50, and 70 cm). The vendor speci ﬁed dose
+rates of 5.92 krad/min at 30 cm SSD was used to calculate the dose rates
+for 50 cm SSD and 70 cm SSD using the inverse square law.
+Radiation exposures were performed on the composite samples
+placed in the x-ray chamber and in situ electrical measurements were
+performed by connecting a low noise cable from the x-ray chamber to a
+Hewlett Packard HP4145B semiconductor parametric analyser
+
+=== CHUNK 16 ===
+ical measurements were
+performed by connecting a low noise cable from the x-ray chamber to a
+Hewlett Packard HP4145B semiconductor parametric analyser.
+Commercial control software, Interactive Characterization Software
+version-3.9 on a personal computer interfaced with the HP4145B, was
+programmed to record the electrical measurements automatically every
+one minute before, during and after radiation. The experimental setup
+for these standard electrical measurements is described in more detail
+in Ref. [ 17].
+3. Results
+Radiation dose rate response of each MWCNT/PMMA composite
+ﬁlm was studied by varying the SSD of the x-ray source described in
+Section 2.3. Change in resistance (S) is used as a parameter in detecting
+the response of the composite ﬁlms to ionizing radiation in this work,
+which 
+
+=== CHUNK 17 ===
+ection 2.3. Change in resistance (S) is used as a parameter in detecting
+the response of the composite ﬁlms to ionizing radiation in this work,
+which is shown in Eq. (1) :
+⎜⎟= ⎛
+⎝
+− ⎞
+⎠
+×S RR
+R 100%
+fi
+i (1)
+where R f is the ﬁnal resistance after radiation exposure to a particular
+ﬁxed dose with varying dose rates at a given time, as measured each
+minute by the parametric analyzer, and R i is the initial resistance before
+radiation exposure.
+3.1. Radiation dose rate response
+Radiation dose rate e ﬀects were studied by placing the fabricated
+MWCNT/PMMA nanocomposite thin ﬁlm samples at the center of the
+160 kV x-ray source and by varying their distance from the x-ray source.
+Dose rates of 5.92, 2.13, and 1.08 krad/min were achieved by placing
+the samples at 30, 50, and 70 cm from the x-ray 
+
+=== CHUNK 18 ===
+ distance from the x-ray source.
+Dose rates of 5.92, 2.13, and 1.08 krad/min were achieved by placing
+the samples at 30, 50, and 70 cm from the x-ray source respectively
+with a constant total dose of 100 krad for each dose rate experiments.
+Electrical resistance of the fabricated thin ﬁlms under test, and a
+nominally identical control sample not exposed to radiation, were
+sampled at 1 min intervals; before, during and after radiation exposure.
+Results of the dose rate experiments for Ferrocene doped ( Fig. 2 )
+MWCNT/PMMA nanocomposite thin ﬁlm clearly exhibits a continuous
+decrease in electrical resistance of the composite during radiation ex-
+posure with a distinctive response curve. The magnitude of the reduc-
+tion in electrical resistance of the composite is roughly inversely pro-
+porti
+
+=== CHUNK 19 ===
+-
+posure with a distinctive response curve. The magnitude of the reduc-
+tion in electrical resistance of the composite is roughly inversely pro-
+portional to the radiation dose rate. The control sample did not show
+any signi ﬁcant change during the time of measurements.
+The Carboxylic acid, copper coated, amine and hydrogen peroxide
+functionalized MWCNT/PMMA nanocomposites show a similar re-
+sponse, but the magnitude of the resistance change is signi ﬁcantly less
+as compared to the ferrocene doped MWCNT/PMMA nanocomposites
+for all dose rates.
+S. Kyatsandra, et al. Surfaces and Interfaces 17 (2019) 100362
+2
+3.2. X-ray radiation sensitivity comparison of functionalized and
+unfunctionalized MWCNT/PMMA composite
+Radiation dose rate experimental results for funFctionalized (fer-
+rocene doped, C
+
+=== CHUNK 20 ===
+parison of functionalized and
+unfunctionalized MWCNT/PMMA composite
+Radiation dose rate experimental results for funFctionalized (fer-
+rocene doped, Carboxylic acid, amine, hydrogen peroxide and copper
+coated) and unfunctionalized [17] MWCNT/PMMA thin ﬁlm compo-
+sites are summarized in Fig. 3 for three di ﬀerent dose rates.
+As seen from the graph in Fig. 3, ferrocene doped MWCNT/PMMA
+nanocomposites outperforms unfunctionalized MWCNT/PMMA com-
+posites [17] and all other functional groups used in this study with
+respect to resistance change upon x-ray exposure across all radiation
+dose rates.
+Fig. 1. (a) Graphical representation of an IDE. (b), (c) SEM images of dispersed COOH functionalized MWCNT/PMMA composite on an IDE. (d) SEM image of
+ferrocene functionalized MWCNT/PMMA composite showin
+
+=== CHUNK 21 ===
+ (c) SEM images of dispersed COOH functionalized MWCNT/PMMA composite on an IDE. (d) SEM image of
+ferrocene functionalized MWCNT/PMMA composite showing the ﬁlm thickness ranging from 3 µ to 7 µ.
+Table 1
+Weight and sonication time of functionalized MWCNT.
+Functionalized MWCNT Weight in DMF solution Sonication time
+Carboxylic acid 5 mg/cm 3 7 min
+Amine 2 mg/cm 3 5 min
+Hydrogen peroxide 1 mg/cm 3 5 min
+Copper coated 0.6 mg/cm 3 8 min
+Fig. 2. Change in resistance over time for Ferrocene doped MWCNT/PMMA
+composite for varying dose rates (total dose in each case was 100 krad).
+S. Kyatsandra, et al. Surfaces and Interfaces 17 (2019) 100362
+3
+3.3. Repeatability and stability of the thin ﬁlm composite
+The natural recovery time for ferrocene doped MWCNT/PMMA thin
+ﬁlm samples after irradiation was on
+
+=== CHUNK 22 ===
+peatability and stability of the thin ﬁlm composite
+The natural recovery time for ferrocene doped MWCNT/PMMA thin
+ﬁlm samples after irradiation was on the order of one week, with si-
+milar times for the other nanocomposites. The results showing repeat-
+ability of the dose rate experiments for ferrocene doped MWCNT/
+PMMA composites are shown in Fig. 4. This ﬁrst cycle from un-irra-
+diated sample to the recovered state is called Trial-1. The x-ray re-
+sponse experiments were repeated on the recovered samples to check
+for repeatability of their response, this was Trial-2. The results clearly
+indicate that the Ferrocene doped MWCNT/PMMA composite thin ﬁlms
+have a repeatable proportionate electrical resistance change response to
+varying radiation dose rates. Similar results were obtained for th
+
+=== CHUNK 23 ===
+ thin ﬁlms
+have a repeatable proportionate electrical resistance change response to
+varying radiation dose rates. Similar results were obtained for the
+Carboxylic acid, copper coated, amine and hydrogen peroxide func-
+tionalized MWCNT/PMMA composite ﬁlms. For the ferrocene doped
+MWCNT/PMMA composites, the di ﬀerences measured between the
+trials was on average less than 10.5%. The fairly small changes ob-
+served between trials for the radiation dose rate measurements are in-
+dicative of the stability of the functionalized MWCNT/PMMA thin ﬁlms
+during the measurements presented.
+4. Heat treatment and reset
+The radiation exposed thin ﬁlm composites exhibited slow recovery
+times, on the order of one week. Previous work on CNT based gas
+sensors have shown that sensor recovery can be accelerated 
+
+=== CHUNK 24 ===
+es exhibited slow recovery
+times, on the order of one week. Previous work on CNT based gas
+sensors have shown that sensor recovery can be accelerated when
+subjected to heat treatment [4]. These devices recovered to pre-ex-
+posure levels after heat treatment in approximately 15 min. In this
+work, radiation exposed ferrocene doped MWCNT/PMMA thin ﬁlm
+composite devices were heated to 175 °C for about 20 min and re-
+covered to pre-radiation levels after heat treatment in approximately
+15 min. Fig. 5 shows example of a heat treatment based recovery data
+set for a ferrocene doped MWCNT/PMMA thin ﬁlm composite exposed
+to a radiation dose of 100 krad at a dose rate of 5.92 krad/min. Similar
+recovery responses were observed for the Carboxylic acid, copper
+coated, amine and hydrogen peroxide functio
+
+=== CHUNK 25 ===
+ at a dose rate of 5.92 krad/min. Similar
+recovery responses were observed for the Carboxylic acid, copper
+coated, amine and hydrogen peroxide functionalized MWCNT/PMMA
+nanocomposite ﬁlms.
+5. Discussion
+The response to the x-ray exposure of the nanocomposites in which
+a reduction of the thin ﬁlm resistance is observed depends on the x-rays
+generating excess charge carriers in the ﬁlms through ionization and
+transport of those carriers to the gold electrodes of the IDEs. For the
+nanocomposites containing unfunctionalized MWNTs reported in Ref.
+[17], ionization occurred in the MWNTs and in the PMMA matrix of the
+nanocomposite. For the nanocomposites containing modi ﬁed or func-
+tionalized MWNT described in this work, the addition of the functional
+group or modifying materials may provide an 
+
+=== CHUNK 26 ===
+sites containing modi ﬁed or func-
+tionalized MWNT described in this work, the addition of the functional
+group or modifying materials may provide an additional source of ex-
+cess charge carriers that are responsible for the enhanced response of
+some of the nanocomposties as summarized in Fig. 3. The following
+discussion details the possible mechanisms involved associated with the
+MWNT network within the nanocomposite, the PMMA matrix, and the
+additional material for functionalization or modi ﬁcation.
+The reduction in resistance of the functionalized/modi ﬁed
+MWCNT/PMMA thin ﬁlm nanocomposites upon radiation exposure and
+the post radiation prolonged recovery observed ( Figs. 2 and 5) is likely
+due to x-ray ionization e ﬀect [23] and
+ subsequent charge transport of
+the radiation induced ele
+
+=== CHUNK 27 ===
+olonged recovery observed ( Figs. 2 and 5) is likely
+due to x-ray ionization e ﬀect [23] and
+ subsequent charge transport of
+the radiation induced electron – hole pairs within the thin ﬁlm nano-
+composite. The transport through the ﬁlm is facilitated by the network
+of MWCNT that permeate the composites. The importance of the
+MWCNT network was previously demonstrated with measurements of
+similar composite ﬁlms composed of carbon black/PMMA in which no
+signiﬁcant response to the x-ray exposure was observed [17].
+Fig. 3. Change in resistance with varying dose rates for unfunctionalized and
+functionalized MWCNT/PMMA composite. (Total dose in each case was
+100 krad.).
+Fig. 4. Change in resistance with varying dose rate for Ferrocene doped
+MWCNT/PMMA composite.
+Fig. 5. Ferrocene doped MWCNT/PMMA
+
+=== CHUNK 28 ===
+ case was
+100 krad.).
+Fig. 4. Change in resistance with varying dose rate for Ferrocene doped
+MWCNT/PMMA composite.
+Fig. 5. Ferrocene doped MWCNT/PMMA composite heat treatment recovery of
+sample nominal resistance.
+S. Kyatsandra, et al. Surfaces and Interfaces 17 (2019) 100362
+4
+From the dose rate experiment results summarized in Fig. 2, three
+distinct e ﬀects are observed. First, the resistance of the thin ﬁlm com-
+posite decreases upon radiation exposure. Second, a higher radiation
+dose rate results in a higher rate of change in the resistance of the
+device. Third, the magnitude of reduction in device resistance is in-
+versely proportional to radiation dose rate. X-ray interaction with
+MWCNTs in the thin ﬁlm causes ionization which results in the removal
+of electrons from the carbon atom
+
+=== CHUNK 29 ===
+to radiation dose rate. X-ray interaction with
+MWCNTs in the thin ﬁlm causes ionization which results in the removal
+of electrons from the carbon atom in the MWCNT. The removal of
+electrons results in sustained electron-hole pair production during ra-
+diation exposure. The increase in the number of charge carriers upon
+radiation exposure causes a decrease in resistance of the thin ﬁlm
+composite, with electrons are expected to contribute the most to the
+conductivity increase. Radiation induced ionization in the PMMA may
+also contribute to the increase in conductivity of the thin ﬁlm. The
+accelerated rate of change of resistance to increasing radiation dose rate
+can be explained by the enhanced electron-hole pair production due to
+increasing radiation intensity (photon ﬂux) resulting in a la
+
+=== CHUNK 30 ===
+adiation dose rate
+can be explained by the enhanced electron-hole pair production due to
+increasing radiation intensity (photon ﬂux) resulting in a larger x-ray
+ionization eﬀect. However, this enhanced electron hole pair production
+due to a higher dose rate also results in an enhancement of the rate of
+creating defect sites [ 24,25] along the side walls of the nanotubes. The
+electric current in MWCNT primarily passes through the outermost
+nanotube shells [ 26,27], which are also the ones sustaining the most
+radiation induced damage. Defect sites cause reduction in electron
+mobility which results in reducing overall conductivity. The inverse
+proportionality relationship of conductivity to radiation dose rate ob-
+served in Fig. 2 is perhaps due to increased production of defect sites
+[17] wh
+
+=== CHUNK 31 ===
+roportionality relationship of conductivity to radiation dose rate ob-
+served in Fig. 2 is perhaps due to increased production of defect sites
+[17] whose conductivity reducing e ﬀects cannot be overcome by en-
+hanced electron-hole pair production from increasing radiation in-
+tensity. In addition, the ionization of the PMMA should leave behind
+positively charged defects that will also induce charge carrier scattering
+within the ﬁlms, also reducing conductivity. It should be noted that the
+damage site e ﬀects on the ferrocene doped MWCNT/PMMA thin ﬁlm
+nanocomposites are signi ﬁcantly reversible, as evidenced by the re-
+peatable responses shown in Fig. 4, and the accelerated heat treatment
+recovery process discussed in Section 4.
+The MWCNT network in the thin ﬁlms facilitates the separation 
+
+=== CHUNK 32 ===
+ in Fig. 4, and the accelerated heat treatment
+recovery process discussed in Section 4.
+The MWCNT network in the thin ﬁlms facilitates the separation of
+the charge carriers, electron-hole pairs [ 28,29]. Some of these holes,
+which have relatively low mobility, will likely be trapped within the
+oxide of the IDE and the polymer matrix of the MWCNT/PMMA ﬁlm,
+which may explain the long recovery time in the nominal resistance of
+the thin ﬁlm devices. Thermal treatment (described in Section 4) of the
+irradiated composite provides su ﬃcient thermal energy for the holes to
+escape, thereby relaxing the composite in much shorter time compared
+to annealing at room temperature.
+Radiation results summarized in Fig. 3 demonstrates the overall
+higher
+sensitivity of functionalized/modi ﬁed MWCNT/PMMA comp
+
+=== CHUNK 33 ===
+ing at room temperature.
+Radiation results summarized in Fig. 3 demonstrates the overall
+higher
+sensitivity of functionalized/modi ﬁed MWCNT/PMMA compo-
+site thin ﬁlms to x-ray radiation over unfunctionalized [17] MWCNT/
+PMMA nanocomposite thin ﬁlms. The increased sensitivity of functio-
+nalized MWCNT/PMMA nanocomposites can be attributed to the pre-
+sence of functional groups on the MWCNT which are not present on the
+unfunctionalized MWCNT. It has been shown previously that con-
+ductivity can be altered by the presence of functional groups on the
+outer most wall, though the conductivity has been preserved in the
+inner tubes of double-walled CNT [30]. These functional groups pro-
+vide an additional source of excess charge carriers from broken bonds
+during x-ray interactions thereby providi
+
+=== CHUNK 34 ===
+CNT [30]. These functional groups pro-
+vide an additional source of excess charge carriers from broken bonds
+during x-ray interactions thereby providing more charge carriers for
+conduction compared to the unfunctionalized MWCNT, hence in-
+creasing the sensitivity. Among all the functionalized groups, the high
+sensitivity of ferrocene doped MWCNT/PMMA composite is likely due
+to the presence of extra ferrocene (an electron donor [31]) groups on
+PMMA which are not present on the unfunctionalized MWCNT/PMMA
+composite. The electron donating ferrocene groups break bonds during
+x-ray interaction thereby providing more charge carriers for conduc-
+tion, hence increasing the sensitivity compared to the other nano-
+composites. For the COOH MWCNT, the COOH functional groups on the
+MWCNT would serve as
+
+=== CHUNK 35 ===
+n, hence increasing the sensitivity compared to the other nano-
+composites. For the COOH MWCNT, the COOH functional groups on the
+MWCNT would serve as a source of negative charge carriers and has
+been shown to increase electron transfer rate due to the presence of
+COOH functional groups [32]. In the case of the copper modi ﬁed
+MWCNT, the copper may provide conductive paths through the junc-
+tions between the nanotubes, and as discussed earlier, dispersion of the
+functionalized and modi ﬁed MWCNTs in the PMMA also contribute to
+the ability of the nanotube network to be conductive.
+For the hydrogen peroxide and amine functionalization groups,
+mechanisms providing extra charge carriers would be smaller in mag-
+nitude compared to the COOH and the copper coated MWCNT, giving a
+smaller overall r
+
+=== CHUNK 36 ===
+echanisms providing extra charge carriers would be smaller in mag-
+nitude compared to the COOH and the copper coated MWCNT, giving a
+smaller overall resistance change during irradiation. The harsh acidic
+process of making the hydrogen peroxide MWCNT would damage the
+sidewall and result in reduced conductivity compared to pristine
+MWCNT due to increased carrier scattering. In obtaining the amine
+functionalization, the COOH MWCNT are further derivatized with a
+long chain aliphatic amino group to produce the amine MWCNT which
+impedes charge carriers at the sidewall, and thus reducing charge
+transfer to the inner tubes of the MWCNT [33]. The reduction of charge
+carriers at the sidewall decreases the sensitivity of the amine functio-
+nalized nanotubes. The role of di ﬀerent functionalized group
+
+=== CHUNK 37 ===
+ction of charge
+carriers at the sidewall decreases the sensitivity of the amine functio-
+nalized nanotubes. The role of di ﬀerent functionalized groups on phy-
+sical properties has been shown previously [34].
+As suggested above, an alternative to the scenario described in
+which the primary source of excess carriers results from ionization ef-
+fects on the side walls of the MWCNTs, the ionization e ﬀects generating
+excess electron-hole pairs may reside primarily in the PMMA matrix.
+The x-rays may produce ionization tracks within the PMMA matrix that
+may then help transport the charge carriers through the ﬁlm to the
+conductive MWCNT network within the ﬁlms. Also, the ﬁlm composi-
+tion is about 96.6% PMMA which would favor the PMMA as a principal
+source of excess charge carriers due to x-ray 
+
+=== CHUNK 38 ===
+hin the ﬁlms. Also, the ﬁlm composi-
+tion is about 96.6% PMMA which would favor the PMMA as a principal
+source of excess charge carriers due to x-ray ionization. It is possible
+that a combination of ionization in the MWCNT and the PMMA con-
+tribute to the observed results. However, prior results [35] indicate that
+ionization of SWCNT from x-rays does take place, as there was no
+polymer matrix in the samples used in Ref. 35. Further modeling and
+experimental study may help elucidate the responsible mechanism(s).
+6. Conclusion
+It has been demonstrated in this study that ferrocene doped
+MWCNT/PMMA thin ﬁlm nanocomposites exhibited a repeatable ac-
+celerated change in the reduction of resistance to increased radiation
+dose rates. Ferrocene doped MWCNT/PMMA composite thin ﬁlm
+showed increased s
+
+=== CHUNK 39 ===
+c-
+celerated change in the reduction of resistance to increased radiation
+dose rates. Ferrocene doped MWCNT/PMMA composite thin ﬁlm
+showed increased sensitivity to x-ray radiation compared to un-
+functionalized
+MWCNT/PMMA composite [17] and all other functional
+groups used in this study. The thin ﬁlm composites in this study had
+slow recovery post-radiation which was accelerated by heat treatment.
+These results show promise in using ferrocene doped MWCNT/PMMA
+based thin ﬁlm composites for ionizing radiation detection and dosi-
+metry.
+Conﬂict of interest
+None.
+Acknowledgments
+The authors would like to acknowledge useful discussions with Dr.
+J. Zhou, Dr. B. Gersey, and Mr. R. Dwivedi. Dr. N. Nicholas of Nanolab,
+Inc provided invaluable technical assistance throughout the experi-
+ments.
+Fundi
+
+=== CHUNK 40 ===
+ Zhou, Dr. B. Gersey, and Mr. R. Dwivedi. Dr. N. Nicholas of Nanolab,
+Inc provided invaluable technical assistance throughout the experi-
+ments.
+Funding: This work was supported in part by the U.S. Department of
+Education through the Minority Science Improvement Program award
+and the Historically Black Graduate Institutions Program, and also
+partly by NASA through the University Research Center Program co-
+operative agreement NNX10AQ14A.
+S. Kyatsandra, et al. Surfaces and Interfaces 17 (2019) 100362
+5
+Supplementary materials
+Supplementary material associated with this article can be found, in
+the online version, at doi:10.1016/j.surﬁn.2019.100362.
+References
+[1] G.F. Knoll, Radiation Detection and Measurements, Wiley, New Jersey, 2010 .
+[2] P.J. Boul, K. Turner, J. Li, M.X. Pulikkathara, R
+
+=== CHUNK 41 ===
+0362.
+References
+[1] G.F. Knoll, Radiation Detection and Measurements, Wiley, New Jersey, 2010 .
+[2] P.J. Boul, K. Turner, J. Li, M.X. Pulikkathara, R.C. Dwivedi, E.D. Sosa, Y. Lu,
+O.V. Kuznetsov, P. Moloney, R. Wilkins, M. O'Rourke, V.N. Khabashesku,
+S. Arepalli, L Yowell, Single wall carbon nanotube response to proton radiation, J.
+Phys. Chem. C. 113 (32) (2009) 14467 –14473.
+[3] H. Baltes, O. Brand, G.K. Fedder, C. Hierold, J.G. Korvink, O. Tabata, Advanced
+Micro and Nanosystems, Wiley, Weinheim, 2004 .
+[4] W.-D. Zhang, W.-H. Zhang, Carbon nanotubes as active components for gas sensors,
+J. Sens. 2009 (2009) 1 –16.
+[5] J. Zhao, A. Buldum, J. Han, J.P. Lu, Gas molecule adsorption in carbon nanotubes
+and nanotube bundles, Nanotechnology 13 (, 2) (2002) 195 –200.
+[6] P. Kar, A. Choudhury, C
+
+=== CHUNK 42 ===
+. Han, J.P. Lu, Gas molecule adsorption in carbon nanotubes
+and nanotube bundles, Nanotechnology 13 (, 2) (2002) 195 –200.
+[6] P. Kar, A. Choudhury, Carboxylic acid functionalized multi-walled carbon nanotube
+doped polyaniline for chloroform sensors, Sens. Actuators B 183 (2013) 25 –33.
+[7] A.L. Go ﬀ, F. Moggia, N. Debou, P. Jegou, V. Artero, M. Fontecave, B. Jousselmea,
+S. Palacin, Facile and tunable functionalization of carbon nanotube electrodes with
+ferrocene by covalent coupling and π-stacking interactions and their relevance to
+glucose bio-sensing, J. Electroanal. Chem. 641 (1 –2) (2010) 57 –63.
+[8] H. Hao-Lin, J. Jih-Mirn, Y. Sung, W. Li-Chun, Y. Sang-Ren, The synthesis, char-
+acterization of oxidized multi-walled carbon nanotubes, and application to surface
+acoustic wave quartz cry
+
+=== CHUNK 43 ===
+Li-Chun, Y. Sang-Ren, The synthesis, char-
+acterization of oxidized multi-walled carbon nanotubes, and application to surface
+acoustic wave quartz crystal gas sensor, Mater. Chem. Phys. 109 (1) (2008)
+148–155.
+[9] J. Maklin, T. Mustonen, K. Kordas, S. Saukko, G. Toth, J. Vahakangas, Nitric oxide
+gas sensors with functionalized carbon nanotubes, Phys. Status Solidi B 244 (11)
+(2007) 4298 –4302.
+[10] D. Fu, H. Lim, Y. Shi, X. Dong, S.G. Mhaisalkar, Y. Chen, S. Moochhala, L. Lain-Jong,
+Diﬀerentiation of gas molecules using ﬂexible and all-carbon nanotube devices, J.
+Phys. Chem. C 112 (3) (2008) 650 –653.
+[11] P. Qi, O. Vermesh, M. Grecu, A. Javey, Q. Wang, H. Dai, Toward large arrays of
+multiplex functionalized carbon nanotube sensors for highly sensitive and selective
+molecular detection, Na
+
+=== CHUNK 44 ===
+y, Q. Wang, H. Dai, Toward large arrays of
+multiplex functionalized carbon nanotube sensors for highly sensitive and selective
+molecular detection, Nanoletters 3 (3) (2003) 347 –351.
+[12] K.B. Male, S. Hrapovic, Y. Liu, D. Wang, J.H.T. Luong, Electrochemical detection of
+carbohydrates using copper nanoparticles and carbon nanotubes, Anal. Chim. Acta
+516 (1 –2) (2004) 35 –41.
+[13] M.L.Y. Sin, G.C.T. Chow, G.M.K. Wong, W.J. Li, P.H.W. Leong, K.W. Wong,
+Ultralow-power alcohol vapor sensors using chemically functionalized multiwalled
+carbon nanotubes, IEEE Trans Nanotechnol 6 (5) (2007) 571 –577.
+[14] D. Ki-Young, J. Choi, Y.D. Lee, B.H. Kang, Y. Youn-Yeol, H.H. Choi, J. Byeong-
+Kwon, Detection of a CO and NH3 gas mixture using carboxylic acid-functionalized
+single-walled carbon nanotubes, Nan
+
+=== CHUNK 45 ===
+ Youn-Yeol, H.H. Choi, J. Byeong-
+Kwon, Detection of a CO and NH3 gas mixture using carboxylic acid-functionalized
+single-walled carbon nanotubes, Nanoscale Res. Lett. 8 (1) (2013) 1 –6.
+[15] G.L.
+Luque, N.F. Ferreyra, G.A. Rivas, Glucose biosensor based on the use of a
+carbon nanotube paste electrode modi ﬁed with metallic particles, Microchim. Acta
+152 (3 –4) (2006) 277 –283.
+[16] T.H. Tran, J.-.W. Lee, K. Lee, Y.D. Lee, B.-.K. Ju, The gas sensing properties of
+single-walled carbon nanotubes deposited on an aminosilane monolayer, Sens.
+Actuators B 129 (1) (2008) 67 –71.
+[17] S. Kyatsandra, R. Wilkins, Total ionizing dose X-ray radiation e ﬀects on MWCNT/
+PMMA thin ﬁlm composites, IEEE Trans. Nanotechnol. 14 (1) (2015) 152 –158.
+[18] H. Ham, Y. Choi, I. Chung, An explanation of dispersion
+
+=== CHUNK 46 ===
+ects on MWCNT/
+PMMA thin ﬁlm composites, IEEE Trans. Nanotechnol. 14 (1) (2015) 152 –158.
+[18] H. Ham, Y. Choi, I. Chung, An explanation of dispersion states of single-walled
+carbon nanotubes in solvents and aqueous surfactant solutions using solubility
+parameters, J. Colloid Interface Sci.. 286 (1) (2005) 216 –223.
+[19] F. Du, J.E. Fischer, K.I. Winey, Coagulation method for preparing single-walled
+carbon nanotube/poly(methyl methacrylate) composites and their modulus, elec-
+trical conductivity, and thermal stability, J. Polym. Sci. B Polym. Phys. 41 (24)
+(2003) 3333 –3338.
+[20] J.E. Mark, Polymer Data Handbook, Oxford University press, New York, 1999 .
+[21] W.F. Smith, J. Hashemi, Foundations of Materials Science and Engineering,
+McGraw-Hill, New York, 2005 .
+[22] M. Moniruzzaman, K.I. W
+
+=== CHUNK 47 ===
+York, 1999 .
+[21] W.F. Smith, J. Hashemi, Foundations of Materials Science and Engineering,
+McGraw-Hill, New York, 2005 .
+[22] M. Moniruzzaman, K.I. Winey, Polymer nanocomposites containing carbon nano-
+tubes, Macromolecules 39 (16) (2006) 5194 –5205.
+[23] G.G. Eichholz, J.W. Poston, Principles of Nuclear Radiation Detection, Ann Arbor
+Science publisher, USA, 1979 .
+[24] E.X. Zhang, A.K.M. Newaz, B. Wang, S. Bhandaru, C.X. Zhang, D.M. Fleetwood,
+K.I. Bolotin, S.T. Pantelides, M.L. Alles, R.D. Schrimpf, S.M. Weiss, R.A. Reed,
+R.A. Weller, Low-energy x-ray and ozone-exposure induced defect formation in
+graphene materials and devices, IEEE Trans. Nucl. Sci. 58 (6) (2011) 2961– 2967.
+[25] I. Childres, L.A. Jauregui, M. Foxe, J. Tian, R. Jalilian, I. Jovanovic, Y.P. Chen,
+Eﬀect of electron-beam
+
+=== CHUNK 48 ===
+. Nucl. Sci. 58 (6) (2011) 2961– 2967.
+[25] I. Childres, L.A. Jauregui, M. Foxe, J. Tian, R. Jalilian, I. Jovanovic, Y.P. Chen,
+Eﬀect of electron-beam irradiation on graphene ﬁeld e ﬀect devices, Appl. Phys.
+Lett. 97 (17) (2010) 1731091 –1731093.
+[26] P.G. Collins, M.S. Arnold, P. Avouris, Engineering carbon nanotubes and nanotube
+circuits using electrical breakdown, Science 292 (2001) 706 –709.
+[27] S. Frank, P. Poncharal, Z.L. Wang, W.A. de Heer, Carbon nanotube quantum re-
+sistors, Science 280 (5370) (1998) 1744 –1746.
+[28] E. Kymakis, G.A.J. Amaratunga, Single-wall carbon nanotube/conjugated polymer
+photovoltaic devices, Appl. Phys. Lett. 80 (1) (2002) 112 –114.
+[29] N.M. Gabor, Z. Zhong, K. Bosnick, J. Park, P.L. McEuen, Extremely e ﬃcient
+mul-
+tiple electron-hole pair generation in c
+
+=== CHUNK 49 ===
+ 80 (1) (2002) 112 –114.
+[29] N.M. Gabor, Z. Zhong, K. Bosnick, J. Park, P.L. McEuen, Extremely e ﬃcient
+mul-
+tiple electron-hole pair generation in carbon nanotube photodiodes, Science 325
+(5946) (2009) 1367 –1371.
+[30] V. Leon, R. Parret, R. Almairac, L. Alvarez, M. Babaa, B.P. Doyle, P. Ienny, P. Parent,
+A.A. Zahab, J. Bantignies, Spectroscopic study of double-walled carbon nanotube
+functionalization for preparation of carbon nanotube / epoxy composites, Carbon
+50 (14) (2012) 4987 –4994.
+[31] D.M. Guldi, M. Marcaccio, D. Paolucci, F. Paolucci, N. Tagmatarchis, D. Tasis,
+E. V_zquez, M. Prato, Single-wall carbon nanotube –ferrocene nanohybrids: obser-
+ving intramolecular electron transfer in functionalized SWNTs, Angew. Chem. 42
+(2003) 4206 –4209.
+[32] K. Balasubramanian, M. Burghard, Che
+
+=== CHUNK 50 ===
+ds: obser-
+ving intramolecular electron transfer in functionalized SWNTs, Angew. Chem. 42
+(2003) 4206 –4209.
+[32] K. Balasubramanian, M. Burghard, Chemically functionalized carbon nanotubes,
+Small 1 (2) (2005) 180 –192.
+[33] G. Trakakis, D. Tasis, J. Parthenios, C. Galiotis, K. Papagelis, Structural properties of
+chemically functionalized carbon nanotube thin ﬁlms, Materials 6 (2013)
+2360–2371.
+[34] M.X. Pulikkathara, O.V. Kuznetsov, I.R.G. Peralta, X. Wei, V.N. Khabashesku,
+Medium density polyethylene composites with functionalized carbon nanotubes,
+Nanotechnology 20 (19) (2009) 195602 .
+[35] Q. Kang, J. Yeow, R. Barnett, The use of semiconducting single walled carbon na-
+notube ﬁlms to measure X-ray dose, Carbon 50 (6) (2012) 2197 –2201.
+S. Kyatsandra, et al.
+Surfaces and Interfaces 17 (
+
+=== CHUNK 51 ===
+ucting single walled carbon na-
+notube ﬁlms to measure X-ray dose, Carbon 50 (6) (2012) 2197 –2201.
+S. Kyatsandra, et al.
+Surfaces and Interfaces 17 (2019) 100362
+6
+

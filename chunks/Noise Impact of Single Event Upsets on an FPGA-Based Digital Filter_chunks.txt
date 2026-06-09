@@ -1,0 +1,814 @@
+
+=== CHUNK 1 ===
+NOISE IMPACT
+OF SINGLE-EVENT UPSETS ON AN FPGA-BASED DIGITAL FILTER
+Brian H. Pratt, Michael J. Wirthlin
+NSF Center for High Performance
+Reconﬁgurable Computing (CHREC)
+Dept. of Elec. & Comp. Engineering
+Brigham Y oung University
+Provo, UT 84604 USA
+brianpratt@byu.net, wirthlin@ee.byu.edu
+Michael Caffrey, Paul Graham, Keith Morgan
+ISR-3 Space Data Systems
+Los Alamos National Laboratory
+Los Alamos, NM 87545 USA
+mpc, grahamp, morgank@lanl.gov
+ABSTRACT
+Field-programmable gate arrays are well-suited to DSP and
+digital communications applications. SRAM-based FPGAs,
+however, are susceptible to radiation-induced single-event
+upsets (SEUs) when deployed in space environments. These
+effects are often handled with the area and power-intensive
+TMR mitigation technique. This paper evaluates the effects
+
+=== CHUNK 2 ===
+ed in space environments. These
+effects are often handled with the area and power-intensive
+TMR mitigation technique. This paper evaluates the effects
+of SEUs in the FPGA conﬁguration memory as noise in a
+digital ﬁlter, showing that many SEUs in a digital communi-
+cations system cause effects that could be considered noise
+rather than circuit failure. Since DSP and digital communi-
+cations applications are designed to withstand certain types
+of noise, SEU mitigation techniques that are less costly than
+TMR may be applicable. This could result in large savings
+in area and power when implementing a reliable system.
+Our experiments show that, of the SEUs that affected the
+digital ﬁlter with a 20 dB SNR input signal, less than 14%
+caused an SNR loss of more than 1 dB at the output.
+1. INTRODUC
+
+=== CHUNK 3 ===
+ the SEUs that affected the
+digital ﬁlter with a 20 dB SNR input signal, less than 14%
+caused an SNR loss of more than 1 dB at the output.
+1. INTRODUCTION
+Field-programmable gate arrays (FPGAs) are known for
+their high processing throughput, reconﬁgurability, and of-
+ten lower total cost as compared to application-speciﬁc in-
+tegrated circuits (ASICs). These characteristics make them
+desirable for use in digital signal processing (DSP) and dig-
+ital communications systems. DSP systems are heavily used
+in space systems and, because of these favorable characteris-
+tics, FPGAs are often considered for these applications [1].
+SRAM-based FPGAs, however, are susceptible to the ef-
+fects of radiation-induced single-event upsets (SEUs). The
+SRAM memory elements which hold the conﬁguration
+memory o
+
+=== CHUNK 4 ===
+wever, are susceptible to the ef-
+fects of radiation-induced single-event upsets (SEUs). The
+SRAM memory elements which hold the conﬁguration
+memory of the FPGA can be corrupted by high-energy par-
+This work w
+as supported by the I/UCRC Program of the National Sci-
+ence Foundation under Grant No. 0801876. Approved for public release
+by Los Alamos National Laboratory under LA-UR-09-03658; distribution
+is unlimited.
+ticles common in space environments. Since the conﬁgu-
+ration memory determines the circuit implemented by the
+FPGA, the actual function of the FPGA can be altered in
+addition to the data in the user memory. In general, the con-
+ﬁguration memory is the more critical set since it makes up
+the majority (>90%) of the on-chip memory [2].
+These SEU-induced faults can be repaired by re
+
+=== CHUNK 5 ===
+ration memory is the more critical set since it makes up
+the majority (>90%) of the on-chip memory [2].
+These SEU-induced faults can be repaired by restoring
+the original conﬁguration of the FPGA. A method called
+conﬁguration scrubbing is used to periodically refresh the
+conﬁguration memory to repair these faults soon after the
+faults are discovered. The errors induced by the faults, how-
+ever, cannot be repaired by scrubbing and must be handled
+separately.
+Mitigating the effects of SEUs is important for FPGA-
+based systems operating in radiation environments. The
+most popular mitigation technique is triple-modular redun-
+dancy (TMR). TMR has been singled out because of its rela-
+tively simple architecture and its general applicability. TMR
+involves triplicating the circuit modules that ne
+
+=== CHUNK 6 ===
+ been singled out because of its rela-
+tively simple architecture and its general applicability. TMR
+involves triplicating the circuit modules that need to be pro-
+tected from SEUs and adding majority voters at their outputs
+to decide what the correct output is from the three replicates.
+Assuming only one fault at a time, TMR is very effective at
+correcting errors introduced by SEUs [3].
+Despite its effectiveness, TMR is very expensive and
+costs at least 3x in terms of hardware [4]. Further, sys-
+tems that employ TMR are slower than their non-redundant
+counterparts. Because of this high area and timing cost,
+many people are investigating other methods of SEU mit-
+igation [5]. Some of these methods, like TMR, are generic
+techniques, while other methods beneﬁt from using knowl-
+edge of the c
+
+=== CHUNK 7 ===
+r methods of SEU mit-
+igation [5]. Some of these methods, like TMR, are generic
+techniques, while other methods beneﬁt from using knowl-
+edge of the circuit design in question to focus on reliability
+issues speciﬁc to that system.
+DSP and digital communications applications are can-
+didates for alternative mitigation strategies. Some systems
+in these categories may not need full TMR protection since
+they are designed to tolerate certain types of errors and noise
+in the ﬁrst place. A demodulator in a digital communications
+978-1-4244-3892-1/09/$25.00 ©2009 IEEE
+38
+Authorized licensed use limited to: Brigham Young University. Downloaded on September 23,2020 at 17:18:22 UTC from IEEE Xplore.  Restrictions apply. 
+system, for
+example, must be designed to tolerate a certain
+amount of thermal no
+
+=== CHUNK 8 ===
+ember 23,2020 at 17:18:22 UTC from IEEE Xplore.  Restrictions apply. 
+system, for
+example, must be designed to tolerate a certain
+amount of thermal noise added to the received signal. This
+noise decreases the signal-to-noise ratio (SNR) of the re-
+ceived signal and thus the performance of the demodulator.
+These built-in error-correcting abilities may also be able to
+correct errors introduced by SEUs in an FPGA-based DSP
+system.
+This paper will evaluate the effects of SEUs on a simple
+digital communications system implemented in an FPGA.
+We have performed fault injection experiments to determine
+the effect of SEUs on the matched ﬁlter of a simple demod-
+ulator system. This paper will show that the effects of SEUs
+may often be viewed as noise introduced into the system.
+Due to the nature of 
+
+=== CHUNK 9 ===
+ple demod-
+ulator system. This paper will show that the effects of SEUs
+may often be viewed as noise introduced into the system.
+Due to the nature of the system, some of these errors may
+be handled gracefully without any explicit SEU mitigation
+techniques. Others may be protected against using mitiga-
+tion techniques less costly than TMR, reducing the area and
+power overhead required for a reliable system.
+2. RELA TED WORK
+In searching for alternatives to TMR, various authors have
+noted that reduced-cost mitigation techniques might be ob-
+tained by using knowledge of the system in question. These
+approaches, primarily targeting ASIC-based systems, have
+been called algorithm-based fault tolerance (ABFT) [6],
+algorithmic soft error tolerance (ASET) [8], and system
+knowledge [7].
+Some authors
+
+=== CHUNK 10 ===
+tems, have
+been called algorithm-based fault tolerance (ABFT) [6],
+algorithmic soft error tolerance (ASET) [8], and system
+knowledge [7].
+Some authors have shown that the effects of soft errors
+in a DSP system can sometimes be viewed as noise. Sev-
+eral papers have examined soft errors produced in ASICs
+by deep-submicron (DSM) noise as well as those produced
+by using voltage overscaling (VOS) to reduce power [8]. Al-
+though we will make a similar analysis, the causes of the soft
+errors are distinct from those which are of main concern for
+SRAM FPGA systems. For example, the errors introduced
+by the VOS technique tend to be located in the most signiﬁ-
+cant bits (MSBs) of a computation rather than the uniformly-
+distributed errors expected from radiation-induced upsets.
+Others have published
+
+=== CHUNK 11 ===
+ signiﬁ-
+cant bits (MSBs) of a computation rather than the uniformly-
+distributed errors expected from radiation-induced upsets.
+Others have published papers dealing with the effects
+of radiation-induced SEUs in ASIC-based DSP systems [7].
+These papers focus on errors caused by upsets only in the
+memory elements of the systems, which is the dominant is-
+sue in ASIC technologies. In contrast, this paper will con-
+sider the effects of SEUs in any part of the FPGA conﬁg-
+uration memory, which speciﬁes the logic implemented in
+addition to the user memory.
+3. NOISE IN DIGITAL COMMUNICA TIONS
+SYSTEMS
+As mentioned in Section 1, digital communications systems
+are designed to operate under adverse conditions. In order to
+predict the performance of a communications system, math-
+ematical models are 
+
+=== CHUNK 12 ===
+s systems
+are designed to operate under adverse conditions. In order to
+predict the performance of a communications system, math-
+ematical models are developed that represent the most im-
+portant characteristics of the signal transmission medium.
+The simplest and most common model used to represent a
+communications channel is the additive noise channel, illus-
+trated in Fig. 1.
+Fig.
+1. Diagram of a simple binary phase-shift keying
+(BPSK) receiver circuit with additive white Gaussian noise
+(AWGN).
+Digital communications systems are often optimized
+mathematically to correct errors introduced by additive
+Gaussian noise in order to combat thermal noise inherent
+in these systems. These built-in error-correction properties
+are critical to the performance of a communications system.
+These propert
+
+=== CHUNK 13 ===
+ noise inherent
+in these systems. These built-in error-correction properties
+are critical to the performance of a communications system.
+These properties are those which we would like to exploit
+when considering an application-speciﬁc mitigation tech-
+nique for digital communications circuits on FPGAs.
+When designing an application-speciﬁc mitigation
+scheme, the measure of performance is critical. The tradi-
+tional method of measuring the error-handling performance
+of a digital communications receiver is bit error rate (BER).
+BER is simply the ratio of incorrectly-decoded data bits to
+the total number of bits received. With a higher amount of
+Gaussian noise, the BER of the system increases. Fig. 2
+shows the relationship between amount of Gaussian noise in
+a receiver system in terms of SNR 
+
+=== CHUNK 14 ===
+
+Gaussian noise, the BER of the system increases. Fig. 2
+shows the relationship between amount of Gaussian noise in
+a receiver system in terms of SNR and the BER at the output
+of the system. The plot shows that a lower SNR, correspond-
+ing to a stronger noise signal, results in a higher BER.
+Fig.
+2. Bit error rate (BER) curves for several M-PSK mod-
+ulation schemes.
+39
+Authorized licensed use limited to: Brigham Young University. Downloaded on September 23,2020 at 17:18:22 UTC from IEEE Xplore.  Restrictions apply. 
+4. SEU-INDUCED
+NOISE
+In addition to the thermal noise inherent in any digital com-
+munications system, FPGA-based systems in space environ-
+ments must also deal with errors caused by SEUs. As men-
+tioned in Section 1, SEUs in SRAM-based FPGAs corrupt
+both the user memory and th
+
+=== CHUNK 15 ===
+ce environ-
+ments must also deal with errors caused by SEUs. As men-
+tioned in Section 1, SEUs in SRAM-based FPGAs corrupt
+both the user memory and the conﬁguration memory of the
+device. This means that both the data being processed and
+the hardware doing the processing are vulnerable to these
+upsets. Whether it is the hardware or the data itself that is
+affected, the result is incorrect data being produced by the
+affected module.
+In some sense, this incorrect data can be viewed as noisy
+data. The SEU that caused the fault in the design results in
+a corrupt data signal leaving the design. For a DSP system,
+we will call this type of corruption SEU-induced noise.
+The dynamics of this type of “noise” are most likely dis-
+tinct from the thermal noise most often dealt with in DSP
+and digital co
+
+=== CHUNK 16 ===
+ SEU-induced noise.
+The dynamics of this type of “noise” are most likely dis-
+tinct from the thermal noise most often dealt with in DSP
+and digital communications systems. As mentioned in Sec-
+tion 3, this noise is modeled as Gaussian noise, that is, the
+noise follows a Gaussian probability distribution. Since the
+mechanics of SEU-induced errors are decidedly different
+than those causing thermal noise, we do not expect SEU-
+induced noise to follow a strict Gaussian distribution. For
+example, upsets in the routing of the design, which controls
+how logic components are connected, are not expected to
+cause errors which strongly resemble Gaussian noise.
+Although the SEU-induced noise in an FPGA system
+may not perfectly resemble Gaussian noise, the noise com-
+pensation characteristics of a DSP 
+
+=== CHUNK 17 ===
+ noise.
+Although the SEU-induced noise in an FPGA system
+may not perfectly resemble Gaussian noise, the noise com-
+pensation characteristics of a DSP system may still be able
+to process the data affected by SEU-induced noise. If the
+effects of SEUs are similar, in some way, to Gaussian noise,
+the system may react with a similar increase in BER. We
+refer to these types of effects as Gaussian-like, since the cir-
+cuitry designed to ﬁlter Gaussian noise is able to ﬁlter this
+type of SEU-induce noise as well.
+If a signiﬁcant percentage of SEUs cause Gaussian-like
+noise in an FPGA-based DSP application, we may be able
+to mitigate many of the adverse effects of SEUs at a much
+lower cost than TMR. Since this type of error will be com-
+pensated for by the DSP application, it may not be necessary
+t
+
+=== CHUNK 18 ===
+se effects of SEUs at a much
+lower cost than TMR. Since this type of error will be com-
+pensated for by the DSP application, it may not be necessary
+to explicitly mitigate their effects. Instead, the mitigation
+scheme can focus on the more critical errors that are not han-
+dled by the built-in noise compensation of the application.
+These errors would include those that are not Gaussian-like
+as well as Gaussian-like, high-magnitude errors that are be-
+yond the noise ﬁltering capabilities of the DSP application
+in question.
+5. EXPERIMENT METHODOLOGY
+To evaluate the effects of SEUs on an FPGA-based DSP sys-
+tem, we performed fault injection on a simple DSP mod-
+ule to emulate radiation-induced upsets and observed the ef-
+fects. The experiments considered only the conﬁguration
+memory cells of 
+
+=== CHUNK 19 ===
+ simple DSP mod-
+ule to emulate radiation-induced upsets and observed the ef-
+fects. The experiments considered only the conﬁguration
+memory cells of the FPGA since these make up the vast ma-
+jority (>90%) of the on-chip memory and thus the majority
+of the fault locations [2]. We did not investigate the effects
+of upsets within block memories, which were not used by
+our test design, nor those within the user ﬂip-ﬂops.
+The module examined in these experiments is the
+matched ﬁlter of a binary phase-shift keying (BPSK) digital
+communications receiver. A simple BPSK receiver consists
+of a downsampler, a matched ﬁlter, and a decision block as
+shown in Fig. 1. The matched ﬁlter is the most complex
+of these components and is responsible for the majority of
+the error-handling of the system. The ﬁl
+
+=== CHUNK 20 ===
+n in Fig. 1. The matched ﬁlter is the most complex
+of these components and is responsible for the majority of
+the error-handling of the system. The ﬁlter used for this
+experiment has the following properties:
+• 49-tap FIR ﬁlter
+• Square-root raised cosine (SRRC) pulse shape with
+50% roll-off
+• 16-bit ﬁxed-point input (Q2.14 format)
+• 18-bit ﬁxed-point output (Q4.14 format)
+• 15% of slices occupied on Virtex 1000 FPGA
+By injecting faults into the conﬁguration bitstream and run-
+ning modulated data through the ﬁlter, we were able to mea-
+sure the impact of each conﬁguration bit in the FPGA being
+upset.
+The BYU-LANL fault injection tool used has been de-
+scribed in detail in previous papers [9]. The fault injection
+tool’s hardware consists of three Virtex 1000 FPGAs: one
+for the design under 
+
+=== CHUNK 21 ===
+ been de-
+scribed in detail in previous papers [9]. The fault injection
+tool’s hardware consists of three Virtex 1000 FPGAs: one
+for the design under test (DUT), one for the golden design,
+and one for data generation and comparison. In the standard
+conﬁguration, a design is implemented on both the DUT and
+golden FPGAs. The third FPGA generates random data us-
+ing an LFSR and passes it as inputs to the DUT and golden
+designs. The outputs of these two FPGAs are constantly
+compared, looking for differences. The fault injection tool’s
+software injects faults in the DUT FPGA by reconﬁguring
+individual conﬁguration bits. If a difference in output is
+observed after one of these injected faults, that conﬁgura-
+tion bit is marked as sensitive. The tool analyzes all of the
+5,810,024 conﬁguration bit
+
+=== CHUNK 22 ===
+s
+observed after one of these injected faults, that conﬁgura-
+tion bit is marked as sensitive. The tool analyzes all of the
+5,810,024 conﬁguration bits, one by one, in a total of ap-
+proximately 25 minutes.
+Fig. 3 shows the steps involved in the experiments per-
+formed. The matched ﬁlter design was implemented on a
+Virtex 1000 FPGA. A 10,000-sample long sequence of ran-
+dom data was generated and fed through a modulator system
+in Matlab. We will refer to this input signal as the signal
+x. Gaussian noise was added to the modulated data, creat-
+ing the signal x + nG, which was then passed through the
+FPGA-based matched ﬁlter, Hgold. The output was recorded
+and stored as y = Hgold(x + nG), as shown in Fig. 3(a).
+The output from the noiseless case (y 0 = Hgold(x), where
+40
+Authorized licensed 
+
+=== CHUNK 23 ===
+was recorded
+and stored as y = Hgold(x + nG), as shown in Fig. 3(a).
+The output from the noiseless case (y 0 = Hgold(x), where
+40
+Authorized licensed use limited to: Brigham Young University. Downloaded on September 23,2020 at 17:18:22 UTC from IEEE Xplore.  Restrictions apply. 
+Fig.
+3. Flow of the matched ﬁlter experiment.
+nG = 0) was the golden output that was compared against
+the data from step three.
+Next, the fault injection tool was used to completely
+characterize the FPGA design by determining which con-
+ﬁguration bits were sensitive to SEUs. This is illustrated
+in Fig. 3(b), where the diagram at the right illustrates the
+physical locations of the sensitive bits within the FPGA. It
+is important to note that the input to each version of the ﬁl-
+ter in this step was the default for th
+
+=== CHUNK 24 ===
+tions of the sensitive bits within the FPGA. It
+is important to note that the input to each version of the ﬁl-
+ter in this step was the default for the fault injection tool: a
+pseudorandom sequence of bits for each of the 16 input bits.
+In other words, the input sequence was not a modulated sig-
+nal, but white noise, which is likely to stress the ﬁlter more
+than the modulated signal that it is designed to receive. This
+provides better coverage of the design.
+This process discovered that the matched ﬁlter design in
+question utilizes 149,696 conﬁguration bits (out of the to-
+tal 5,810,024 available in the Virtex 1000 FPGA). Fig. 6(b)
+shows a plot of the physical location of each of these conﬁg-
+uration bits in this FPGA. This is referred to as the dynamic
+cross section of this speciﬁc FPGA d
+
+=== CHUNK 25 ===
+ot of the physical location of each of these conﬁg-
+uration bits in this FPGA. This is referred to as the dynamic
+cross section of this speciﬁc FPGA design. Only these sen-
+sitive bits were considered for the rest of the experiment.
+The third step of the experiment determined the impact
+of sensitive SEUs on the ﬁlter as shown in Fig. 3(c). Each
+sensitive conﬁguration bit, as discovered in step (b), was up-
+set and the output recorded as y′
+i, i referring to which bit was
+upset. The input to the corrupt ﬁlter was x + nG, the same
+modulated signal from step (a). Each corrupt output signal
+could then be subtracted from the golden output signal to ob-
+tain the “noise” signal at the output of this particular corrupt
+ﬁlter, referred to as ni = y′
+i − y. In this way, we obtained a
+sample of the S
+
+=== CHUNK 26 ===
+o ob-
+tain the “noise” signal at the output of this particular corrupt
+ﬁlter, referred to as ni = y′
+i − y. In this way, we obtained a
+sample of the SEU-induced noise for every sensitive conﬁg-
+uration bit in the matched ﬁlter design.
+In order to obtain results for different types of noise en-
+vironments, noise was added to the input signal and steps 1
+and 3 were repeated for three cases: 20 dB, 10 dB, and 5 dB
+SNR at the input to the ﬁlter.
+To analyze the results from this experiment, we have
+taken the individual corrupt output signals for each upset
+bit and calculated the loss in signal-to-noise ratio caused by
+each upset. First, the SNR at the output of the golden ﬁlter
+was calculated as follows:
+ngold = y − y0, (1)
+gold
+SNR dB =
+10 ∗ log10
+( power(y0)
+po
+wer(ngold)
+)
+. (2)
+Then the SNR
+
+=== CHUNK 27 ===
+ the output of the golden ﬁlter
+was calculated as follows:
+ngold = y − y0, (1)
+gold
+SNR dB =
+10 ∗ log10
+( power(y0)
+po
+wer(ngold)
+)
+. (2)
+Then the SNR at the output of each corrupt ﬁlter (one for
+each conﬁguration bit) was calculated:
+ni = y ′
+i − y, (3)
+corr
+SNR dBi = 10 ∗ l
+og10
+( power(y0)
+po
+wer(y′
+i)
+)
+. (4)
+Finally, the difference of the two SNR values was taken for
+each corrupt output to show the difference in SNR caused
+by the injected fault:
+SNR
+lossi = gol
+d SNR dB − corr SNR dBi. (5)
+In a
+standard communications system model with an
+AWGN channel, the loss in SNR can be used to estimate
+the change in BER of the system. Using Fig. 2, we can
+estimate the impact of a certain loss of SNR on BER. A loss
+in SNR corresponds to sliding up and left along one of the
+BER curves, resulting i
+
+=== CHUNK 28 ===
+ we can
+estimate the impact of a certain loss of SNR on BER. A loss
+in SNR corresponds to sliding up and left along one of the
+BER curves, resulting in an increase in BER.
+6. EXPERIMENTAL RESULTS
+The calculations described in the previous section resulted
+in a large number of SNR loss values: one for each sensitive
+conﬁguration bit in the FIR ﬁlter design. Fig. 4 shows three
+cumulative distribution functions (CDF) of the loss in SNR
+due to each single conﬁguration bit upset. The plot displays
+the results of the three experiments, each with a different
+amount of noise added to the input signal. The CDFs were
+created from 149,696 entries: one for each of the sensitive
+conﬁguration bits (i.e. FPGA conﬁguration bits actually uti-
+lized by the ﬁlter design).
+As an example, for the 20 dB input S
+
+=== CHUNK 29 ===
+or each of the sensitive
+conﬁguration bits (i.e. FPGA conﬁguration bits actually uti-
+lized by the ﬁlter design).
+As an example, for the 20 dB input SNR case, the plot
+shows that 95% of the sensitive conﬁguration upsets caused
+less than 15 dB of SNR loss at the output of the ﬁlter. Con-
+versely, only 5% of sensitive upsets caused an SNR loss of
+15 dB or more. Virtually all upsets caused an SNR loss of
+less than 40 dB. It is clear from the plot, then, that most of
+the conﬁguration upsets caused little loss in SNR. In fact, for
+the 20 dB input SNR case, only 12.7% of the upsets caused
+an SNR loss of 1 dB or more.
+It is interesting to note that in the cases with more severe
+noise, even more of the conﬁguration upsets caused little
+loss in SNR. Table 1 shows numerical results for all three
+exp
+
+=== CHUNK 30 ===
+in the cases with more severe
+noise, even more of the conﬁguration upsets caused little
+loss in SNR. Table 1 shows numerical results for all three
+experiments. The results show that, as the noise at the input
+to the ﬁlter increased, the impact of SEUs on the SNR at
+the output of ﬁlter was reduced. In the 5 dB input SNR case,
+only 7.1% of the upsets caused an SNR loss of 1 dB or more.
+41
+Authorized licensed use limited to: Brigham Young University. Downloaded on September 23,2020 at 17:18:22 UTC from IEEE Xplore.  Restrictions apply. 
+Table
+1. Percentages of upsets of sensitive conﬁguration bits causing negative effects falling under certain thresholds.
+Less than
+0.1dB Less than
+1dB Less than
+3dB Less than
+6dB
+Input SNR loss in
+SNR loss in
+SNR loss in
+SNR loss in
+SNR
+20 dB 121,493 trials
+(8
+
+=== CHUNK 31 ===
+hresholds.
+Less than
+0.1dB Less than
+1dB Less than
+3dB Less than
+6dB
+Input SNR loss in
+SNR loss in
+SNR loss in
+SNR loss in
+SNR
+20 dB 121,493 trials
+(81.2%) 129,217 trials
+(86.3%) 133,337 trials
+(89.1%) 136,229 trials
+(91.0%)
+10 dB 128,725 trials
+(86.0%) 135,982 trials
+(90.8%) 139,586 trials
+(93.2%) 142,133 trials
+(94.9%)
+5 dB 132,449 trials
+(88.5%) 139,124 trials
+(92.9%) 142,231 trials
+(95.0%) 143,824 trials
+(96.1%)
+Fig.
+4. Cumulative distribution functions (CDF) showing
+the loss in SNR due to a single sensitive conﬁguration bit
+with various SNR levels at the input to the ﬁlter.
+It appears that the errors caused by the conﬁguration upsets
+were absorbed into the noise already present in the system.
+As mentioned in Section 5, these SNR results can be
+linked to the desired BER metric, but thi
+
+=== CHUNK 32 ===
+e absorbed into the noise already present in the system.
+As mentioned in Section 5, these SNR results can be
+linked to the desired BER metric, but this is only truly valid
+if the conﬁguration upsets cause Gaussian-like noise. Un-
+fortunately, the amount of time required to measure the BER
+for each conﬁguration upset at each SNR level made it difﬁ-
+cult to obtain direct BER measurements.
+Initial investigation into whether the SNR measurements
+are a good indicator of BER are encouraging. Fig. 5 shows
+the BER curves for the golden ﬁlter as well as ﬁve different
+sample conﬁguration bits. The plot shows that some of the
+upsets do cause a general degradation of BER as the SNR
+worsens. Others cause more dramatic effects, such as bit
+1000574, as labeled in the plot. When this bit was upset,
+a BER 
+
+=== CHUNK 33 ===
+egradation of BER as the SNR
+worsens. Others cause more dramatic effects, such as bit
+1000574, as labeled in the plot. When this bit was upset,
+a BER ﬂoor was observed, meaning that the BER never im-
+proved past a value of about 0.005, or 1 bit error in every 200
+bits sent. Effects such as these are certainly not Gaussian-
+like, but many of the bits we have examined do seem to have
+this property. Only a more thorough investigation will tell
+how good the assumption of Gaussian-like noise is. This
+will be pursued in future work.
+The results of the experiments presented here are en-
+couraging. They imply that it is indeed possible for a DSP or
+digital communications system to handle many of the errors
+caused by SEUs and that further investigation is warranted.
+The impact of this knowledge cou
+
+=== CHUNK 34 ===
+igital communications system to handle many of the errors
+caused by SEUs and that further investigation is warranted.
+The impact of this knowledge could lead to a dramatic re-
+duction in the redundancy applied to FPGA-based DSP sys-
+tems intended for radiation environments. Just as the dy-
+namic cross section of the FPGA design speciﬁes the con-
+ﬁguration bits that affect the operation of a particular design,
+we may deﬁne an application-speciﬁc cross section that de-
+scribes the set of conﬁguration bits that are not inherently
+protected by higher-level algorithms.
+For example, Fig. 6(c) is a plot of the conﬁguration bits
+of the matched ﬁlter design which, with an input SNR of
+20 dB, cause greater than 1 dB loss in SNR at the output
+of the ﬁlter. This is the application-speciﬁc cross sectio
+
+=== CHUNK 35 ===
+design which, with an input SNR of
+20 dB, cause greater than 1 dB loss in SNR at the output
+of the ﬁlter. This is the application-speciﬁc cross section
+for an application where 1 dB or less SNR loss is accept-
+able for this receiver system. This cross section only con-
+tains 20,479 conﬁguration bits (0.35% of the total 5,810,024
+conﬁguration bits), whereas the dynamic cross section con-
+tained 149,696 bits (2.5% of the total). This is nearly a 10x
+reduction in the number of conﬁguration bits that need ad-
+ditional protection using TMR or some other technique.
+Fig.
+5. The bit error rate (BER) curves for ﬁve selected
+conﬁguration upsets compared to the theoretical curve for
+a BPSK/QPSK system.
+7. FUTURE WORK
+In future work, we will further analyze the direct BER im-
+pact of SEU effects on th
+
+=== CHUNK 36 ===
+d to the theoretical curve for
+a BPSK/QPSK system.
+7. FUTURE WORK
+In future work, we will further analyze the direct BER im-
+pact of SEU effects on the matched ﬁlter and other compo-
+nents of a digital communications receiver. With these ex-
+periments, we will be better able to determine which upsets
+are handled naturally by the error-correction of the receiver,
+i.e. those that cause Gaussian-like noise.
+42
+Authorized licensed use limited to: Brigham Young University. Downloaded on September 23,2020 at 17:18:22 UTC from IEEE Xplore.  Restrictions apply. 
+(a) FPGA
+Layout (b) Dynamic cross section (c) Application-speciﬁc cross section
+Fig. 6. (a) Screen capture of the physical layout of the matched ﬁlter circuit. (b) The dynamic cross section of the design
+as recorded by the BYU-LANL fault i
+
+=== CHUNK 37 ===
+a) Screen capture of the physical layout of the matched ﬁlter circuit. (b) The dynamic cross section of the design
+as recorded by the BYU-LANL fault injection tool. (c) The subset of conﬁguration bits that, when upset, cause an SNR loss
+greater than 1 dB with an input signal SNR of 20 dB.
+We will also investigate reduced-cost mitigation strate-
+gies suitable for SEU-induced errors in FPGA-based DSP
+systems. These strategies will focus on mitigating the ef-
+fects of the faults which cause high-magnitude noise. The
+faults which produce low-magnitude noise could be left un-
+protected and left to the inherent error-handling of the DSP
+algorithm. With this targeted approach, mitigation overhead
+may be drastically reduced compared to a full-design solu-
+tion such as TMR.
+8. CONCLUSION
+The experi
+
+=== CHUNK 38 ===
+With this targeted approach, mitigation overhead
+may be drastically reduced compared to a full-design solu-
+tion such as TMR.
+8. CONCLUSION
+The experiment presented shows that, in a real world FPGA-
+based system, many SEU-induced errors may be able to
+be safely ignored. Combined with traditional conﬁguration
+scrubbing, a communications system like the one described
+in this paper is much less sensitive to conﬁguration SEUs
+than expected. In the experiments presented, the major-
+ity of SEUs affecting the FPGA-based digital ﬁlter caused
+less than 1 dB loss in SNR at the ﬁlter’s output. These
+results should be considered when designing reliable digi-
+tal communications systems in order to avoid unnecessary
+over-design. A reduced-cost mitigation technique could be
+utilized in place of TMR, resu
+
+=== CHUNK 39 ===
+igi-
+tal communications systems in order to avoid unnecessary
+over-design. A reduced-cost mitigation technique could be
+utilized in place of TMR, resulting in signiﬁcant savings in
+terms of circuit area and power.
+9. REFERENCES
+[1] M. Caffrey, “A space-based reconﬁgurable radio,” in
+Proceedings of the International Conference on En-
+gineering of Reconﬁgurable Systems and Algorithms
+(ERSA), T. P . Plaks and P . M. Athanas, Eds. CSREA
+Press, June 2002, pp. 49–53.
+[2] P . Graham, M. Caffrey, M. Wirthlin, D. E. Johnson,
+and N. Rollins, “Reconﬁgurable computing in space:
+From current technology to reconﬁgurable systems-on-
+a-chip,” in Proceedings of the 2003 IEEE Aerospace
+Conference. Big Sky, MT: IEEE, March 2003, pp.
+T07
+0603.1–12.
+[3] C.
+Carmichael, E. Fuller, J. Fabula, and F. D. Lima,
+“Pro
+
+=== CHUNK 40 ===
+of the 2003 IEEE Aerospace
+Conference. Big Sky, MT: IEEE, March 2003, pp.
+T07
+0603.1–12.
+[3] C.
+Carmichael, E. Fuller, J. Fabula, and F. D. Lima,
+“Proton testing of SEU mitigation methods for the Vir-
+tex FPGA,” in Proceedings of the IEEE Microelectron-
+ics Reliability and Qualiﬁcation Workshop, Pasadena,
+CA, December 2001.
+[4] M. Wirthlin, N. Rollins, M. Caffrey, and P . Graham,
+“Hardness by design techniques for ﬁeld-programmable
+gate arrays,” in Proceedings of the 11th Annual NASA
+Symposium on VLSI design, Coeur d’Alene, ID, May
+2003, pp. W A11.1–W A11.6.
+[5] K. Morgan, D. McMurtrey, B. Pratt, and M. Wirthlin,
+“A comparison of TMR with alternative Fault-Tolerant
+design techniques for FPGAs,” Nuclear Science, IEEE
+Transactions on, vol. 54, no. 6, pp. 2065–2072, 2007.
+[6] P . Reddy, A.L.N
+
+=== CHUNK 41 ===
+ernative Fault-Tolerant
+design techniques for FPGAs,” Nuclear Science, IEEE
+Transactions on, vol. 54, no. 6, pp. 2065–2072, 2007.
+[6] P . Reddy, A.L.N.; Banerjee, “Algorithm-based fault de-
+tection for signal processing applications,” Transactions
+on Computers, vol. 39, no. 10, pp. 1304–1308, Oct
+1990.
+[7] P . Reyes, P . Reviriego, J. Maestro, and O. Ruano, “A
+new protection technique for ﬁnite impulse response
+(FIR) ﬁlters in the presence of soft errors,” in Indus-
+trial Electronics, 2007. ISIE 2007. IEEE International
+Symposium on, 2007, pp. 3328–3333.
+[8] B. Shim and N. Shanbhag, “Energy-efﬁcient soft error-
+tolerant digital signal processing,” V ery Large Scale
+Integration (VLSI) Systems, IEEE Transactions on,
+vol. 14, no. 4, pp. 336–348, 2006.
+[9] E. Johnson, M. Caffrey, P . Graham, N
+
+=== CHUNK 42 ===
+ing,” V ery Large Scale
+Integration (VLSI) Systems, IEEE Transactions on,
+vol. 14, no. 4, pp. 336–348, 2006.
+[9] E. Johnson, M. Caffrey, P . Graham, N. Rollins, and
+M. Wirthlin, “Accelerator validation of an FPGA SEU
+simulator,” IEEE Transactions on Nuclear Science,
+vol. 50, no. 6, pp. 2147–2157, December 2003.
+43
+Authorized licensed use limited to: Brigham Young University. Downloaded on September 23,2020 at 17:18:22 UTC from IEEE Xplore.  Restrictions apply. 
+

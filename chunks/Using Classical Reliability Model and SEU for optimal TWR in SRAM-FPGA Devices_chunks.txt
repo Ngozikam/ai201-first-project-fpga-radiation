@@ -1,0 +1,653 @@
+
+=== CHUNK 1 ===
+Abstract: Space applications are complex systems that require intricate trade analyses for optimum implementations.  We focus on a subset of the trade process, using classical reliability theory and SEU data, to illustrate appropriate TMR scheme selection.  
+ Using Classical Reliability Models and Single Event Upset (SEU) Data to Determine Optimum Implementation 
+Schemes for Triple Modular Redundancy (TMR) in SRAM-based Field Programmable Gate Array (FPGA) Devices 
+M. Berg1, Member IEEE, H. Kim1, A. Phan1, C. Seidleck1, K. LaBel2, Member IEEE, J. Pellish2 Member IEEE, M. Campola2 Member IEEE  
+Introduction 
+2.  NASA  Goddard Space Flight Center,  Code 561.4, Greenbelt, MD 20771 
+National Aeronautics and 
+Space Administration 
+ This study investigates mitigation performance  
+and risk analy
+
+=== CHUNK 2 ===
+er,  Code 561.4, Greenbelt, MD 20771 
+National Aeronautics and 
+Space Administration 
+ This study investigates mitigation performance  
+and risk analysis for a variety of mitigation design  
+strategies.  The intention is to provide a means for  
+optimum mitigation integration for critical applications.  
+Risk is measured by analyzing reliability across time  
+using classical reliability models and measured single  
+event upset (SEU) data.  
+Melanie Berg 
+1.  AS&D in support of NASA Goddard Space Flight Center, Laurel, MD 20707 
+Triple Modular Redundancy (TMR) 
+ TMR schemes [3-5] are defined by which portion of the circuit is  
+triplicated and where the voters are placed. 
+• The strongest TMR implementation will triplicate all data-paths and apply  
+separate voters to each data-path. 
+• How
+
+=== CHUNK 3 ===
+ where the voters are placed. 
+• The strongest TMR implementation will triplicate all data-paths and apply  
+separate voters to each data-path. 
+• However, this can be costly: area, power, and complexity. 
+• A trade is performed to determine the TMR scheme that requires the  
+least amount of effort and circuitry and while meeting project  
+requirements. 
+• Scope of mitigation for this study is: 
+     Block TMR(BTMR), Local TMR (LTMR), and Distributed TMR (DTMR).  
+ In this study, reliability is also analyzed across particle fluence by  
+transforming classical reliability models [1] from the time domain into the  
+fluence domain.  As a benefit, analyzing mitigation in the fluence domain  
+enhances the evaluation process by providing the ability to make direct  
+comparisons to accelerated ra
+
+=== CHUNK 4 ===
+, analyzing mitigation in the fluence domain  
+enhances the evaluation process by providing the ability to make direct  
+comparisons to accelerated radiation test data (SEU data). Design  
+implementation is targeted to a Sequential random access memory (SRAM)-
+based field programmable gate array (FPGA) (Xilinx Kintex-7) [2].  SEU test  
+data was obtained by performing heavy-ion testing at Texas A&M Cyclotron  
+Facility. 
+SEU Errors and Fault Correction SEU Test Methodology 
+ The primary design under investigation (DUI) was the Counter Array [2] as illustrated in Figure 7. Variations of the DUI were created  
+and implemented in the Xilinx Kintex-7 FPAG device ( XC7K325T-1FBG900). Heavy-ion testing was performed at Texas A&M University  
+Cyclotron Facility (TAMU).    
+Partitioning: SRAM-base
+
+=== CHUNK 5 ===
+ex-7 FPAG device ( XC7K325T-1FBG900). Heavy-ion testing was performed at Texas A&M University  
+Cyclotron Facility (TAMU).    
+Partitioning: SRAM-based FPGAs contain a significant number of shared resources that can become single points of failure [7].   
+Consequently, designs were partitioned such that no resources were shared across TMR domains. A partitioned design is illustrated in Figure  
+8.  The Xilinx floor-planner tool was used for partitioning. 
+Mitigation: Evaluating mitigation strength was the primary goal of this investigation. The following is a list of DUI (counter array) variations  
+that were manually developed: (1) no-mitigation (pure counters), (2) BTMR with partitioning, (3) DTMR with partitioning, and (4) DTMR without  
+partitioning. One additional DUI was created by u
+
+=== CHUNK 6 ===
+tion (pure counters), (2) BTMR with partitioning, (3) DTMR with partitioning, and (4) DTMR without  
+partitioning. One additional DUI was created by using the Synopsys’ “Synplify Premier” synthesis tool [9]. Referring to Figure 7, DTMR  
+(without voter feedback) was applied to the counter-array and LTMR was applied to its snap-shop array.  We refer to this scheme as partial  
+TMR (PTMR).  
+Scrubbing: During testing, an external configuration memory scrubber [3] was applied to the DUT’s configuration. The configuration scrubber  
+was verified for full operation during testing by performing a read-back of the DUT’s configuration memory.  Read-back should indicate  
+approximately zero errors after each heavy-ion test. 
+ 
+  
+ 
+Analysis of SEU Test Results 
+Design σSEU 
+Pfs()error∝PConfiguratio
+
+=== CHUNK 7 ===
+ack should indicate  
+approximately zero errors after each heavy-ion test. 
+ 
+  
+ 
+Analysis of SEU Test Results 
+Design σSEU 
+Pfs()error∝PConfiguration+P(fs)functionalLogic+PSEFIConfiguration 
+σSEU 
+ 
+Functional 
+logic σSEU 
+(DFF + CL)  
+SEFI σSEU (Global routes 
+and hidden Logic) 
+  
+ Because configuration SEUs are the dominant  
+component faults in unhardened SRAM-based FPGAs [3]; and  
+their affects to system operation are prolific, a strong TMR  
+scheme (that can mask a variety of configuration SEUs) is  
+required (BTMR or DTMR) [3-5].  Consequently, do not use  
+LTMR with SRAM-based FPGAs as illustrated in Figure 5. 
+ 
+ 
+Figure 4: Mitigation window (MW) example. 
+SRAM-Based FPGA TMR Strategies: Strengths and Weaknesses  
+ Equation (1) describes the four categories of SEUs in FPGAs [3]
+
+=== CHUNK 8 ===
+tion window (MW) example. 
+SRAM-Based FPGA TMR Strategies: Strengths and Weaknesses  
+ Equation (1) describes the four categories of SEUs in FPGAs [3]:  
+Configuration, functional logic, global routes, and hidden logic. Figure 4 illustrates  
+how a design can be modularized into mitigation windows (MWs). The effects of  
+SEUs on MWs can be classified as follows:  
+ 
+ 
+ 
+   
+Classical Reliability 
+Equation 
+Reliability for 
+one block 
+e- λt 
+ 
+Reliability for 
+BTMR 
+3 e- 2λt-2 e- 3λt 
+Mean time to 
+failure 
+(MTTFblock) 
+1/ λ 
+Mean time to 
+failure 
+(MTTFBTMR) 
+ 
+(5/6 λ)= 0.833/λ 
+ 
+λ:error rate 
+ BTMR is a common approach to mitigation for two  
+primary reasons: 
+• It requires the least number of voters (area savings) and 
+• It can be applied to black-box logic (e.g., intellectual  
+propert
+
+=== CHUNK 9 ===
+  
+primary reasons: 
+• It requires the least number of voters (area savings) and 
+• It can be applied to black-box logic (e.g., intellectual  
+property (IP) cores). 
+  
+ 
+SRAM-Based FPGAs and LTMR: 
+SRAM-Based FPGAs and BTMR: 
+Table 1: Classical reliability models over time. 
+Figure 7: Block diagram of design under investigation – Counter Array 
+Figure 8: Physical layout of a partitioned TMR  
+design (the same partitions were used for BTMR,  
+DTMR, and PTMR). 
+Block TMR(BTMR) V
+O
+T
+I
+N
+G
+M
+A
+T
+R
+I
+X
+Complex 
+function 
+with 
+DFFs 
+Copy 1 
+Copy 2 
+Copy 3 
+CombLogic
+Voter
+Voter
+Voter
+LTMR
+CombLogic CombLogic
+DFF
+DFF
+DFF
+Voter 
+Voter 
+Voter 
+Voter 
+Voter 
+Voter 
+Voter 
+Voter 
+Voter 
+Local TMR (LTMR) 
+Distributed TMR (DTMR) 
+BTMR: Voting is only performed at the  
+outputs of complex blocks.  
+•
+
+=== CHUNK 10 ===
+r 
+Voter 
+Voter 
+Voter 
+Voter 
+Voter 
+Local TMR (LTMR) 
+Distributed TMR (DTMR) 
+BTMR: Voting is only performed at the  
+outputs of complex blocks.  
+• Does not correct errors only masks  
+them. 
+• If blocks are not regularly flushed  
+(e.g. reset), errors might accumulate  
+– may not be an effective technique. 
+ 
+Figure 1: BTMR [3].  Triplicate complex  
+function and place voter at outputs.  
+• Complex function is treated as a black-box.   
+• Global route SEUs, accumulated faults (no  
+correction), and shared resource SEUs (single  
+points of failure) can break the mitigation  
+scheme. 
+Figure 2: LTMR [3].  Only DFFs are  
+triplicated.  Data-paths stay singular.  
+• LTMR masks upsets from DFFs and  
+corrects DFF upsets if voter  
+feedback is used.  
+• SEUs in the data path, global route  
+
+
+=== CHUNK 11 ===
+paths stay singular.  
+• LTMR masks upsets from DFFs and  
+corrects DFF upsets if voter  
+feedback is used.  
+• SEUs in the data path, global route  
+SEUs, and shared resource SEUs  
+(single points of failure) can break  
+the mitigation scheme. 
+ 
+Figure 3: DTMR [3]. The entire design is triplicated. Voters are brought inside of the design and are placed 
+after the DFFs.   
+• Most SEUs are masked.   
+• Errors can be corrected if voter feedback to DFFs are used. 
+•  Global route SEUs, and shared resource SEUs (single points of failure) can break the mitigation scheme. 
+Deliverable to NASA Electronic Parts and Packaging (NEPP) Program to be published on nepp.nasa.gov. 
+• MW boundaries: Start at a voter-output or a device input; 
+End at a DFF-voter pair or a device output 
+• Internal MW eleme
+
+=== CHUNK 12 ===
+lished on nepp.nasa.gov. 
+• MW boundaries: Start at a voter-output or a device input; 
+End at a DFF-voter pair or a device output 
+• Internal MW elements can be CL or DFFs (i.e., if a DFF does 
+not have a voter, then it is not a MW boundary) 
+TMR Mitigation Window Definition  
+110 
+DFF  Voter CL CL CL CL DFF 
+DFF  Voter CL CL CL CL DFF 
+DFF  Voter CL CL CL CL DFF 
+Voter 
+Voter 
+Voter 
+DFF  Voter CL CL DFF 
+DFF  Voter CL CL DFF 
+DFF  Voter CL CL DFF 
+Voter 
+Voter 
+Voter 
+Voter DFF 
+Voter DFF 
+Voter DFF 
+CL 
+CL 
+CL 
+DFF 
+DFF 
+DFF 
+• The SEU in associated with an unused resource or disabled logic and consequently does not affect system  
+operation. 
+• The SEU fault only affects one of the TMR triplet copies within the same mitigation window (MW). If only one  
+triplet copy has a fault, then t
+
+=== CHUNK 13 ===
+on. 
+• The SEU fault only affects one of the TMR triplet copies within the same mitigation window (MW). If only one  
+triplet copy has a fault, then the MW will either (a) mask the fault or (b) mask and correct the fault.  
+• The SEU fault affects multiple triplet copies within the same MW. If more than one of the triplet copies are  
+affected by an SEU, then the MW will malfunction and the fault will not be masked from the system.  This is a  
+common error signature of global route SEUs or configuration SEUs that control shared resources. 
+ BTMR is a fairly strong mitigation strategy for flushable designs; i.e.,  
+feed-forward or highly-resettable circuits (as illustrated in Figure 6).  It is also  
+considered a strong application when requirements dictate short time intervals of  
+correc
+
+=== CHUNK 14 ===
+ttable circuits (as illustrated in Figure 6).  It is also  
+considered a strong application when requirements dictate short time intervals of  
+correct operation.  
+ Table 1 lists the classical reliability and Mean time to failure (MTTF)  
+models [1] for an unmitigated design versus the corresponding BTMR  
+implementation.  If a mission’s requirements dictate that BTMR shall reliably  
+operate for a length of time near the time of failure for one unmitigated block,  
+then BTMR becomes a weak mitigation scheme.  This is because over time, the  
+reliability of the BTMR scheme drops off faster than the unmitigated. Table 1  
+shows: MTTFblock  > MTTFBTMR. 
+ 
+ 
+Voter 
+TRANSMIT 
+TRANSMIT 
+TRANSMIT 
+RESET 
+Figure 6: Flushable BTMR system. 
+7/7/15, 8:03 AMattachment.ashx 2,071×1,576 pixels
+Page 1 
+
+=== CHUNK 15 ===
+MTTFBTMR. 
+ 
+ 
+Voter 
+TRANSMIT 
+TRANSMIT 
+TRANSMIT 
+RESET 
+Figure 6: Flushable BTMR system. 
+7/7/15, 8:03 AMattachment.ashx 2,071×1,576 pixels
+Page 1 of 1https://mail02.ndc.nasa.gov/owa/attachment.ashx?id=RgAAAABoK…t=1&attid0=BAAAAAAA&attcid0=image001.png%4001D0B806.9A3FA040
+Figure 9: Integral LET spectra for GCR during solar 
+maximum and solar minimum [8]. 
+Counter 0 
+Counter 1 
+Counter 2 
+Counter 198 
+Counter 199 
+Counter 1 
+Counter 2 
+Counter 199 
+Counter 198 
+Low 
+Cost 
+Digital 
+Tester 
+(LCDT) 
+200 independent counters 
+operating at full speed  
+Snap-Shot: Mechanism for Counter-Array Output to 
+Tester.  Tester can only see Snap-shot Counter 0.  
+8 bit output Counter 0 
+Snap-Shot Array Counter-Array 
+SEU Test Results  
+Mitigation Strength 
+ Given the counter-array DUI and based on σSEU 
+
+=== CHUNK 16 ===
+er 0.  
+8 bit output Counter 0 
+Snap-Shot Array Counter-Array 
+SEU Test Results  
+Mitigation Strength 
+ Given the counter-array DUI and based on σSEU data from Figure 10,  
+DTMR with partitioning is the strongest mitigation strategy.  This result is as  
+expected.  At the lower LETs, DTMR σSEU data has greater than one decade of  
+improvement versus BTMR and over two decades versus no-mitigation.   
+ As LET increases, the mitigation strategies start to converge in  
+performance.  This is because of the dominance of global route SEUs at higher  
+LETs.  Global route SEUs are a common factor for failure in all three strategies. 
+ It was interesting to observe that there was not a significant difference  
+between DTMR with partitioning and DTMR without partitioning. Potential  
+explanations fo
+
+=== CHUNK 17 ===
+ing to observe that there was not a significant difference  
+between DTMR with partitioning and DTMR without partitioning. Potential  
+explanations for the insignificant difference in σSEU data are the following: there  
+may be hidden shared resources beyond the control of the floor-planner  
+(partitioning tool), global routes may have a strong significance, and the DUI’s  
+isolated independent modules may play a role.  As future work, this will be further  
+investigated using a variety of DUIs and fault injection. 
+ PTMR proved to be weaker than the system with no mitigation as LET  
+increased.  This is because LTMR was applied to the snap-shot register.  As  
+previously mentioned, LTMR should not be used with SRAM-based FPGAs.   
+BTMR and Reliability Models 
+ In this investigation (count
+
+=== CHUNK 18 ===
+hot register.  As  
+previously mentioned, LTMR should not be used with SRAM-based FPGAs.   
+BTMR and Reliability Models 
+ In this investigation (counter-array DUI), BTMR performed better than  
+expected; i.e., it’s MFTF was higher (in all tested LETs) than the unmitigated  
+design.  This can be attributed to the fact that the DUI was made of 200 small  
+independent modules (counters) and one large flushable structure (snap-shot  
+array).  Results closer to the reliability model predictions are expected to occur  
+with DUIs that have one large MW with strong co-dependencies between  
+modules. However, better results are expected with DUIs that are purely flushable.  
+BTMR and Availability 
+ Regarding Figure 13, while the BTMR σSEU data can be used to  
+characterize mitigation failure, the o
+
+=== CHUNK 19 ===
+ are purely flushable.  
+BTMR and Availability 
+ Regarding Figure 13, while the BTMR σSEU data can be used to  
+characterize mitigation failure, the one-out-of-three can be used to assess  
+availability.  The premise is that when one copy fails, another is assumed to fail  
+soon.  Subsequently, BTMR schemes require the system to halt or shut down  
+upon one-out-of-three failure.  During this time, the system either flushes or the  
+failed copied is serviced.  This affects availability and is of critical concern for  
+satisfying mission requirements. Further discussion is in the paper. 
+ 
+Conclusion 
+Acknowledgements 
+References 
+ The conversion process from σSEU data to error-rates tends to lose  
+valuable information regarding data trends across low LET.  Hence, an analysis in  
+the fluen
+
+=== CHUNK 20 ===
+on process from σSEU data to error-rates tends to lose  
+valuable information regarding data trends across low LET.  Hence, an analysis in  
+the fluence domain was performed by transforming classical reliability models from  
+the time domain to the fluence domain.  The conversion is as follows: replace error-
+rates (λ) with heavy-ion accelerated testing σSEU d a t a  (λèσSEU) and time with  
+fluence (tèΦ). This transformation was performed to improve lower-LET analysis  
+of mitigation strategies. 
+ As expected, DTMR was the strongest mitigation scheme.  However, there  
+is interesting data that show DTMR without partitioning performed almost as  
+well as DTMR with partitioning.  This will be further investigated with altering DUI  
+MW size, creating more co-dependent internal-MW modules,
+
+=== CHUNK 21 ===
+t as  
+well as DTMR with partitioning.  This will be further investigated with altering DUI  
+MW size, creating more co-dependent internal-MW modules, and fault injection. 
+ σSEU data and reliability models illustrated the strengths and weaknesses of  
+BTMR.  Data show that it is important to take into account the mission’s required  
+operational time and availability prior to selecting BTMR as the system’s mitigation  
+strategy. 
+ An important result was observed with PTMR.  The data showed that a  
+poor choice of mitigation application can cause the system to be more  
+susceptible than a system with no mitigation. 
+This work was supported in part by the NASA Electronic Parts and Packaging (NEPP) Program and the 
+Defense Threat Reduction Agency.   
+ 
+See paper. 
+Figure 13: BTMR availabili
+
+=== CHUNK 22 ===
+n part by the NASA Electronic Parts and Packaging (NEPP) Program and the 
+Defense Threat Reduction Agency.   
+ 
+See paper. 
+Figure 13: BTMR availability: BTMR failure; versus failure with 
+no mitigation; versus any one failure out of the BTMR copies. 
+Figure 10: Comparison of MFTF for all mitigation strategies. 
+Figure 12: Reliability across particle fluence: 
+Zoomed-in low fluence region of Figure 11. 
+Figure 11: Reliability across particle fluence: 
+BTMR versus System with No Mitigation. 
+To be presented by Melanie Berg at the Institute of Electrical and Electronics Engineers (IEEE) Nuclear and Space Radiation Effects Conference (NSREC), Boston, Massachusetts, July 13-17, 2015.  
+SEU cross-section (σSEU)  DFF: Flip flop CL: combinatorial logic Single event functional interrupt: SEFI 
+DFF
+
+=== CHUNK 23 ===
+ston, Massachusetts, July 13-17, 2015.  
+SEU cross-section (σSEU)  DFF: Flip flop CL: combinatorial logic Single event functional interrupt: SEFI 
+DFF: Flip flop  
+CL: combinatorial logic 
+CL CL CL 
+DFF 
+DFF 
+DFF 
+CL CL CL 
+R
+O
+U
+T
+I
+N
+G
+ 
+M
+A
+T
+R
+I
+X
+I1 I2 I3 I4 
+LUT 
+Look Up Table: LUT 
+Q
+QSET
+CLR
+D
+Q
+QSET
+CLR
+D
+Q
+QSET
+CLR
+D
+I1 I2 I3 I4 
+LUT 
+I1 I2 I3 I4 
+LUT 
+I1 I2 I3 I4 
+LUT 
+Voter 
+Figure 5: Block diagram of LTMR in an SRAM-based FPGA.  With 
+LTMR, there exists too many other configuration bits + logic (beyond 
+the protected DFFs) that can be corrupted by an SEU.  Applied 
+mitigation needs to be stronger for SRAM-based FPGA devices. 
+(1) 
+1.0E+00 
+1.0E+01 
+1.0E+02 
+1.0E+03 
+1.0E+04 
+1.0E+05 
+1.0E+06 
+5.7 20.6 41.2 
+MFTF 
+LET (MeV!cm2/mg) 
+DTMR 
+PTMR 
+BTMR 
+Pure Counters 
+DTMR-No-
+Part
+
+=== CHUNK 24 ===
+ 
+1.0E+00 
+1.0E+01 
+1.0E+02 
+1.0E+03 
+1.0E+04 
+1.0E+05 
+1.0E+06 
+5.7 20.6 41.2 
+MFTF 
+LET (MeV!cm2/mg) 
+DTMR 
+PTMR 
+BTMR 
+Pure Counters 
+DTMR-No-
+Partition 
+Note: PTMR has poor 
+results: used no 
+feedback DTMR and 
+LTMR in some areas. 
+Unexpected result: 
+MFTF for DTMR-No-
+Partition is near 
+DTMR-with-Partition! 
+Good news. 
+1.0E+00 
+1.0E+01 
+1.0E+02 
+1.0E+03 
+1.0E+04 
+1.0E+05 
+5.7 20.6 41.2 
+MFTF 
+LET MeV*cm2/mg 
+BTMR 
+Pure Counters 
+BTMR One Out 
+of Three 
+0.8 
+0.82 
+0.84 
+0.86 
+0.88 
+0.9 
+0.92 
+0.94 
+0.96 
+0.98 
+1 
+0 200 400 600 
+Relibilty 
+Fluence Φ  (particle/cm2) 
+0"
+0.1"
+0.2"
+0.3"
+0.4"
+0.5"
+0.6"
+0.7"
+0.8"
+0.9"
+1"
+0" 5000"10000"15000"20000"
+Relibilty 
+Fluence Φ  (particles/cm2) 
+- System No TMR: e-(σSEU)Φ 
+- BTMR System : 3e-2(σSEU) Φ-2e-3(σSEU)Φ 
+@LET = 5.7 MeV!cm2/mg:  
+MFTF=σSEU=1
+
+=== CHUNK 25 ===
+000"
+Relibilty 
+Fluence Φ  (particles/cm2) 
+- System No TMR: e-(σSEU)Φ 
+- BTMR System : 3e-2(σSEU) Φ-2e-3(σSEU)Φ 
+@LET = 5.7 MeV!cm2/mg:  
+MFTF=σSEU=1.0e-4 cm2/design 
+For the projected BTMR design,  
+reliability drops below 99% 
+between 600-700 particles with an 
+LET = 5.7 MeV!cm2/mg. 
+ The traditional approach to SEU data analysis and characterization is to convert σSEU data to error-rates.  However, during the  
+conversion process (from the fluence (Φ) domain to the time (t) domain), important information in the lower LET region is lost.  Referring to  
+Figure 9, there is a significant difference of particle flux when comparing lower LET particles to higher.  Subsequently, in order to perform a  
+comparison of mitigation efficiency, it is important to investigate behavior at lower LET w
+
+=== CHUNK 26 ===
+articles to higher.  Subsequently, in order to perform a  
+comparison of mitigation efficiency, it is important to investigate behavior at lower LET without loss of information.  For this reason, we replace  
+error-rates (λ) with σSEU data (λèσSEU) and time with fluence (tèΦ ) to convert classical reliability models from the t-domain to the Φ-domain.  
+σSEU data from Figure 10 can be used as the variables in the Table 1 equations to obtain the reliability graphs shown in Figure 11 and Figure  
+12.  
+mitigation fails 
+and data is not as 
+expected 
+one of the three 
+copies has failed 
+but mitigation is 
+not broken.  
+No Mitigation 
+

@@ -1,0 +1,560 @@
+To be presented by Melanie Berg at Government Microcircuit Applications and Critical Technology Conference, Miami, FL, March 12-15, 2018.
+ 1
+NASA Electronic Parts and Packaging 
+Field Programmable Gate Array Single 
+Event Effects Test Guideline Update 
+Melanie Berg1,  Kenneth LaBel2, 
+Melanie.D.Berg@NASA.gov
+1.AS&D in support of NASA/GSFC
+2. NASA/GSFC
+To be presented by Melanie Berg at Government Microcircuit Applications and Critical Technology Conference, Miami, FL, March 12-15, 2018.
+
+To be presented by Melanie Berg at Government Microcircuit Applications and Critical Technology Conference, Miami, FL, March 12-15, 2018.
+Acronyms
+• Application specific integrated circuit (ASIC)
+• Collected charge (Qcoll)
+• Combinatorial logic (CL)
+• Commercial off the shelf (COTS)
+• Complementary metal-oxide semiconductor 
+(CMOS)
+• Critical charge (Qcrit)
+• Device under test (DUT)
+• Edge-triggered flip-flops (DFFs)
+• Error rate (λ)
+• Error rate per bit(λbit)
+• Error rate per system(λsystem)
+• Field programmable gate array (FPGA)
+• Flip flop (DFF)
+• Fluence (Φ)
+• Input – output (I/O)
+• Intellectual Property (IP)
+• Linear energy transfer (LET)
+• Low cost digital tester (LCDT)
+• Material density (ρ)
+• Mean fluence to failure (MFTF)
+• NASA Electronic Parts and Packaging (NEPP)
+• Operational frequency (fs)
+• Personal Computer (PC)
+2
+•Probability of configuration upsets (Pconfiguration)
+•Probability of Functional Logic upsets 
+(PfunctionalLogic)
+•Probability of single event functional interrupt 
+(PSEFI)
+•Probability of system failure (Psystem)
+•Processor (PC)
+•Radiation Effects and Analysis Group (REAG)
+•Reliability over fluence (R(Φ))
+•Single event effect (SEE)
+•Single event functional interrupt (SEFI)
+•Single event latch-up (SEL)
+•Single event transient (SET)
+•Single event upset (SEU)
+•Single event upset cross-section (σSEU)
+•Shift register (SR)
+•Voltage (Vdd)
+•Windowed shift register (WSR)
+•Xilinx Virtex 5 field programmable gate array (V5)
+•Xilinx Virtex 5 field programmable gate array 
+radiation hardened (V5QV)
+To be presented by Melanie Berg at Government Microcircuit Applications and Critical Technology Conference, Miami, FL, March 12-15, 2018.
+Device Penetration of Heavy Ions and 
+Linear Energy Transfer (LET)
+• LET characterizes the 
+deposition of charged 
+particles.
+• Based on average energy 
+(E) loss per unit path length 
+(x) (stopping power).
+• Mass is used to normalize 
+LET to the target material.
+dx
+dELET ρ
+1=
+Density of target material
+mg
+cmMeV
+2
+Units
+;
+VDD
+Current 
+Flows 
+through On 
+Transistor
+Off 
+Transistor is
+Susceptible 
+Qcoll > Qcrit
+Collected charge Qcoll
+Critical Charge Qcrit
+3
+To be presented by Melanie Berg at Government Microcircuit Applications and Critical Technology Conference, Miami, FL, March 12-15, 2018.
+Characterizing Single Event Upsets (SEUs): 
+Radiation Testing and SEU Cross Sections
+Terminology:
+• Flux: Particles/(sec-cm2)
+• Fluence: Particles/cm2
+σseu is calculated at several LET values 
+(particle spectrum)
+fluence
+errors
+seu
+#=σ
+SEU Cross Sections (σseu) characterize potential upsets 
+that occur when a device is exposed to ionizing particles.
+4
+Does simple error counting 
+pertain to a complex 
+system?...  
+To be presented by Melanie Berg at Government Microcircuit Applications and Critical Technology Conference, Miami, FL, March 12-15, 2018.
+FPGA Structure Categorization as 
+Defined by NASA Goddard REAG
+σSEU Differentiation:
+Test structures and various techniques target specific FPGA 
+categories for σSEU analysis
+5
+Design σSEU Configuration σSEU Functional logic σSEU SEFI σSEU
+Sequential and 
+Combinatorial logic 
+(CL) in data path
+Global Routes 
+and Hidden 
+Logic
+To be presented by Melanie Berg at Government Microcircuit Applications and Critical Technology Conference, Miami, FL, March 12-15, 2018.
+OVERVIEW OF UPDATES
+• Academic versus mission specific single event effect (SEE) 
+device evaluation
+• SEE visibility enhancement during radiation testing
+• Mean fluence to failure analysis (MFTF); i.e., testing flushable 
+architectures versus non-flushable architectures
+• Mission specific system-level single event upset (SEU) 
+response prediction
+• Heavy-ion energy and linear energy transfer (LET) selection 
+• Proton versus heavy-ion testing
+• Fault injection
+• Intellectual property core (IP Core) test and evaluation
+• Unreliable design and its affects to SEE Data
+• Mitigation evaluation (embedded and user-implemented)
+• Single event latch-up (SEL) test and analysis
+6
+To be presented by Melanie Berg at Government Microcircuit Applications and Critical Technology Conference, Miami, FL, March 12-15, 2018.
+Academic versus Mission Specific 
+Ground SEE Testing
+• A distinction should be made regarding the purpose of 
+data collection: 
+– academic study for component-level SEE sensitivity; or 
+– extrapolation for mission survivability predictions. 
+• A component level study will not be indicative of system 
+behavior.
+– System topology considerations
+– Variation in transistor types
+– Co-dependencies between components
+– Electrical masking
+– Complexity of extrapolation from component to system 
+• Mission specific testing will be complex and will not 
+cover full state space traversal.
+• Benefiting from each of the pros to recover from cons: 
+for FPGA test and evaluation, we propose testing a 
+mixture of academic and mission specific.
+7
+To be presented by Melanie Berg at Government Microcircuit Applications and Critical Technology Conference, Miami, FL, March 12-15, 2018.
+Conventional Academic Testing: 
+Long Chains of Inverters
+• Testing long chains of inverters was a conventional method for evaluating 
+combinatorial logic susceptibilities to single event transients (SETs).
+• ASIC (lab-made) test structures showed elongation of SETs as they 
+propagated through the inverter chain.  This is misleading:
+• Test structures have unbalanced rise and fall times.  This causes SET 
+elongation.  
+• Commercial ASIC circuits are created by experienced designers and are 
+balanced; will not have the same response. MISLEADING test results.
+• Commercial FPGA circuits are also balanced.  No SET elongation.
+• However, configuring long chains of inverters will cause too much noise in 
+a FPGA design.  Will cause catastrophic SEE test results.
+Long Chain of Inverters
+I/O 
+Block
+I/O block will filter 
+small transients 
+Long chains of inverters are noisy and are consequently not good 
+design practice.  They should not be used as test structures.
+8
+To be presented by Melanie Berg at Government Microcircuit Applications and Critical Technology Conference, Miami, FL, March 12-15, 2018.
+Conventional Academic Testing: Long 
+Chains of Flip-Flops (DFFs)
+• The test structure is a long chain of DFFs connected serially; otherwise 
+referred to as a shift-register (SR). 
+• Pro: Commonly used for measuring sequential logic SEUs in FPGAs.  
+• The number of DFFs is generally in the 100’s to 1000’s. 
+• Original SEU testing evaluated SRs that were purely sequential logic, i.e., 
+only DFFs.  
+– Currently, tests are also performed with combinatorial logic (CL) placed 
+between the DFF stages.
+– Adding CL helps to analyze SET capture by DFFs.
+• Due to I/O signal integrity issues, the SRs were also tested at very low 
+frequencies. 
+– Windowed shift registers can be reliably used to test at high 
+frequencies.
+Q
+Q
+SET
+CLR
+D
+Q
+Q
+SET
+CLR
+D
+Q
+Q
+SET
+CLR
+D
+Q
+Q
+SET
+CLR
+D
+Q
+Q
+SET
+CLR
+D
+Q
+Q
+SET
+CLR
+D
+Q
+Q
+SET
+CLR
+D
+Q
+Q
+SET
+CLR
+D
+Shift Register Chain
+ OutputData Input
+9
+To be presented by Melanie Berg at Government Microcircuit Applications and Critical Technology Conference, Miami, FL, March 12-15, 2018.
+Proposed Academic Testing 
+Enhancements: Windowed Shift Registers
+• Windowed output provides the option for high frequency testing without 
+causing board-level signal integrity issues. 
+• All DFF nodes are observable by the tester. 
+• The inclusion of combinatorial logic facilitates evaluation of combinatorial 
+logic effects, i.e., SET capture. 
+• Meets synchronous design requirements if all DFFs are connected to the 
+same balanced clock tree.
+Q
+Q
+SET
+CLR
+D
+Q
+Q
+SET
+CLR
+D
+Q
+Q
+SET
+CLR
+D
+Q
+Q
+SET
+CLR
+D
+Q
+Q
+SET
+CLR
+D
+Q
+Q
+SET
+CLR
+D
+Q
+Q
+SET
+CLR
+D
+Q
+Q
+SET
+CLR
+D
+Q
+Q
+SET
+CLR
+D
+Q
+Q
+SET
+CLR
+D
+Q
+Q
+SET
+CLR
+D
+Q
+Q
+SET
+CLR
+D
+N levels of Inverters 
+between DFF stages:
+N = 0, 4, and 8
+Shift Register Chain
+4-bit Window Output
+Topology is still too simple to be the sole source of 
+data extrapolation for a mission specific design.
+10
+To be presented by Melanie Berg at Government Microcircuit Applications and Critical Technology Conference, Miami, FL, March 12-15, 2018.
+Mission Specific Testing 
+Considerations
+• In order to predict mission reliability, it is best to analyze 
+systems that closely resemble those that will be employed in 
+the mission.  
+– This requires the system-under-test have comparable complexity 
+and maintain proper design topology. 
+• Challenge: mission-specific applications are complex systems 
+that make SEU data collection challenging: 
+– This is mostly because visibility into system circuitry and state 
+space traversal are minimized per SEE test. 
+– Data obtained during radiation testing can be misrepresentative. 
+– Consequently the data might not correctly characterize SEU 
+response per mission specific operational modes; and could lead 
+to poor (and perhaps catastrophic) design implementations 
+11
+To be presented by Melanie Berg at Government Microcircuit Applications and Critical Technology Conference, Miami, FL, March 12-15, 2018.
+Proposed Enhancements to Mission 
+Specific Testing
+• Study system trends by parameter variation:
+– Investigate different test structures that vary in complexity;
+– Vary operational frequency and input patterns; 
+– Force a variety of state-space traversal schemes per test;
+– Perform as many tests as possible;
+• Increase visibility of internal circuits and their 
+contributions to susceptibility.  
+• These actions help to identify dominant sources of error;
+and better extrapolate data to mission-specific systems.
+Mission specific testing can provide data that better 
+characterizes your target.  However, visibility into DUT failure 
+mechanisms is essential.
+12
+To be presented by Melanie Berg at Government Microcircuit Applications and Critical Technology Conference, Miami, FL, March 12-15, 2018.
+Mission Specific Testing: Increasing Visibility 
+with Embedded Microprocessor Testing (1)
+Halted
+Error
+Trace Instruction
+Trace Valid Instruction
+Trace Exception Taken
+Trace Exception Kind
+Trace Register Write
+Trace Register Address
+Trace data cache Request
+Trace data cache Hit
+Trace Data cache Ready
+Trace Data cache Read
+Trace Instruction cache Request
+Trace Instruction cache Hit
+TESTER
+Watchdogs
+Send watchdog 
+errors to host 
+PC
+DUT
+DUT: device under test
+13
+To be presented by Melanie Berg at Government Microcircuit Applications and Critical Technology Conference, Miami, FL, March 12-15, 2018.
+Mission Specific Testing: Increasing Visibility 
+with Embedded Microprocessor Testing (2)
+• Visibility was increased by isolating memory accesses as 
+follows:
+– Moving the instruction and data storage to the LCDT for traffic 
+observation.
+– Performing tests with and without cache to determine the influence 
+cache has on upsets.
+• Differentiating global upsets from the normal data set:
+– Helps to understand which upsets are prominent. 
+– Gives insight to how the use of cache will affect σSEUs.
+• Monitoring internal MicroBlazeTM signals
+– σSEUs are not reliant on detecting erroneous memory read and writes 
+anymore.  Data are too limited and uninformative with solely relying 
+on memory reads and writes.
+– Can now determine when a processor crashes and how.
+LCDT: Low cost digital tester
+14
+To be presented by Melanie Berg at Government Microcircuit Applications and Critical Technology Conference, Miami, FL, March 12-15, 2018.
+Mission Specific Ground Testing and 
+Mean Fluence to Failure (MFTF)
+• Academic test circuits are 
+flush through:
+– Faults occur and will be 
+flushed through the circuit.
+– Can keep testing after the 
+fault occurs.
+– Can use a counting metric of 
+faults per particle exposure.
+• Mission specific designs are 
+complex and tend to crash 
+upon fault.  
+– They are not flush through 
+circuits.
+– Test until fault occurs.
+– Proposed metric is MFTF.
+1.00E+02
+1.00E+03
+1.00E+04
+1.00E+05
+1.00E+06
+1.00E+07
+1.00E+08
+1.00E+09
+0 20 40 60 80 100
+MFTF (particles/cm2)
+LET MeVcm2/mg
+V5QV: MicroBlaze
+with Cache Enabled
+V5: PowerPC
+15
+
+To be presented by Melanie Berg at Government Microcircuit Applications and Critical Technology Conference, Miami, FL, March 12-15, 2018.
+Goal: Predict System-Level SEU 
+Reliability 
+• NEPP is investigating the application of classical 
+reliability performance metrics combined with single 
+event upset (SEU) empirical data to improve space 
+application reliability prediction.
+• Proposed methodology is being investigated in three 
+phases:
+– Simplified proof-of-concept.
+– Omnidirectional effects of ions to system 
+susceptibility.
+– Geometric limitations.
+16
+To be presented by Melanie Berg at Government Microcircuit Applications and Critical Technology Conference, Miami, FL, March 12-15, 2018.
+NEPP Proposed Prediction Methodology
+• Calculate MFTF per LET (obtain SEU 
+data via ground testing).
+• Create a histogram of particle flux 
+versus LET for the mission’s required 
+time-window in the expected target 
+environment.
+• Note: Each bin’s maximum LET 
+(LET
+max) is a ground test point; and 
+has an associated MFTF.
+• Graph reliability across fluence (R(Φ)) 
+for each of the LET test points and 
+their associated MFTFs. R(Φ)=e-Φ/MFTF
+• Each LETmax is associated with a bin 
+of particle fluence for a given time 
+window.  Use this fluence to determine 
+the reliability for each bin.
+• Analyze the reliabilities across all bins.
+17
+1.0E-08
+1.0E-07
+1.0E-06
+1.0E-05
+1.0E-04
+1.0E-03
+1.0E-02
+1.0E-01
+1.0E+00
+1.0E+01
+1.0E+02
+1.0E+03
+Flux(particles/(cm2*10-minutes)
+LET Bins (MeVcm2/mg)
+Space Data 
+Histogram
+
+To be presented by Melanie Berg at Government Microcircuit Applications and Critical Technology Conference, Miami, FL, March 12-15, 2018.
+Determining Expected Reliability using 
+MFTF and Space Data Particle Fluence
+9.998400E-01
+9.998600E-01
+9.998800E-01
+9.999000E-01
+9.999200E-01
+9.999400E-01
+9.999600E-01
+9.999800E-01
+1.000000E+00Reliability
+Fluence (particles/cm2)
+R(Φ)=e-Φ/3.0×107
+PowerPC: MFTF = 3.0×107
+Reliability calculation for the 
+first bin of particle flux. 
+Expected number of particles is 
+approximately 3000. R(ϕ)>4-9’s.
+1.00E+02
+1.00E+03
+1.00E+04
+1.00E+05
+1.00E+06
+1.00E+07
+1.00E+08
+1.00E+09
+0 20 40 60 80 100
+MFTF (particles/cm2)
+LET MeVcm2/mg
+V5QV: MicroBlaze
+with Cache Enabled
+V5: PowerPC
+18
+
+To be presented by Melanie Berg at Government Microcircuit Applications and Critical Technology Conference, Miami, FL, March 12-15, 2018.
+Selection of LET for Ground Heavy-
+Ion SEE Testing
+• The proposed methodology requires careful LET selection during 
+ground testing.
+• This is especially true for commercial (or sensitive) devices.
+• Because of the high particle counts at low LETs, it is best to 
+reduce the size of the histogram bins.  Hence, tests should be 
+performed at as many low LET values as possible.
+• When possible, test at different energies to obtain similar LETs.  
+Take note – SEU response should be statistically equivalent.
+• Test at different angles to achieve similar LETs.  SEU response 
+should be statistically equivalent.  
+• When effective LETs do not provide statistically accurate SEU 
+responses, geometrical device specifics need to be investigated.
+19
+To be presented by Melanie Berg at Government Microcircuit Applications and Critical Technology Conference, Miami, FL, March 12-15, 2018.
+Summary
+• In 2012, NASA Electronic Parts and Packaging (NEPP) 
+developed a robust test and analysis (hardness 
+assurance) methodology for FPGA component 
+evaluation and SEE data application.  
+• Since 2012, FPGA circuit complexity has increased 
+exponentially. 
+• With the combination of complexity management and 
+years of lessons learned material, the documentation is 
+currently being updated.  
+• This presentation highlights a select portion of the 
+guideline updates. 
+20
+To be presented by Melanie Berg at Government Microcircuit Applications and Critical Technology Conference, Miami, FL, March 12-15, 2018.
+Acknowledgements
+• This work has been sponsored by the NASA 
+Electronic Parts and Packaging (NEPP) Program.
+• Thanks is given to the NASA Goddard Radiation 
+Effects and Analysis Group (REAG) for their 
+technical assistance and support. 
+21
+Contact Information:
+Melanie Berg: NASA Goddard REAG FPGA 
+Principal Investigator:
+Melanie.D.Berg@NASA.GOV
+21

@@ -1,0 +1,313 @@
+The NASA Electronic Parts and Packaging 
+(NEPP) Program – Field Programmable Gate 
+Array (FPGA) Tasks/Considerations 
+Kenneth A. LaBel 
+ken.label@nasa.gov  
+301-286-9936 
+Co- Manager, NEPP Program 
+NASA Goddard Space Flight Center (GSFC) 
+http://nepp.nasa.gov
+To be published on nepp.nasa.gov previously presented by Kenneth LaBel at the NASA Electronic Parts and Packaging (NEPP) 
+Electronics Technology Workshop (ETW), Greenbelt, MD, June 17-19, 2014. 1 
+Outline 
+• Acronym List 
+• Food For Thought 
+• Plans for FY14/FY15 
+• Recent Highlights 
+• Summary 
+2 To be published on nepp.nasa.gov previously presented by Kenneth LaBel at the NASA Electronic Parts and Packaging (NEPP) 
+Electronics Technology Workshop (ETW), Greenbelt, MD, June 17-19, 2014. 
+Acronyms 
+3 
+Acronym Definition 
+3D Three Dimensional 
+ADC Analog to Digital Converter 
+Aero Aerospace 
+AMRDEC Aviation and Missile Research Development and Engineering 
+Center 
+ARC Ames Research Center 
+BME Base Metal Electrode 
+BOK Body of Knowledge 
+CALCE Center for Advanced Life Cycle Engineering 
+CAVE Center for Advanced Vehicle and Extreme Environment 
+Electronics 
+CBRAM Conductive Bridging Random Access Memory 
+CMOS Complementary Metal Oxide Semiconductor 
+COP Community of Practice 
+COTS Commercial Off The Shelf 
+CSA Canadian Space Agency 
+DAC Digital to Analog Converter 
+DARPA Defense Advanced Research Projects Agency 
+DC Direct Current 
+DDR Double Data Rate 
+DLA/DSCC Defense Logistics Agency Land and Maritime 
+EEE Electrical, Electronic, and Electromechanical 
+ELDRS Enhanced Low Dose Rate Sensitivity 
+EPARTS NASA Electronic Parts Database 
+ESA European Space Agency 
+ETW Electronics Technology Workshop 
+FET Field Effect Transistor 
+FPGA Field Programmable Gate Array 
+FY Fiscal Year 
+G11 Component Parts Committee 
+G12 Solid State Devices Committee 
+GaAs Gallium Arsenide 
+GaN Gallium Nitride 
+GIDEP Government Industry Data Exchange Program 
+GRC Glenn Research Center 
+GSFC Goddard Space Flight Center 
+HALT Highly Accelerated Life Test 
+HiREV High Reliability Virtual Electronics Center 
+HPL High Performance Logic 
+IBM International Business Machines 
+ICBM Intercontinental Ballistic Missile 
+IP Intellectual Property 
+JAXA Japanese Space Agency 
+JEDEC Joint Electron Device Engineering Council  
+JHU-APL Johns Hopkins University Applied Physics Laboratory 
+Acronym Definition 
+JPL Jet Propulsion Laboratories 
+JSC Johnson Space Center
+KSC Kennedy Space Center 
+LaRC Langley Research Center 
+LEAP Leading Edge Access Program 
+MDA Missile Defense Agency 
+MEMS Microelectromechanical Structure 
+MIL Military 
+MLCC Multi-Layer Ceramic Capacitor 
+MOSFET Metal Oxide Semiconductor Field Effect Transistor 
+MRQW Microelectronics Reliability and Qualification Working Meeting 
+MSFC Marshall Space Flight Center 
+NASA National Aeronautics and Space Administration 
+NAVSEA Naval Sea Systems Command 
+NEPAG NASA Electronic Parts Assurance Group 
+NEPP NASA Electronic Parts and Packaging 
+NFC Near-Field Communication 
+NGC Northrop Grumman Corporation 
+NPSL NASA Parts Selection List 
+NRO National Reconnaissance Office 
+NSP National Space Programs 
+NSWC Naval Surface Warefare Center 
+PBGA Plastic Ball Grid Array 
+POF Physics of Failure 
+POL Point of Load 
+QML Qualified Manufacturer List
+RERAM Resistive Random Access Memory 
+RF Radio Frequency 
+SAE Society of Automotive Engineers
+SAS Supplier Assessment System 
+SEE Single Event Effects 
+SEU Single Event Upset 
+SiC Silicon Carbide 
+SMC Space and Missile Command 
+SOC Systems on a Chip 
+SW  Southwest 
+TI Texas Instruments 
+TMR Triple Modular Redundancy 
+TRL Technology Readiness Level 
+TSMC Taiwan Semiconductor Manufacturing Company 
+US United States 
+USAF United States Air Force 
+USN United States Navy 
+VCS Voluntary Consensus Standards 
+VNAND Vertical NAND 
+To be published on nepp.nasa.gov previously presented by Kenneth LaBel at the NASA Electronic Parts and Packaging (NEPP) 
+Electronics Technology Workshop (ETW), Greenbelt, MD, June 17-19, 2014. 
+Food For Thought – 
+Hype Cycle for Emerging Technologies 
+4 To be published on nepp.nasa.gov previously presented by Kenneth LaBel at the NASA Electronic Parts and Packaging (NEPP) 
+Electronics Technology Workshop (ETW), Greenbelt, MD, June 17-19, 2014. 
+Source: Gartner August 2013 
+Where does your technology interest lie on the curve? 
+NEPP – FPGA Considerations 
+• NEPP Tasks take two focuses: 
+– Support for developments in the Mil/Aero arena, and,
+– Evaluation of emerging commercial technologies. 
+• Mil/Aero: 
+– Qualification: ensure that manufacturer claims 
+meet product qualification requirements. 
+– Aid manufacturers in understanding 
+“vulnerabilities” in their new developments. 
+• Commercial: 
+– Evaluate state-of-the-art devices keeping in mind 
+application operating area for NASA usage. 
+• Deliverables: guidelines, test reports, and 
+technical papers. 
+• Task Leadership 
+– Radiation: Melanie Berg 
+– Reliability: Doug Sheldon 
+ 
+5 To be published on nepp.nasa.gov previously presented by Kenneth LaBel at the NASA Electronic Parts and Packaging (NEPP) 
+Electronics Technology Workshop (ETW), Greenbelt, MD, June 17-19, 2014. 
+FY14 NEPP Core  - Complex Devices 
+FPGAs – 
+Radiation 
+NEPP Research Category – Complex Devices 
+ 
+ 
+Xilinx Virtex 5QV 
+Commercial 
+Xilinx 28nm 
+Virtex-7, Kintex-7 
+NEPP Ongoing Task 
+Legend 
+ FY14 Proposed New Start 
+ Core Areas are Bubbles; 
+Boxes underneath are variable 
+tasks in each core 
+6 
+FPGA SOCs 
+Xilinx Zynq, 
+Microsemi 
+SmartFusion 2 
+New Microsemi 
+and ATMEL 
+Embedded 
+Coldfire™  
+FPGAs – 
+Reliability 
+ 
+ 
+Xilinx Virtex 5QV 
+Daisy Chain 
+Package 
+Evaluation 
+Area Array 
+Packages 
+ 
+ 
+Class Y QML 
+Class Y and IPC 
+HALT for 
+PBGA 
+Memory 
+Devices 
+ 
+ 
+Resistive Memory 
+(RERAM, CBRAM) 
+Radiation, 
+Reliability 
+3D Structure 
+FLASH Memory 
+Samsung VNAND 
+Radiation, 
+Reliability 
+DDR3 Memory 
+Radiation, 
+Reliability 
+Assurance 
+ 
+ 
+Memory Fault 
+Coverage 
+FPGA SOCs 
+Xilinx Zynq, 
+Microsemi 
+SmartFusion 2 
+SOC 
+Radiation 
+Synopsys 
+TMR Tool 
+Evaluation 
+Thermal Interface 
+Materials 
+Solder Bump
+Comparison 
+Flip Chip 
+Interconnect 
+Advanced 
+CMOS 
+ 
+ 
+IBM 
+trusted foundry 
+14-32 nm 
+Radiation 
+Intel 
+14 nm 
+Radiation 
+DARPA LEAP 
+Program 
+(32 nm) 
+Radiation 
+To be published on nepp.nasa.gov previously presented by Kenneth LaBel at the NASA Electronic Parts and Packaging (NEPP) 
+Electronics Technology Workshop (ETW), Greenbelt, MD, June 17-19, 2014. 
+ 
+• Xilinx Virtex 5QV 
+– See Melanie Berg’s talk 
+• Xilinx Kintex-7 (Virtex-7 family) 
+– SEE testing begun in April 2014 (Melanie Berg) 
+• Microsemi ProASIC 
+– SEE Testing completed (Melanie Berg) 
+• Evaluation of mitigation tools 
+– Under discussion with Synopsis to evaluate 
+(Melanie Berg) 
+• Xilinx Zynq-7000 
+– SEE testing begun (Farokh Irom) 
+• Discussions underway with Altera on 
+next generation (Stratix 10) and 
+Microsemi RT4G 
+ 
+7 To be published on nepp.nasa.gov previously presented by Kenneth LaBel at the NASA Electronic Parts and Packaging (NEPP) 
+Electronics Technology Workshop (ETW), Greenbelt, MD, June 17-19, 2014. 
+Radiation Tasks 
+FPGAs – 
+Radiation  
+Xilinx Virtex 5QV 
+Commercial 
+Xilinx 28nm 
+Virtex-7, Kintex-7
+FPGA SOCs 
+Xilinx Zynq, 
+Microsemi 
+SmartFusion 2 
+New Microsemi 
+and ATMEL 
+Embedded 
+Coldfire™  
+• Xilinx Virtex 5QV 
+– Awaiting daisy chain packages 
+• Xilinx Artix-7 (Virtex-7 
+family) 
+– See Doug Sheldon’s talk 
+• HALT for PBGA 
+– See Ram’s talk 
+• Multiple BOK documents 
+ 
+8 To be published on nepp.nasa.gov previously presented by Kenneth LaBel at the NASA Electronic Parts and Packaging (NEPP) 
+Electronics Technology Workshop (ETW), Greenbelt, MD, June 17-19, 2014. 
+Reliability Tasks 
+FPGAs – 
+Reliability  
+Xilinx Virtex 5QV 
+Daisy Chain 
+Package 
+Evaluation 
+Area Array 
+Packages  
+Class Y QML 
+Class Y and IPC 
+HALT for 
+PBGA FPGA SOCs 
+Xilinx Zynq, 
+Microsemi 
+SmartFusion 2 
+Thermal Interface 
+Materials 
+Solder Bump 
+Comparison 
+Flip Chip 
+Interconnect 
+Summary 
+• FPGAs continue to be a major technology focus 
+for NEPP for both Mil/Aero and commercial 
+products 
+– Applications will vary from ultra-reliable to 
+“throwaway” CubeSats and everything in between. 
+ 
+9 To be published on nepp.nasa.gov previously presented by Kenneth LaBel at the NASA Electronic Parts and Packaging (NEPP) 
+Electronics Technology Workshop (ETW), Greenbelt, MD, June 17-19, 2014. 
+http://www.xilinx.com/about/generation-ahead-20nm.html 
+ http://eecatalog.com/caciufo/wp-content/uploads/2014/01/Figure-
+5-Altera-SoC-roadmap-PNG.png 

@@ -1,0 +1,1787 @@
+
+=== CHUNK 1 ===
+To be presented by Melanie D. Berg at the NASA Electronic Parts and Packaging Program (NEPP) Electronics Technology 
+Workshop (ETW), NASA Goddard Space Flight Center in Greenbelt, MD, June 15-18, 2020 and published on nepp.nasa.gov.
+Single Event Effects in Field Programmable 
+Gate Array (FPGA) Devices: Update 2020 
+Melanie Berg(1)
+Melanie.D.Berg@NASA.gov; Melanie.Berg@SSAIHQ.com
+Michael Campola(2), Hak Kim(1), Anthony Phan(1)
+1. SSAI Inc. in support of the NEPP Program and NASA/GSFC
+2. NASA Goddard Space Flight Center
+National Aeronautics 
+and Space Administration
+NEPP Electronics Technology Workshop
+June 15-18, 2020
+1
+This work was funded in part by the NASA Electronic Parts and Packaging (NEPP) Program and the Trusted 
+& Assured Microelectronics Program Under Interagency Agreement SAA5-1
+
+=== CHUNK 2 ===
+ part by the NASA Electronic Parts and Packaging (NEPP) Program and the Trusted 
+& Assured Microelectronics Program Under Interagency Agreement SAA5-18-4-U28631
+To be presented by Melanie D. Berg at the NASA Electronic Parts and Packaging Program (NEPP) Electronics Technology 
+Workshop (ETW), NASA Goddard Space Flight Center in Greenbelt, MD, June 15-18, 2020 and published on nepp.nasa.gov.
+Acronyms
+2
+Acronym Definition 
+1MB 1 Megabit
+3D Three Dimensional 
+3DIC Three Dimensional Integrated Circuits
+ACE Absolute Contacting Encoder
+AHB Advanced high performance bus
+ADC Analog to Digital Converter 
+AEC Automotive Electronics Council
+AES Advanced Encryption Standard
+AMD Advanced Micro Devices Incorporated
+AMS Agile Mixed Signal
+ARM Acorn Reduced Instruction Set ComputerMachine
+AXI Advanced ext
+
+=== CHUNK 3 ===
+ Encryption Standard
+AMD Advanced Micro Devices Incorporated
+AMS Agile Mixed Signal
+ARM Acorn Reduced Instruction Set ComputerMachine
+AXI Advanced extensible interface
+BGA Ball Grid Array
+BRAM Block Random Access Memory
+BTMR Block triple modular redundancy
+CAN Controller Area Network
+CBRAM Conductive Bridging Random Access Memory
+CCC RTG4 clock conditioning circuit
+CCI Correct Coding Initiative
+CGA Column Grid Array
+CMOS Complementary Metal Oxide Semiconductor 
+CN Xilinx ceramic flip-chip (CF and CN) packages are ceramic column grid array 
+(CCGA) packages
+COTS Commercial Off The Shelf 
+CRC Cyclic Redundancy Check
+CRÈME Cosmic Ray Effects on Micro Electronics
+CRÈME MC Cosmic Ray Effects on Micro Electronics Monte Carlo
+CSE Crypto Security Engineer
+CU Control Unit
+DC Direct current
+DCU Distr
+
+=== CHUNK 4 ===
+icro Electronics
+CRÈME MC Cosmic Ray Effects on Micro Electronics Monte Carlo
+CSE Crypto Security Engineer
+CU Control Unit
+DC Direct current
+DCU Distributed Control Unit
+DDR Double Data Rate (DDR3 = Generation 3; DDR4 =  Generation 4)
+DFF Flip-flop
+DMM Digital Multimeter
+DMA Direct Memory Access
+DSP Digital Signal Processing
+DSPI Dynamic Signal Processing Instrument
+DTMR Distributed triple modular redundancy
+Dual Ch. Dual Channel
+DUT Device under test
+ECC Error-Correcting Code
+EDAC Error detection and correction
+EEE Electrical, Electronic, and Electromechanical 
+EMAC Equipment Monitor And Control
+EMIB Multi-die Interconnect Bridge
+EPCS Extended physical coding layer
+ESA European Space Agency
+eTimers Event Timers
+ETW Electronics Technology Workshop 
+FCCU Fluidized Catalytic Cracking Unit
+Fe
+
+=== CHUNK 5 ===
+ed physical coding layer
+ESA European Space Agency
+eTimers Event Timers
+ETW Electronics Technology Workshop 
+FCCU Fluidized Catalytic Cracking Unit
+FeRAM Ferroelectric Random Access Memory
+FinFET Fin Field Effect Transistor
+FIR Finite impulse response filter
+FMC FPGA Mezzanine Card
+FPGA Field Programmable Gate Array 
+FPU Floating Point Unit
+FY Fiscal Year 
+Gb Gigabit
+Gbps Gigabit per second
+GCR Galactic Cosmic Ray 
+GEO geostationary equatorial orbit
+GIC Global Industry Classification
+GOMACTech Government Microcircuit Applications and Critical Technology Conference
+GPIO General purpose input/output
+GPIB General purpose interface bus
+GPU Graphics Processing Unit
+GR Global Route
+GRC NASA Glenn Research Center
+GSFC Goddard Space Flight Center 
+Acronym Definition 
+GTH/GTY/GTX Transceiver Type
+G
+
+=== CHUNK 6 ===
+cs Processing Unit
+GR Global Route
+GRC NASA Glenn Research Center
+GSFC Goddard Space Flight Center 
+Acronym Definition 
+GTH/GTY/GTX Transceiver Type
+GTMR Global TMR
+HALT Highly Accelerated Life Test 
+HAST Highly Accelerated Stress Test
+HBM High Bandwidth Memory
+HDIO High Density Digital Input/Output
+HDR High-Dynamic-Range
+HiREV High Reliability Virtual Electronics Center
+HKMG high-k metal gate 
+HMC Hybrid Memory Cube
+HPIO High Performance Input/Output
+HPS High Pressure Sodium
+HSTL High speed transceiver logic
+I/F interface
+I/O input/output
+I2C Inter-Integrated Circuit
+i2MOS Microsemi second generation of Rad-Hard MOSFET
+IC Integrated Circuit
+I-Cache independent cache
+JFAC Joint Federated Assurance Center
+JPEG Joint Photographic Experts Group
+JTAG Joint Test Action Group (FPGAs use JTAG to 
+
+=== CHUNK 7 ===
+I-Cache independent cache
+JFAC Joint Federated Assurance Center
+JPEG Joint Photographic Experts Group
+JTAG Joint Test Action Group (FPGAs use JTAG to provide 
+access to their programming debug/emulation functions)
+KB Kilobyte
+L2 Cache independent caches organized as a hierarchy (L1, L2, etc.)
+LCDT NEPP low cost digital tester
+LEO Low Earth Orbit
+LET Linear energy transfer
+L-mem Long-Memory
+LP Low Power
+LUT Look-up table
+LVCMOS Low-voltage Complementary Metal Oxide Semiconductor 
+LVDS Low-Voltage Differential Signaling
+LVTTL Low –voltage transistor-transistor logic
+LTMR Local triple modular redundancy
+LW HPS Lightwatt High Pressure Sodium
+M/L BIST Memory/Logic Built-In Self-Test
+Mil-STD Military standard
+MAPLD Military Aerospace Programmable Logic Device
+MFTF Mean fluence to failure
+μPROM M
+
+=== CHUNK 8 ===
+BIST Memory/Logic Built-In Self-Test
+Mil-STD Military standard
+MAPLD Military Aerospace Programmable Logic Device
+MFTF Mean fluence to failure
+μPROM Micro programmable read-only memory
+μSRAM Micro SRAM
+Mil/Aero Military/Aerospace
+MIPI Mobile Industry Processor Interface
+MMC MultiMediaCard
+MOSFET Metal-Oxide-Semiconductor Field-Effect Transistor
+MP Microprocessor
+MP Multiport
+MPFE Multiport Front-End
+MPSoC Multiprocessor System on a chip
+MPU Microprocessor Unit
+Msg message
+MTTF Mean time to failure
+NAND Negated AND or NOT AND
+NASA National Aeronautics and Space Administration 
+NEPP NASA Electronic Parts and Packaging 
+NOR Not OR logic gate
+NV(M) Non-volatile (memory)
+OCM On-chip RAM
+OSC-TMR-PLL Embedded triple modular redundant phase lockedloop
+OSC Oscillator
+OSD Office of the Secretary of 
+
+=== CHUNK 9 ===
+M) Non-volatile (memory)
+OCM On-chip RAM
+OSC-TMR-PLL Embedded triple modular redundant phase lockedloop
+OSC Oscillator
+OSD Office of the Secretary of Defense
+PC Personal Computer
+PCB Printed Circuit Board
+Acronym Definition 
+PCIe Peripheral Component Interconnect Express
+PCIe Gen2 Peripheral Component Interconnect Express Generation 2
+Pconfiguration SEU cross-section of configuration
+Pfunctional_logic SEU cross-section of functional logic
+PHY Physical layer
+PLL Phase Locked Loop
+PLOL Phase Locked Loop loss of lock
+PMA Physical Medium Attachment
+POR Power on reset
+PPM Parts per million
+Proc. Processing
+PS-GTR High Speed Bus Interface
+PSEFI SEU cross-section from single event functional interrupts
+Psystem System SEU cross-section
+QDR quad data rate
+QFN Quad Flat Pack No Lead
+QML Qualified ma
+
+=== CHUNK 10 ===
+ cross-section from single event functional interrupts
+Psystem System SEU cross-section
+QDR quad data rate
+QFN Quad Flat Pack No Lead
+QML Qualified manufactures list
+QSPI Serial Quad Input/Output
+RC Resistor capacitor
+R&M Reliability and Maintainability
+RAM Random Access Memory
+ReRAM Resistive Random Access Memory
+RGB Red, Green, and Blue
+RH Radiation Hardened
+RT Radiation Tolerant
+RTD Representative tactical design
+RTG4FCCC_0 RTG4 Phase lock loop Core
+SATA Serial Advanced Technology Attachment
+SCU Secondary Control Unit
+SD Secure Digital
+SD/eMMC Secure Digital embedded MultiMediaCard
+SD-HC Secure Digital High Capacity
+SDM Spatial-Division-Multiplexing
+SEE Single Event Effect
+SEF Single event failure
+SEFI Single Event Functional Interrupt
+SEL Single event latchup
+SERDES Serializer/deserial
+
+=== CHUNK 11 ===
+ltiplexing
+SEE Single Event Effect
+SEF Single event failure
+SEFI Single Event Functional Interrupt
+SEL Single event latchup
+SERDES Serializer/deserializer
+SET Single event transient
+SEU Single event upset
+Si Silicon 
+SK Hynix SK Hynix Semiconductor Company
+SMDs Selected Item Descriptions
+SMMU System Memory Management Unit
+SOA Safe Operating Area
+SOC Systems on a Chip 
+SPI Serial Peripheral Interface
+sRIO Serio Rapid I/O
+SSTL Sub series terminated logic
+TBD To Be Determined
+Temp Temperature
+THD+N Total Harmonic Distortion Plus Noise
+TMR Triple Modular Redundancy
+T-Sensor Temperature-Sensor
+TSMC Taiwan Semiconductor Manufacturing Company
+UART Universal Asynchronous Receiver/Transmitter
+UltraRAM Ultra Random Access Memory
+USB Universal Serial Bus
+VNAND Vertical NAND 
+WDT Watchdog Timer
+WSR Wi
+
+=== CHUNK 12 ===
+niversal Asynchronous Receiver/Transmitter
+UltraRAM Ultra Random Access Memory
+USB Universal Serial Bus
+VNAND Vertical NAND 
+WDT Watchdog Timer
+WSR Windowed shift register
+XAUI Extended 10 Gigabit Media Independent Interface
+XGXS 10 Gigabit Ethernet Extended Sublayer
+XGMII 10 Gigabit Media Independent Interface)
+To be presented by Melanie D. Berg at the NASA Electronic Parts and Packaging Program (NEPP) Electronics Technology 
+Workshop (ETW), NASA Goddard Space Flight Center in Greenbelt, MD, June 15-18, 2020 and published on nepp.nasa.gov.
+• FPGA and SEE Test Methodology Overview
+• Xilinx Kintex-UltraScale SEE Test and Analysis
+• Microsemi PolarFire SEE Test and Analysis
+• SEE Data Analysis Methodology (SRAM-based FPGA)
+• Future work
+3
+AgendaFPGA:  Field programmable gate array
+SEE: singl
+
+=== CHUNK 13 ===
+olarFire SEE Test and Analysis
+• SEE Data Analysis Methodology (SRAM-based FPGA)
+• Future work
+3
+AgendaFPGA:  Field programmable gate array
+SEE: single event effects 
+To be presented by Melanie D. Berg at the NASA Electronic Parts and Packaging Program (NEPP) Electronics Technology 
+Workshop (ETW), NASA Goddard Space Flight Center in Greenbelt, MD, June 15-18, 2020 and published on nepp.nasa.gov.
+To be presented by Melanie D. Berg at the NASA Electronic Parts and Packaging Program (NEPP) Electronics Technology 
+Workshop (ETW), NASA Goddard Space Flight Center in Greenbelt, MD, June 15-18, 2020 and published on nepp.nasa.gov.
+FPGA SEU Cross-section Model
+4
+CLBs
+BRAM GR Control
+HardIP
+Configurable logic block: (CLB)
+Global Route: GR
+Static random access memory: (SRAM)
+Intellectual property: 
+
+=== CHUNK 14 ===
+ction Model
+4
+CLBs
+BRAM GR Control
+HardIP
+Configurable logic block: (CLB)
+Global Route: GR
+Static random access memory: (SRAM)
+Intellectual property: (IP); e.g., micro processors)
+Analog circuits
+Complex routing 
+everywhere.
+𝜎𝜎𝑆𝑆𝑆𝑆𝑆𝑆 = 𝑓𝑓 𝜎𝜎𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐 , 𝜎𝜎𝐵𝐵𝐵𝐵𝐵𝐵𝐵𝐵 , 𝜎𝜎𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑓𝑓𝑓𝑓𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐 , 𝜎𝜎𝐻𝐻𝑐𝑐𝐻𝐻𝐻𝐻𝐻𝐻𝑐𝑐𝑓𝑓𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐
+Dominant mechanisms of failure will drive 𝝈𝝈𝑺𝑺𝑺𝑺𝑺𝑺
+Cross-sections for a mapped design/system (𝜎𝜎𝑆𝑆𝑆𝑆𝑆𝑆 ) are a function of 
+the FPGA’s internal elements and the mapped design’s topology.
+BRAM: Block random access memory
+SEU: single event upset
+SEF: single event failure (system)
+σ: cross-section
+To be presented by Melanie D. Berg at the NASA Electronic Parts and Packaging Program (NEPP) Electronics Technology 
+Workshop (ETW), NASA Goddard Space Flight Ce
+
+=== CHUNK 15 ===
+nted by Melanie D. Berg at the NASA Electronic Parts and Packaging Program (NEPP) Electronics Technology 
+Workshop (ETW), NASA Goddard Space Flight Center in Greenbelt, MD, June 15-18, 2020 and published on nepp.nasa.gov.
+• Distinction is made between SEU/SEF test methodologies, 
+functional testing, and reliability/TID studies.
+• The mechanisms of failure, their impact, and metrics differ:
+– SEU/SEF: Upon random-event particle ionization…how often does something happen; 
+mean-time-to-failure; mean-fluence-to-failure; probabilities; statistics.  Flat portion of 
+reliability-bathtub curve.
+– Functional: Based on a potential design flaw… Does the system operate as 
+expected? No correlation to how long it takes to find a failure or how often – the 
+importance is to find any failure.
+– Reliabil
+
+=== CHUNK 16 ===
+e system operate as 
+expected? No correlation to how long it takes to find a failure or how often – the 
+importance is to find any failure.
+– Reliability/TID: degradation… right- side rising portion of bathtub curve.
+• SEF cross-sections depend on the FPGA type and the user-mapped 
+design’s dominant mechanisms of failure.  Yet some studies tend 
+to focus on mechanisms that have negligible impact. 
+• SEE dominant mechanisms of failure drive the following:
+– Test methodology (test fixture, stimulus, monitors, and capture)
+– Data results (cross-sections) … no need to concentrate on items that have 
+negligible contributions.
+– Error rate/ Survivability prediction
+5
+SEF and Dominant Mechanisms of 
+Failure
+To be presented by Melanie D. Berg at the NASA Electronic Parts and Packaging Program (NEP
+
+=== CHUNK 17 ===
+bility prediction
+5
+SEF and Dominant Mechanisms of 
+Failure
+To be presented by Melanie D. Berg at the NASA Electronic Parts and Packaging Program (NEPP) Electronics Technology 
+Workshop (ETW), NASA Goddard Space Flight Center in Greenbelt, MD, June 15-18, 2020 and published on nepp.nasa.gov.
+SRAM-based FPGA Single Event 
+Effects (SEE) Study: Xilinx Kintex-
+Ultrascale (XCKU040-1LFFVA1156I)
+6
+To be presented by Melanie D. Berg at the NASA Electronic Parts and Packaging Program (NEPP) Electronics Technology 
+Workshop (ETW), NASA Goddard Space Flight Center in Greenbelt, MD, June 15-18, 2020 and published on nepp.nasa.gov.
+To be presented by Melanie D. Berg at the NASA Electronic Parts and Packaging Program (NEPP) Electronics Technology 
+Workshop (ETW), NASA Goddard Space Flight Center in Gree
+
+=== CHUNK 18 ===
+nie D. Berg at the NASA Electronic Parts and Packaging Program (NEPP) Electronics Technology 
+Workshop (ETW), NASA Goddard Space Flight Center in Greenbelt, MD, June 15-18, 2020 and published on nepp.nasa.gov.
+Xilinx Kintex-UltraScale Study Objectives
+• This is an independent investigation that evaluates the single event 
+destructive and transient susceptibility of the the Xilinx Kintex-
+UltraScale device. 
+• Design/Device susceptibility is determined by monitoring the DUT for 
+SET and SEU induced faults by exposing the DUT to a heavy ion beam.   
+• Potential SEL is checked throughout heavy-ion testing by monitoring 
+device current.
+• FPGA part# XCKU040-1LFFVA1156I.
+7
+system σSEU Configuration 
+σSEU
+Functional logic 
+σSEU
+SEFI 
+σSEU
+𝜎𝜎𝑆𝑆𝑆𝑆𝑆𝑆 = 𝑓𝑓 𝜎𝜎𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐, 𝜎𝜎𝐵𝐵𝐵𝐵𝐵𝐵𝐵𝐵, 𝜎
+
+=== CHUNK 19 ===
+rt# XCKU040-1LFFVA1156I.
+7
+system σSEU Configuration 
+σSEU
+Functional logic 
+σSEU
+SEFI 
+σSEU
+𝜎𝜎𝑆𝑆𝑆𝑆𝑆𝑆 = 𝑓𝑓 𝜎𝜎𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐, 𝜎𝜎𝐵𝐵𝐵𝐵𝐵𝐵𝐵𝐵, 𝜎𝜎𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑓𝑓𝑓𝑓𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐, 𝜎𝜎𝐻𝐻𝑐𝑐𝐻𝐻𝐻𝐻𝐻𝐻𝑐𝑐𝑓𝑓𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐
+Block RAM 
+σSEU
+SEFI: single event functional interruptSEU: single event upset SEL: single event latch-up
+DUT: device under test SET: single event transientσSEU: SEU Cross-section
+NEPP performs independently driven studies to determine various 
+device/system susceptibilities as they pertain to NASA programs.
+To be presented by Melanie D. Berg at the NASA Electronic Parts and Packaging Program (NEPP) Electronics Technology 
+Workshop (ETW), NASA Goddard Space Flight Center in Greenbelt, MD, June 15-18, 2020 and published on nepp.nasa.gov.
+This study is divided in two phases (if any, addi
+
+=== CHUNK 20 ===
+ NASA Goddard Space Flight Center in Greenbelt, MD, June 15-18, 2020 and published on nepp.nasa.gov.
+This study is divided in two phases (if any, additional phases will be 
+community driven/funded):
+• Phase I: Generic component study:
+– Collaboration: NEPP, Xilinx, and Space R2 LLC
+– Tests performed: 11/2019 LBNL
+– Additional Data: gathered from a prior NEPP Kintex-UltraScale test 
+campaign 03/2017 TAMU
+– Completed: test report submitted (December 2019)
+• Phase II: Advanced component/system study:
+– Collaboration: NEPP, Xilinx, Aerospace, and Space R2 LLC
+– New structures/tasks:
+• Scrubbing (32-bit 50 MHz)
+• Xilinx Microblaze processor
+• Multi-transceiver (GTX) lanes
+• Triple modular redundancy (TMR)
+– Will begin shortly after government opening.
+8
+Collaboration and Test Campaigns
+To be pr
+
+=== CHUNK 21 ===
+i-transceiver (GTX) lanes
+• Triple modular redundancy (TMR)
+– Will begin shortly after government opening.
+8
+Collaboration and Test Campaigns
+To be presented by Melanie D. Berg at the NASA Electronic Parts and Packaging Program (NEPP) Electronics Technology 
+Workshop (ETW), NASA Goddard Space Flight Center in Greenbelt, MD, June 15-18, 2020 and published on nepp.nasa.gov.
+Impact to Community: Kintex-UltraScale
+• Entry into the aerospace market with COTS expectation (KU060)*.
+• Fabricated on a high-k metal gate (HKMG) TSMC 20 nm planar HPL (high 
+performance low power) process.
+• I/O interfaces are robust and meet the space community’s needs.
+• Previous studies show no SEL.
+• There are no embedded mitigation circuits in the user fabric.  However, 
+higher gate-count affords the user to inser
+
+=== CHUNK 22 ===
+• Previous studies show no SEL.
+• There are no embedded mitigation circuits in the user fabric.  However, 
+higher gate-count affords the user to insert mitigation.
+• There is no embedded processor.  However, the user can embed a soft-
+core.
+9
+Type GTH GTY
+Quantity 16-64 0-32
+Maximum Data Rate 16.3Gb/s 16.3Gb/s
+Minimum Data Rate 0.5Gb/s 0.5Gb/s
+Data Transfer Is Key for Our New System Applications: 
+Kintex-UltraScale Transceivers (GTH and GTY … GTX)
+*Actual designated device (by Xilinx) is the KU060.  KU040 was the device under test (DUT) for this investigation.  Both 
+devices are from the same Xilinx product family (same process) and have the same geometry (20 nm). It is agreed 
+upon and understood by the SEE community that data obtained by one device applies to the other.
+COTS: commercial 
+
+=== CHUNK 23 ===
+same geometry (20 nm). It is agreed 
+upon and understood by the SEE community that data obtained by one device applies to the other.
+COTS: commercial off the shelf
+To be presented by Melanie D. Berg at the NASA Electronic Parts and Packaging Program (NEPP) Electronics Technology 
+Workshop (ETW), NASA Goddard Space Flight Center in Greenbelt, MD, June 15-18, 2020 and published on nepp.nasa.gov.
+DUT Preparation for Heavy-Ion SEE Testing
+• NEPP populated three custom-made daughter boards with 
+XCKU040-1LFFVA1156I (DUT) devices. 
+• The DUTs were thinned using mechanical etching via an Ultra 
+Tec ASAP-1 device preparation system. 
+• The parts were successfully thinned to 90 um – 100  um.
+10
+NEPP custom developed daughter cardUltra Tec ASAP-1
+To be presented by Melanie D. Berg at the NASA Electr
+
+=== CHUNK 24 ===
+ successfully thinned to 90 um – 100  um.
+10
+NEPP custom developed daughter cardUltra Tec ASAP-1
+To be presented by Melanie D. Berg at the NASA Electronic Parts and Packaging Program (NEPP) Electronics Technology 
+Workshop (ETW), NASA Goddard Space Flight Center in Greenbelt, MD, June 15-18, 2020 and published on nepp.nasa.gov.
+Test System: LCDT and DUT (KU040)
+11
+LCDT: low cost digital tester
+GUI: Graphical User Interface
+CLK, CLK_SR_A, SHFT_CLK: clocks
+ LabVIEW GUI: Send 
+Commands and Receive Data
+LabVIEW GUI: Monitor 
+power and configure 
+tester
+Logic Analyzer and 
+configure DUT
+KU 
+DUT
+LCDT
+RS232, TX232: universal asynchronous receiver-transmitter (UART)
+LCDT3 connected to daughterboard (DUT)
+LCDT3: NEPP custom 
+developed Motherboard tester
+To be presented by Melanie D. Berg at the NAS
+
+=== CHUNK 25 ===
+ansmitter (UART)
+LCDT3 connected to daughterboard (DUT)
+LCDT3: NEPP custom 
+developed Motherboard tester
+To be presented by Melanie D. Berg at the NASA Electronic Parts and Packaging Program (NEPP) Electronics Technology 
+Workshop (ETW), NASA Goddard Space Flight Center in Greenbelt, MD, June 15-18, 2020 and published on nepp.nasa.gov.
+• Flux:1.0x102 to 1.0x105 particles/cm2/s
+• Fluence: All tests were run to 1 x 107 particles/cm2 or until destructive or 
+functional events occurred.
+• Test Temperature: Room Temperature.
+12
+Heavy-Ion Test Facilities and Test 
+Conditions
+Ion Energy 
+(MeV/Nucleon)
+Effective 
+LET(MeV∙cm2/mg)0°
+N 16 1.16
+O 16 1.54
+Si 16 2.39
+Si 16 4.35
+Ar 16 7.27
+V 16 10.9
+Ion Energy
+(MeV/Nucleon)
+LET
+(MeV*cm2/mg) 0°
+LET
+(MeV*cm2/mg) 60 °
+He 25 0.07 0.14
+N 25 0.9 0.18
+Ne 25 1.8
+
+=== CHUNK 26 ===
+
+Si 16 2.39
+Si 16 4.35
+Ar 16 7.27
+V 16 10.9
+Ion Energy
+(MeV/Nucleon)
+LET
+(MeV*cm2/mg) 0°
+LET
+(MeV*cm2/mg) 60 °
+He 25 0.07 0.14
+N 25 0.9 0.18
+Ne 25 1.8 3.6
+Ar 25 5.5 11.0
+Kr 25 19.8 40.0
+Lawrence Berkeley National Laboratory (LBNL)
+Texas A&M (TAMU)
+To be presented by Melanie D. Berg at the NASA Electronic Parts and Packaging Program (NEPP) Electronics Technology 
+Workshop (ETW), NASA Goddard Space Flight Center in Greenbelt, MD, June 15-18, 2020 and published on nepp.nasa.gov. 13
+Summary: Phase I DUT Test Structures
+Test Structure Frequency Range
+Configuration N/A
+BRAM 50 MHz
+Shift Registers (WSR) 100 MHz
+Counter Arrays 50 MHz
+DSP Blocks (FIR) 100 MHz
+GTX (Aurora single lane) 3.125 GHz
+Generic Component Study
+To be presented by Melanie D. Berg at the NASA Electronic Parts and Packaging Prog
+
+=== CHUNK 27 ===
+ 100 MHz
+GTX (Aurora single lane) 3.125 GHz
+Generic Component Study
+To be presented by Melanie D. Berg at the NASA Electronic Parts and Packaging Program (NEPP) Electronics Technology 
+Workshop (ETW), NASA Goddard Space Flight Center in Greenbelt, MD, June 15-18, 2020 and published on nepp.nasa.gov. 14
+Xilinx Kintex-UltraScale Configuration 
+and BRAM SEU Data
+1.0E-08
+1.0E-07
+1.0E-06
+1.0E-05
+1.0E-04
+1.0E-03
+1.0E-02
+1.0E-01
+1.0E+00
+0 10 20 30 40
+σConfiguration_device (cm2/device)
+LET (MeV·cm2/mg)
+TAMU Data March 2017
+LBNL Data Oct 2019
+1.0E-12
+1.0E-11
+1.0E-10
+1.0E-09
+1.0E-08
+0 5 10 15
+σConfiguration_bit(cm2/bit)
+LET (MeV∙cm2/mg)
+Configuration SEU Cross Section
+BRAM SEU Cross Section
+Configuration SEU cross-sections 
+Across Device
+Configuration and BRAM SEU 
+cross-sections per bit
+Note1: TAMU
+
+=== CHUNK 28 ===
+EU Cross Section
+BRAM SEU Cross Section
+Configuration SEU cross-sections 
+Across Device
+Configuration and BRAM SEU 
+cross-sections per bit
+Note1: TAMU and LBNL data correlate.
+Note2: Graphs have different scales.  
+Note 3: Left graph: across device… right graph: normalized per bit.
+Additional Kintex-UltraScale data will be shown in a following section.
+
+To be presented by Melanie D. Berg at the NASA Electronic Parts and Packaging Program (NEPP) Electronics Technology 
+Workshop (ETW), NASA Goddard Space Flight Center in Greenbelt, MD, June 15-18, 2020 and published on nepp.nasa.gov.
+• SEL was monitored for every test.
+• Current monitoring is performed by tapping into 
+on-board current sensing resistors.   
+• No SEL detected < 40 MeVcm2/mg
+15
+Kintex-UltraScale SEL
+To be presented by Melanie 
+
+=== CHUNK 29 ===
+erformed by tapping into 
+on-board current sensing resistors.   
+• No SEL detected < 40 MeVcm2/mg
+15
+Kintex-UltraScale SEL
+To be presented by Melanie D. Berg at the NASA Electronic Parts and Packaging Program (NEPP) Electronics Technology 
+Workshop (ETW), NASA Goddard Space Flight Center in Greenbelt, MD, June 15-18, 2020 and published on nepp.nasa.gov.
+SONOS FPGA Single Event Effects 
+(SEE) Study: Microsemi PolarFire ® 
+(MPF300TS-1FCG1152I)
+16
+To be presented by Melanie D. Berg at the NASA Electronic Parts and Packaging Program (NEPP) Electronics Technology 
+Workshop (ETW), NASA Goddard Space Flight Center in Greenbelt, MD, June 15-18, 2020 and published on nepp.nasa.gov.
+To be presented by Melanie D. Berg at the NASA Electronic Parts and Packaging Program (NEPP) Electronics Technology 
+W
+
+=== CHUNK 30 ===
+and published on nepp.nasa.gov.
+To be presented by Melanie D. Berg at the NASA Electronic Parts and Packaging Program (NEPP) Electronics Technology 
+Workshop (ETW), NASA Goddard Space Flight Center in Greenbelt, MD, June 15-18, 2020 and published on nepp.nasa.gov.
+Microsemi PolarFire Study Objectives
+• This is an independent investigation that evaluates the single 
+event destructive and transient susceptibility of the Microsemi 
+PolarFire FPGA device. 
+• Design/Device susceptibility is determined by monitoring the 
+DUT for Single Event Transient (SET) and Single Event Upset 
+(SEU) induced faults by exposing the DUT to a heavy ion beam.   
+• Potential Single Event Latch-up (SEL) is checked throughout 
+heavy-ion testing by monitoring device current.
+• FPGA part# MPF300TS-1FCG1152I.
+17
+system
+
+=== CHUNK 31 ===
+otential Single Event Latch-up (SEL) is checked throughout 
+heavy-ion testing by monitoring device current.
+• FPGA part# MPF300TS-1FCG1152I.
+17
+system σSEU Configuration 
+σSEU
+Functional logic 
+σSEU
+SEFI 
+σSEU
+𝜎𝜎𝑆𝑆𝑆𝑆𝑆𝑆 = 𝑓𝑓 𝜎𝜎𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐, 𝜎𝜎𝐵𝐵𝐵𝐵𝐵𝐵𝐵𝐵, 𝜎𝜎𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑓𝑓𝑓𝑓𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐, 𝜎𝜎𝐻𝐻𝑐𝑐𝐻𝐻𝐻𝐻𝐻𝐻𝑐𝑐𝑓𝑓𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐
+Block RAM 
+σSEU
+SONOS configuration is not expected to have bit flips.  However, pass/fail 
+configuration readbacks were performed after each experiment.
+To be presented by Melanie D. Berg at the NASA Electronic Parts and Packaging Program (NEPP) Electronics Technology 
+Workshop (ETW), NASA Goddard Space Flight Center in Greenbelt, MD, June 15-18, 2020 and published on nepp.nasa.gov.
+This study is divided in multiple phases:
+• Phase I: Generic component study
+– Collabora
+
+=== CHUNK 32 ===
+eenbelt, MD, June 15-18, 2020 and published on nepp.nasa.gov.
+This study is divided in multiple phases:
+• Phase I: Generic component study
+– Collaboration: NEPP, Microsemi, Trusted & Assured Microelectronics 
+Program 
+– Tests performed: 11/2019 LBNL
+– Completed and test report submitted (December 2019)
+• Phase II: Fill out SEE cross-sections
+– Collaboration: NEPP, Microsemi, Trusted & Assured Microelectronics 
+Program 
+– Same test structures as Phase I (generic components)
+• Phase III: TBD
+– Collaboration: NEPP, Microsemi, and ???
+– New structures/tasks: TBD
+18
+Collaboration and Test Campaigns
+To be presented by Melanie D. Berg at the NASA Electronic Parts and Packaging Program (NEPP) Electronics Technology 
+Workshop (ETW), NASA Goddard Space Flight Center in Greenbelt, MD, June 15-18, 202
+
+=== CHUNK 33 ===
+ectronic Parts and Packaging Program (NEPP) Electronics Technology 
+Workshop (ETW), NASA Goddard Space Flight Center in Greenbelt, MD, June 15-18, 2020 and published on nepp.nasa.gov.
+• SONOS non-volatile (NV) technology on a 28 nm technology node.  
+Innately hardened configuration.
+• Reconfigurable FPGA with SEU immune configuration.
+• User fabric logic (flip-flops, combinatorial logic, global routes) are 
+not hardened.  However, increase in logic gates allows for user 
+inserted mitigation (e.g., TMR and watchdogs).
+• Cost advantage over SRAM-based FPGAs and previous generation 
+Microsemi FPGAs using floating gate NV technology (65nm and 
+older). 
+• Trust related embedded structures:
+– Physically unclonable function (PUF)
+– Secure eNVM ® (non-volatile memory security feature)
+– Tamper det
+
+=== CHUNK 34 ===
+der). 
+• Trust related embedded structures:
+– Physically unclonable function (PUF)
+– Secure eNVM ® (non-volatile memory security feature)
+– Tamper detectors and counter measures
+• Up to 24 multi-protocol low power serial I/O: 250Mbps – 12.5 Gbps 
+Transceiver lanes
+19
+Impact to Community: Microsemi 
+PolarFire ®
+To be presented by Melanie D. Berg at the NASA Electronic Parts and Packaging Program (NEPP) Electronics Technology 
+Workshop (ETW), NASA Goddard Space Flight Center in Greenbelt, MD, June 15-18, 2020 and published on nepp.nasa.gov.
+DUT Preparation for Heavy-Ion SEE Testing
+• NEPP acquired two evaluation-boards (MPF300-EVAL-KIT) 
+populated with MPF300TS-1FCG1152I PolarFire® devices. 
+• The DUTs were thinned using mechanical etching via an Ultra Tec 
+ASAP-1 device preparation system. 
+
+=== CHUNK 35 ===
+ted with MPF300TS-1FCG1152I PolarFire® devices. 
+• The DUTs were thinned using mechanical etching via an Ultra Tec 
+ASAP-1 device preparation system. 
+• The parts were successfully thinned to roughly 100  um.
+20
+NEPP use of an evaluation board as a daughterboard instead of developing 
+custom daughter card.
+To be presented by Melanie D. Berg at the NASA Electronic Parts and Packaging Program (NEPP) Electronics Technology 
+Workshop (ETW), NASA Goddard Space Flight Center in Greenbelt, MD, June 15-18, 2020 and published on nepp.nasa.gov. 21
+Test Setup: New Motherboard Tester
+NEPP is now using evaluation 
+boards as Motherboards 
+(testers).  LCDT replacement 
+Flexible FPGA 
+Mezzanine Card 
+(FMC)
+Daughterboard
+Motherboard
+Motherboard: 
+development of 
+ethernet capability
+To be presented by Melan
+
+=== CHUNK 36 ===
+replacement 
+Flexible FPGA 
+Mezzanine Card 
+(FMC)
+Daughterboard
+Motherboard
+Motherboard: 
+development of 
+ethernet capability
+To be presented by Melanie D. Berg at the NASA Electronic Parts and Packaging Program (NEPP) Electronics Technology 
+Workshop (ETW), NASA Goddard Space Flight Center in Greenbelt, MD, June 15-18, 2020 and published on nepp.nasa.gov.
+Test System: At Heavy-Ion Facility
+22
+
+To be presented by Melanie D. Berg at the NASA Electronic Parts and Packaging Program (NEPP) Electronics Technology 
+Workshop (ETW), NASA Goddard Space Flight Center in Greenbelt, MD, June 15-18, 2020 and published on nepp.nasa.gov. 23
+Summary: Phase I DUT Test Structures
+Test Structure Frequency Range
+Configuration N/A
+BRAM 50 MHz
+Shift Registers (WSR) 100 MHz
+Counter Arrays 50 MHz
+DSP Blocks (FIR)
+
+=== CHUNK 37 ===
+ DUT Test Structures
+Test Structure Frequency Range
+Configuration N/A
+BRAM 50 MHz
+Shift Registers (WSR) 100 MHz
+Counter Arrays 50 MHz
+DSP Blocks (FIR) 100 MHz
+Generic Component Study
+To be presented by Melanie D. Berg at the NASA Electronic Parts and Packaging Program (NEPP) Electronics Technology 
+Workshop (ETW), NASA Goddard Space Flight Center in Greenbelt, MD, June 15-18, 2020 and published on nepp.nasa.gov.
+• Facility: Lawrence Berkeley National Laboratories 88 inch 
+Cyclotron, 16 MeV/amu tune. 
+• Flux: 1.0x103 to 1.0x105 particles/cm2/s
+• Fluence: All tests were run to 1 x 107 particles/cm2 or until 
+destructive or functional events occurred.
+• Test Temperature: Room Temperature.
+• Power Supply Voltage: Vcc = 1.2V; VIO = 2.5V
+24
+Heavy-Ion Test Facility and Test 
+Conditions
+We lost a 
+
+=== CHUNK 38 ===
+urred.
+• Test Temperature: Room Temperature.
+• Power Supply Voltage: Vcc = 1.2V; VIO = 2.5V
+24
+Heavy-Ion Test Facility and Test 
+Conditions
+We lost a significant amount of test time because of California wild-fires.
+Linear energy transfer (LET)
+Ion Energy (MeV/Nucleon) Effective 
+LET(MeV∙cm2/mg)0°
+N 16 1.16
+O 16 1.54
+Ne 16 2.39
+To be presented by Melanie D. Berg at the NASA Electronic Parts and Packaging Program (NEPP) Electronics Technology 
+Workshop (ETW), NASA Goddard Space Flight Center in Greenbelt, MD, June 15-18, 2020 and published on nepp.nasa.gov. 25
+PolarFire ® SEFI: Current-Drop 
+Anomaly
+0.00E+00
+5.00E-02
+1.00E-01
+1.50E-01
+2.00E-01
+2.50E-01
+3.00E-01
+3.50E-01
+42500.0 42600.0 42700.0 42800.0 42900.0 43000.0 43100.0 43200.0 43300.0
+Current (Amps)
+Time (S)
+Idd_coreF
+• Every experime
+
+=== CHUNK 39 ===
+
+2.50E-01
+3.00E-01
+3.50E-01
+42500.0 42600.0 42700.0 42800.0 42900.0 43000.0 43100.0 43200.0 43300.0
+Current (Amps)
+Time (S)
+Idd_coreF
+• Every experiment (if run with enough particle fluence) experienced a current 
+drop; however all but one (1) test had a current drop lasting for 1.7 ms.
+• Shown: drop lasted for 177s – cleared on its own.  Only observed during 
+one test at a LET = 1.0 MeVcm2/mg.
+• Most current measurement systems are not setup to detect a 1.7 ms drop.  
+We were able to catch the event due to the various means of active/real-time 
+data capture during test.
+To be presented by Melanie D. Berg at the NASA Electronic Parts and Packaging Program (NEPP) Electronics Technology 
+Workshop (ETW), NASA Goddard Space Flight Center in Greenbelt, MD, June 15-18, 2020 and published on nepp
+
+=== CHUNK 40 ===
+aging Program (NEPP) Electronics Technology 
+Workshop (ETW), NASA Goddard Space Flight Center in Greenbelt, MD, June 15-18, 2020 and published on nepp.nasa.gov.
+PolarFire ® SEFI: Current-Drop 
+(Timeout*) Cross-Sections
+26
+1.0E-09
+1.0E-08
+1.0E-07
+1.0E-06
+1.0E-05
+0.00 0.50 1.00 1.50 2.00 2.50
+SEU Cross-Section Timeout(cm2/design)
+LET (MeV·cm2/mg)
+1.0E-09
+1.0E-08
+1.0E-07
+1.0E-06
+1.0E-05
+0.00 0.50 1.00 1.50 2.00 2.50
+SEU Cross Section Timeouts (cm2/design)
+LET(MeV·cm2/mg)
+Data across designs correlate … Events are not design dependent; 
+Mechanism of failure is embedded in device.
+*1.7 ms current-drop event could not be observed via normal current measurement apparatus.  However, the current 
+event could be observed by DUT-operation timeouts.
+Did not test at low LET: needed 
+for proper error-ra
+
+=== CHUNK 41 ===
+ measurement apparatus.  However, the current 
+event could be observed by DUT-operation timeouts.
+Did not test at low LET: needed 
+for proper error-rate calculations
+To be presented by Melanie D. Berg at the NASA Electronic Parts and Packaging Program (NEPP) Electronics Technology 
+Workshop (ETW), NASA Goddard Space Flight Center in Greenbelt, MD, June 15-18, 2020 and published on nepp.nasa.gov.
+• Normal operational current was marked at approximately 2.75 A; The core-
+current dropped below 100 mA during anomalous event.
+• The current drop was always recoverable.
+• The current drop lasted for approximately 1.7 ms except for one event which 
+lasted for approximately 177s. 
+– Note that the event shown on the previous slide is not the 1.7 ms event; 
+alternatively it is the 177 s event.
+– Diff
+
+=== CHUNK 42 ===
+asted for approximately 177s. 
+– Note that the event shown on the previous slide is not the 1.7 ms event; 
+alternatively it is the 177 s event.
+– Difference in current-drop duration is generally in the order of microseconds.
+• The current drop is significant enough to stop operation (timeout).
+• A reset is required after the current drop (state-space is lost during the event).
+• No configuration is lost after a current drop (read-back passes with no SEUs).
+• The current drop occurred for every test at every LET (that was used during the 
+first-look study).
+• Lower LET values are required to achieve a more accurate 
+reliability/survivability calculation per environment.
+• Microsemi is aware of the anomaly and is working to identify responsible 
+circuitry.
+27
+PolarFire ® SEFI: Current Drop 
+
+
+=== CHUNK 43 ===
+alculation per environment.
+• Microsemi is aware of the anomaly and is working to identify responsible 
+circuitry.
+27
+PolarFire ® SEFI: Current Drop 
+Anomaly: Additional Information
+To be presented by Melanie D. Berg at the NASA Electronic Parts and Packaging Program (NEPP) Electronics Technology 
+Workshop (ETW), NASA Goddard Space Flight Center in Greenbelt, MD, June 15-18, 2020 and published on nepp.nasa.gov. 28
+Microsemi PolarFire ® SEU Data
+1.0E-12
+1.0E-11
+1.0E-10
+1.0E-09
+1.0E-08
+1.0E-07
+1.0E-06
+1.0E-05
+0.00 0.50 1.00 1.50 2.00 2.50
+SEU Cross-Section(cm2/shiftregbit)
+LET (MeV·cm2/mg)
+1.0E-12
+1.0E-11
+1.0E-10
+1.0E-09
+1.0E-08
+1.0E-07
+1.0E-06
+1.0E-05
+0.00 0.50 1.00 1.50 2.00 2.50
+SEU Cross-section Counters 
+(cm2/counterbit)
+LET(MeV·cm2/mg)
+1.00E-12
+1.00E-11
+1.00E-10
+1.00E-09
+1.00E-08
+1.00E
+
+=== CHUNK 44 ===
+
+1.0E-05
+0.00 0.50 1.00 1.50 2.00 2.50
+SEU Cross-section Counters 
+(cm2/counterbit)
+LET(MeV·cm2/mg)
+1.00E-12
+1.00E-11
+1.00E-10
+1.00E-09
+1.00E-08
+1.00E-07
+1.00E-06
+1.00E-05
+0.00 0.50 1.00 1.50 2.00 2.50
+SEU Cross-section BRAM (cm2/bit)
+LET(MeV·cm2/mg)
+Shift Registers Counter Arrays
+BRAM
+Interesting note: per bit 
+SEU cross-sections do 
+not seem to be design 
+dependent at low LET 
+values. 
+To be presented by Melanie D. Berg at the NASA Electronic Parts and Packaging Program (NEPP) Electronics Technology 
+Workshop (ETW), NASA Goddard Space Flight Center in Greenbelt, MD, June 15-18, 2020 and published on nepp.nasa.gov.
+• SEL was monitored for every test.
+• Current monitoring is performed by tapping into 
+on-board current sensing resistors.   
+• No SEL detected < 40 MeVcm2/mg
+29
+PolarFire® SEL
+
+=== CHUNK 45 ===
+ery test.
+• Current monitoring is performed by tapping into 
+on-board current sensing resistors.   
+• No SEL detected < 40 MeVcm2/mg
+29
+PolarFire® SEL
+To be presented by Melanie D. Berg at the NASA Electronic Parts and Packaging Program (NEPP) Electronics Technology 
+Workshop (ETW), NASA Goddard Space Flight Center in Greenbelt, MD, June 15-18, 2020 and published on nepp.nasa.gov.
+• Lower LET experiments are necessary in order to characterize the 
+current-drop onset and to predict error-rates.
+– Requires TAMU heavy-ion tests (LETs can go as low as 0.07 
+MeVcm2/mg).
+• Higher LET experiments are necessary in order to fill out the SEU 
+cross-section curve; and to find saturation.
+• NEPP will investigate:
+– More complex embedded components
+– Test-as-you-fly (representative tactical designs (RT
+
+=== CHUNK 46 ===
+tion curve; and to find saturation.
+• NEPP will investigate:
+– More complex embedded components
+– Test-as-you-fly (representative tactical designs (RTD)). 
+30
+Microsemi PolarFire ® Additional SEE 
+Testing
+To be presented by Melanie D. Berg at the NASA Electronic Parts and Packaging Program (NEPP) Electronics Technology 
+Workshop (ETW), NASA Goddard Space Flight Center in Greenbelt, MD, June 15-18, 2020 and published on nepp.nasa.gov. 31
+Data Handling and 
+Survivability/Error Rate 
+Prediction Techniques
+At the end of the day… the 
+professional industry gathers SEE data 
+for SEF and survivability/error-rate 
+prediction.
+What do we do with all this data?
+To be presented by Melanie D. Berg at the NASA Electronic Parts and Packaging Program (NEPP) Electronics Technology 
+Workshop (ETW), NASA Go
+
+=== CHUNK 47 ===
+his data?
+To be presented by Melanie D. Berg at the NASA Electronic Parts and Packaging Program (NEPP) Electronics Technology 
+Workshop (ETW), NASA Goddard Space Flight Center in Greenbelt, MD, June 15-18, 2020 and published on nepp.nasa.gov.
+To be presented by Melanie D. Berg at the NASA Electronic Parts and Packaging Program (NEPP) Electronics Technology 
+Workshop (ETW), NASA Goddard Space Flight Center in Greenbelt, MD, June 15-18, 2020 and published on nepp.nasa.gov.
+Survivability for Mission Critical 
+Applications: Problem Statement
+For SEF analysis, common practice is to use simple 
+test structures that focus on discrete components:
+• Data are extrapolated into survivability calculators.
+• Generic SEU data are used across all designs. 
+• Assumption: the need for testing is reduced.
+•
+
+=== CHUNK 48 ===
+ata are extrapolated into survivability calculators.
+• Generic SEU data are used across all designs. 
+• Assumption: the need for testing is reduced.
+• However, the fidelity of generic SEU data 
+extrapolation to tactical designs is questionable.
+How do we provide SEU data for 
+survivability calculations of tactical 
+systems; while reducing the need to test 
+every design? Generic testing versus Test-
+As-You-Fly.
+Better to use representative tactical 
+designs (RTD) for SEU analysis:
+• Data are a better fit for 
+characterizing tactical behavior.
+• However, requires SEU testing for 
+every design!
+32To be presented by Melanie D. Berg at the NASA Electronic Parts and Packaging Program (NEPP) Electronics Technology 
+Workshop (ETW), NASA Goddard Space Flight Center in Greenbelt, MD, June 15-18, 202
+
+=== CHUNK 49 ===
+ectronic Parts and Packaging Program (NEPP) Electronics Technology 
+Workshop (ETW), NASA Goddard Space Flight Center in Greenbelt, MD, June 15-18, 2020 and published on nepp.nasa.gov.
+To be presented by Melanie D. Berg at the NASA Electronic Parts and Packaging Program (NEPP) Electronics Technology 
+Workshop (ETW), NASA Goddard Space Flight Center in Greenbelt, MD, June 15-18, 2020 and published on nepp.nasa.gov.
+• RTD Definition: Test design that approximates the tactical (target) design.
+• When we cannot test tactical, we test RTD.
+• Considerations for when to develop RTD for SEE testing:
+– Tactical is not available to test.
+– SEE designs require an increase in observation points.
+– Test fixtures can limit I/O, stimulus capability, and capture capability. 
+– SEE experiments require the t
+
+=== CHUNK 50 ===
+equire an increase in observation points.
+– Test fixtures can limit I/O, stimulus capability, and capture capability. 
+– SEE experiments require the test system to force the DUT into desired 
+states (increases test coverage and assists in validating dominant 
+mechanisms of failure).
+RTD Definition and Considerations
+33
+The test-as-you-fly methodology requires complex 
+test systems with an abundance of observation and 
+reporting mechanisms.  Requires more than simple 
+heartbeat monitoring.
+
+To be presented by Melanie D. Berg at the NASA Electronic Parts and Packaging Program (NEPP) Electronics Technology 
+Workshop (ETW), NASA Goddard Space Flight Center in Greenbelt, MD, June 15-18, 2020 and published on nepp.nasa.gov.
+• Data presented in earlier slides are component level/generic.  
+• NEPP
+
+=== CHUNK 51 ===
+ght Center in Greenbelt, MD, June 15-18, 2020 and published on nepp.nasa.gov.
+• Data presented in earlier slides are component level/generic.  
+• NEPP will always perform a component level investigation on 
+FPGAs:
+– First look
+– Flush out
+– General idea if mitigation will be required
+– Important information for the community
+• As  FPGA devices become more complex extrapolation from simple 
+component structures to RTD is not an appropriate method for 
+tactical characterization.
+• Test-as-you-fly is not new for NEPP.  NEPP performs test-as-you-fly 
+(RTD/MFTF) FPGA SEE investigations for mission (program-specific 
+experiments).
+NEPP FPGA Device Investigations: 
+Generic SEE Data versus RTD/MFTF SEE 
+Data
+34
+To be presented by Melanie D. Berg at the NASA Electronic Parts and Packaging Program (
+
+=== CHUNK 52 ===
+Investigations: 
+Generic SEE Data versus RTD/MFTF SEE 
+Data
+34
+To be presented by Melanie D. Berg at the NASA Electronic Parts and Packaging Program (NEPP) Electronics Technology 
+Workshop (ETW), NASA Goddard Space Flight Center in Greenbelt, MD, June 15-18, 2020 and published on nepp.nasa.gov.
+A Closer Look Into SRAM-Based 
+FPGA Devices
+35
+CLBs
+BRAM GR Control
+HardIP
+𝜎𝜎𝑆𝑆𝑆𝑆𝑆𝑆 = 𝑓𝑓 𝜎𝜎𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐 , 𝜎𝜎𝐵𝐵𝐵𝐵𝐵𝐵𝐵𝐵 , 𝜎𝜎𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑓𝑓𝑓𝑓𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐 , 𝜎𝜎𝐻𝐻𝑐𝑐𝐻𝐻𝐻𝐻𝐻𝐻𝑐𝑐𝑓𝑓𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐
+Keep in mind: dominant mechanisms of failure drive 
+𝝈𝝈𝑺𝑺𝑺𝑺𝑺𝑺; and are unique to the FPGA type.
+To be presented by Melanie D. Berg at the NASA Electronic Parts and Packaging Program (NEPP) Electronics Technology 
+Workshop (ETW), NASA Goddard Space Flight Center in Greenbelt, MD, June 15-18, 2020 and published o
+
+=== CHUNK 53 ===
+d Packaging Program (NEPP) Electronics Technology 
+Workshop (ETW), NASA Goddard Space Flight Center in Greenbelt, MD, June 15-18, 2020 and published on nepp.nasa.gov.
+Embedded View of Mapped Logic
+Designs only map 
+into a portion of 
+the configuration 
+and only use a 
+portion of the user 
+fabric logic gates.
+FPGA configuration and user 
+logic are different types of 
+embedded components.
+Modern FPGAs have 100’s of 
+millions of configuration bits and 
+100’s of thousands of logic cells.
+36
+I1 I2 I3 I4
+User Logic LUT
+Configuration
+To be presented by Melanie D. Berg at the NASA Electronic Parts and Packaging Program (NEPP) Electronics Technology 
+Workshop (ETW), NASA Goddard Space Flight Center in Greenbelt, MD, June 15-18, 2020 and published on nepp.nasa.gov.
+ASIC implementation
+Generic Xilinx
+
+=== CHUNK 54 ===
+Workshop (ETW), NASA Goddard Space Flight Center in Greenbelt, MD, June 15-18, 2020 and published on nepp.nasa.gov.
+ASIC implementation
+Generic Xilinx Implementation
+(LUT can differ by family)
+Why Extrapolation Does not work with 
+Generic Test Structures: 
+Example Shift Register
+37
+With an SRAM-based FPGA, each 
+design uses more logic than 
+assumed.  Makes extrapolation of 
+SEU data (from simple test structures 
+to tactical designs) unreliable.
+I1 I2 I3 I4
+LUT
+Q
+Q
+SET
+CLR
+D
+I1 I2 I3 I4
+LUT
+I1 I2 I3 I4
+LUT
+I1 I2 I3 I4
+LUT
+Q
+Q
+SET
+CLR
+D
+I1 I2 I3 I4
+LUT
+I1 I2 I3 I4
+LUT
+I1 I2 I3 I4
+LUT
+I1 I2 I3 I4
+LUT
+Q
+Q
+SET
+CLR
+D
+User logic: Lookup Table (LUT)
+User logic: Flip-Flop(DFF)
+Configuration bits
+LUTs and DFFs are contained in 
+configuration logic blocks (CLBs)
+To be presented by Melanie D. Berg at 
+
+=== CHUNK 55 ===
+User logic: Flip-Flop(DFF)
+Configuration bits
+LUTs and DFFs are contained in 
+configuration logic blocks (CLBs)
+To be presented by Melanie D. Berg at the NASA Electronic Parts and Packaging Program (NEPP) Electronics Technology 
+Workshop (ETW), NASA Goddard Space Flight Center in Greenbelt, MD, June 15-18, 2020 and published on nepp.nasa.gov.
+I1 I2 I3 I4
+LUT
+Q
+Q
+SET
+CLR
+D
+I1 I2 I3 I4
+LUT
+I1 I2 I3 I4
+LUT
+I1 I2 I3 I4
+LUT
+Q
+Q
+SET
+CLR
+D
+I1 I2 I3 I4
+LUT
+I1 I2 I3 I4
+LUT
+I1 I2 I3 I4
+LUT
+I1 I2 I3 I4
+LUT
+Q
+Q
+SET
+CLR
+D
+Hidden Logic: Routing matrix 
+inserted during place and route 
+phase.  Adds to the overall 
+design susceptibility.
+Closer Look: 
+Shift Register with Manufacturer 
+Inserted Routing Matrix (Hidden Logic)
+R
+O
+U
+T
+I
+N
+G 
+M
+A
+T
+R
+I
+X
+Simple test structures will not capture the impact of a 
+
+=== CHUNK 56 ===
+Register with Manufacturer 
+Inserted Routing Matrix (Hidden Logic)
+R
+O
+U
+T
+I
+N
+G 
+M
+A
+T
+R
+I
+X
+Simple test structures will not capture the impact of a tactical design’s 
+hidden logic (data are not extrapolatable).  Hence the drive towards 
+testing RTD structures.
+38
+To be presented by Melanie D. Berg at the NASA Electronic Parts and Packaging Program (NEPP) Electronics Technology 
+Workshop (ETW), NASA Goddard Space Flight Center in Greenbelt, MD, June 15-18, 2020 and published on nepp.nasa.gov.
+Configuration, Mask, and Essential Bits
+• Configuration bits: Total number of 
+configuration cells… (fixed per each FPGA 
+type)
+• Essential bits: number of configuration cells 
+used by the design mapping (calculated by 
+the manufacturer upon user directive… 
+design and device dependent).
+39
+Design ma
+
+=== CHUNK 57 ===
+r of configuration cells 
+used by the design mapping (calculated by 
+the manufacturer upon user directive… 
+design and device dependent).
+39
+Design mapping into user 
+fabric logic cells is 
+defined by configuration 
+bit settings.
+I1 I2 I3 I4
+Inverter LUT
+Configuration
+Cells
+User Fabric
+To be presented by Melanie D. Berg at the NASA Electronic Parts and Packaging Program (NEPP) Electronics Technology 
+Workshop (ETW), NASA Goddard Space Flight Center in Greenbelt, MD, June 15-18, 2020 and published on nepp.nasa.gov.
+SEU Cross-Sections
+• Cross-section Categorization:
+• Across all configuration cells (device)
+• Per configuration cell (device-bit)
+• Across essential-bits (Design + device)
+• Design specific
+𝜎𝜎(𝐿𝐿𝐿𝐿𝐿𝐿)𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐_𝐷𝐷𝐻𝐻𝐷𝐷𝑐𝑐𝑐𝑐𝐻𝐻=
+#𝐻𝐻𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑒𝑒
+#𝑃𝑃𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑓𝑓𝐻𝐻𝑒𝑒/𝑐𝑐𝑐𝑐
+
+=== CHUNK 58 ===
+
+• Across essential-bits (Design + device)
+• Design specific
+𝜎𝜎(𝐿𝐿𝐿𝐿𝐿𝐿)𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐_𝐷𝐷𝐻𝐻𝐷𝐷𝑐𝑐𝑐𝑐𝐻𝐻=
+#𝐻𝐻𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑒𝑒
+#𝑃𝑃𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑓𝑓𝐻𝐻𝑒𝑒/𝑐𝑐𝑐𝑐2
+𝜎𝜎(𝐿𝐿𝐿𝐿𝐿𝐿)𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐_𝑏𝑏𝑐𝑐𝑐𝑐=
+#𝐻𝐻𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑒𝑒
+#𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃
+𝑃𝑃𝑐𝑐2 ∗(#un𝑐𝑐𝑐𝑐𝑒𝑒𝑚𝑚𝐻𝐻𝐻𝐻𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝐵𝐵𝑐𝑐𝑐𝑐𝑒𝑒)
+𝜎𝜎(𝐿𝐿𝐿𝐿𝐿𝐿)Essential_𝑏𝑏𝑐𝑐𝑐𝑐= 𝐿𝐿𝐸𝐸𝐸𝐸𝐸𝐸𝐸𝐸𝐸𝐸𝐸𝐸𝐸𝐸𝐸𝐸_𝑏𝑏𝐸𝐸𝐸𝐸𝐸𝐸 × 𝜎𝜎(𝐿𝐿𝐿𝐿𝐿𝐿)𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐_𝑏𝑏𝑐𝑐𝑐𝑐
+Which cross-sections do we use for survivability analysis?  
+Must consider mission requirements.
+𝜎𝜎(𝐿𝐿𝐿𝐿𝐿𝐿)𝑆𝑆𝑆𝑆𝑆𝑆 = 𝟏𝟏/MFTF = 𝟏𝟏/((𝐹𝐹𝐸𝐸𝐸𝐸𝐸𝐸𝐹𝐹𝐹𝐹𝐸𝐸𝐿𝐿𝐸𝐸𝐹𝐹𝐸𝐸 − 𝐵𝐵𝐸𝐸𝐸𝐸𝐹𝐹𝐵𝐵𝐸𝐸𝐸𝐸𝐹𝐹𝐸𝐸𝐿𝐿𝐸𝐸𝐹𝐹𝐸𝐸)*AverageFlux)
+Generally, configuration cross-sections are readily 
+available from generic device investigations. 
+40
+To be presented by Melanie D. Berg at the NASA Electronic Parts and Packaging Program (NEPP) Electronics Tec
+
+=== CHUNK 59 ===
+e from generic device investigations. 
+40
+To be presented by Melanie D. Berg at the NASA Electronic Parts and Packaging Program (NEPP) Electronics Technology 
+Workshop (ETW), NASA Goddard Space Flight Center in Greenbelt, MD, June 15-18, 2020 and published on nepp.nasa.gov.
+If Upper-bounds Satisfy Mission 
+Reliability/Survivability Requirements, 
+Then No Mitigation is Required.
+41
+Do configuration-device cross-sections satisfy mission requirements?
+Do essential-bit cross-sections satisfy mission requirements?
+Do essential-bit cross-sections upper-bound MFTF σSEF?
+Must be proven via testing.
+Is mitigation required?
+Single event failure Cross-section (σSEF) 
+1.0E-08
+1.0E-07
+1.0E-06
+1.0E-05
+1.0E-04
+1.0E-03
+1.0E-02
+1.0E-01
+1.0E+00
+0 2 4 6 8 10 12
+SEU Cross-Section (cm2)
+LET (MeV∙cm2/mg)
+Design
+
+=== CHUNK 60 ===
+ection (σSEF) 
+1.0E-08
+1.0E-07
+1.0E-06
+1.0E-05
+1.0E-04
+1.0E-03
+1.0E-02
+1.0E-01
+1.0E+00
+0 2 4 6 8 10 12
+SEU Cross-Section (cm2)
+LET (MeV∙cm2/mg)
+Design
+Essential bit - Design
+Configuration-Device
+Design/SEF
+To be presented by Melanie D. Berg at the NASA Electronic Parts and Packaging Program (NEPP) Electronics Technology 
+Workshop (ETW), NASA Goddard Space Flight Center in Greenbelt, MD, June 15-18, 2020 and published on nepp.nasa.gov. 42
+Prove It Before You Use It
+• Using 𝜎𝜎(𝐿𝐿𝐿𝐿𝐿𝐿)Essential_𝑏𝑏𝑐𝑐𝑐𝑐 as upper-bounds is not a new 
+concept.
+• However, 𝜎𝜎(𝐿𝐿𝐿𝐿𝐿𝐿)Essential_𝑏𝑏𝑐𝑐𝑐𝑐 should only be used if it is 
+known/proven to be an upper-bound (or close enough 
+depending on criticality).
+• The proof of bounding has been the missing factor; and is 
+now necessary.
+• Why now? Device complexity inclu
+
+=== CHUNK 61 ===
+lose enough 
+depending on criticality).
+• The proof of bounding has been the missing factor; and is 
+now necessary.
+• Why now? Device complexity includes a significant 
+amount of hidden logic.  
+– Hidden logic have components that are not included in the 
+essential bit count.
+– It has shown (in flight) to impact susceptibility (e.g., internal 
+scrubbers).
+To be presented by Melanie D. Berg at the NASA Electronic Parts and Packaging Program (NEPP) Electronics Technology 
+Workshop (ETW), NASA Goddard Space Flight Center in Greenbelt, MD, June 15-18, 2020 and published on nepp.nasa.gov.
+• NEPP (with collaborating organizations) and the manufacturer can 
+provide generic SEE data.
+• Programs will be responsible for sponsoring test-as-you-fly 
+studies.
+– Expectations: generic data/information ar
+
+=== CHUNK 62 ===
+rer can 
+provide generic SEE data.
+• Programs will be responsible for sponsoring test-as-you-fly 
+studies.
+– Expectations: generic data/information are a foundation for test-as-
+you-fly campaign development.
+– Programs should participate in RTD/DUT test design development.
+Roles and Contributions to Current 
+and Future FPGA SEE Studies
+Reach out if interested in collaborating
+43
+To be presented by Melanie D. Berg at the NASA Electronic Parts and Packaging Program (NEPP) Electronics Technology 
+Workshop (ETW), NASA Goddard Space Flight Center in Greenbelt, MD, June 15-18, 2020 and published on nepp.nasa.gov.
+• Perform generic (first look) component studies (well understood process).
+• It is understood that providing DFF, CLB, and LUT generic test data is not 
+enough. They are not extrapolat
+
+=== CHUNK 63 ===
+onent studies (well understood process).
+• It is understood that providing DFF, CLB, and LUT generic test data is not 
+enough. They are not extrapolatable to tactical designs.
+• What should follow? Prove (for a variety of design complexities) 
+𝝈𝝈(𝑳𝑳𝑺𝑺𝑳𝑳)𝐄𝐄𝐄𝐄𝐄𝐄𝐄𝐄𝐄𝐄𝐄𝐄𝐄𝐄𝐄𝐄𝐄𝐄_𝒃𝒃𝒃𝒃𝒃𝒃 is an upper-bound to 𝝈𝝈(𝑳𝑳𝑺𝑺𝑳𝑳)𝑺𝑺𝑺𝑺𝑺𝑺.  
+Xilinx SEU Test and Analysis: What Can the 
+Manufacturer and NEPP Provide? 
+Front-end Proof of Concept
+𝜎𝜎(𝐿𝐿𝐿𝐿𝐿𝐿)Essential_𝑏𝑏𝑐𝑐𝑐𝑐= 𝐿𝐿𝐸𝐸𝐸𝐸𝐸𝐸𝐸𝐸𝐸𝐸𝐸𝐸𝐸𝐸𝐸𝐸_𝑏𝑏𝐸𝐸𝐸𝐸𝐸𝐸 × 𝜎𝜎(𝐿𝐿𝐿𝐿𝐿𝐿)𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐_𝑏𝑏𝑐𝑐𝑐𝑐
+Manufacturer/NEPP perform a variety of tests (benchmarks) to 
+compare 𝜎𝜎(𝐿𝐿𝐿𝐿𝐿𝐿)Essential _𝑏𝑏𝑐𝑐𝑐𝑐 to 𝜎𝜎(𝐿𝐿𝐿𝐿𝐿𝐿)SEF.
+Manufacturer/NEPP provide generic data: configuration, BRAM, 
+and embedded logic cross-sections.
+Manufacturer/NEPP perform additional testing to investigate 
+
+
+=== CHUNK 64 ===
+urer/NEPP provide generic data: configuration, BRAM, 
+and embedded logic cross-sections.
+Manufacturer/NEPP perform additional testing to investigate 
+potential SEFIs and other device SEE susceptibilities (global 
+routes and SEL).
+44
+Still somewhat generic – but can answer several questions for users and 
+alleviate the need for testing.
+To be presented by Melanie D. Berg at the NASA Electronic Parts and Packaging Program (NEPP) Electronics Technology 
+Workshop (ETW), NASA Goddard Space Flight Center in Greenbelt, MD, June 15-18, 2020 and published on nepp.nasa.gov.
+• If 𝜎𝜎(𝐿𝐿𝐿𝐿𝐿𝐿)Essential_𝑏𝑏𝑐𝑐𝑐𝑐 proves to be a satisfactory upper-bound, the
+𝜎𝜎(𝐿𝐿𝐿𝐿𝐿𝐿)𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐_𝑏𝑏𝑐𝑐𝑐𝑐 data multiplied by the of the tactical design’s essential-bit 
+count can be used by development teams for su
+
+=== CHUNK 65 ===
+(𝐿𝐿𝐿𝐿𝐿𝐿)𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐_𝑏𝑏𝑐𝑐𝑐𝑐 data multiplied by the of the tactical design’s essential-bit 
+count can be used by development teams for survivability analysis.
+• Examples of hidden logic not covered by essential bit counts that can impact 
+susceptibility:
+– Mixed-signal circuitry (e.g. ADC or other hidden analog circuits), global-routes, 
+and other hidden logic structures (embedded IP cores).  
+Xilinx SEU Test and Analysis: What Does 
+The End-User Do with The Data? 
+Application of Concept
+Compare your design to manufacturer benchmark designs. Use 
+𝜎𝜎(𝐿𝐿𝐿𝐿𝐿𝐿)Essential_𝑏𝑏𝑐𝑐𝑐𝑐 for survivability calculations if 𝜎𝜎(𝐿𝐿𝐿𝐿𝐿𝐿)Essential_𝑏𝑏𝑐𝑐𝑐𝑐 > 𝜎𝜎(𝐿𝐿𝐿𝐿𝐿𝐿)SEF
+If manufacturer data show anomalies or your tactical design has 
+untested complexities, additional RTD testing will be needed.
+The
+
+=== CHUNK 66 ===
+𝑐𝑐𝑐 > 𝜎𝜎(𝐿𝐿𝐿𝐿𝐿𝐿)SEF
+If manufacturer data show anomalies or your tactical design has 
+untested complexities, additional RTD testing will be needed.
+The end-user should not piecemeal small grained 
+components (e.g., CLBs) for survivability analysis because 
+of hidden logic and topological non-linearities.
+45
+Intellectual property (IP)
+To be presented by Melanie D. Berg at the NASA Electronic Parts and Packaging Program (NEPP) Electronics Technology 
+Workshop (ETW), NASA Goddard Space Flight Center in Greenbelt, MD, June 15-18, 2020 and published on nepp.nasa.gov.
+Kintex-UltraScale SEU Cross-Sections
+1.0E-08
+1.0E-07
+1.0E-06
+1.0E-05
+1.0E-04
+1.0E-03
+1.0E-02
+1.0E-01
+1.0E+00
+0 2 4 6 8 10 12
+SEU Cross-Section (cm2)
+LET (MeV∙cm2/mg)
+Counter Array SEF TAMU 2017
+Essential bit - Design
+Configuration-D
+
+=== CHUNK 67 ===
+03
+1.0E-02
+1.0E-01
+1.0E+00
+0 2 4 6 8 10 12
+SEU Cross-Section (cm2)
+LET (MeV∙cm2/mg)
+Counter Array SEF TAMU 2017
+Essential bit - Design
+Configuration-Device
+1.00E-08
+1.00E-07
+1.00E-06
+1.00E-05
+1.00E-04
+1.00E-03
+1.00E-02
+1.00E-01
+1.00E+00
+0 5 10 15
+Cross-section (cm2/design)
+LET (MeV∙cm2/mg)
+DSP SEF
+Essential bit -design
+1.0E-08
+1.0E-07
+1.0E-06
+1.0E-05
+1.0E-04
+1.0E-03
+1.0E-02
+1.0E-01
+1.0E+00
+0 2 4 6 8 10 12
+SEU Cross-section (cm2)
+LET (MeV∙cm2/mg)
+Channel or Lane SEF
+Soft or Hard Error SEF
+Frame Error SEF
+Configuration - Device
+σessential_bit > σSEF
+Implies σEssential_bit can be used to 
+predict survivability (non-mitigated 
+design).
+More testing will be performed to investigate if 
+there are SEFIs and if upper-bound holds 
+across complex designs (e.g., embedded 
+processors); and higher LET.
+
+=== CHUNK 68 ===
+ng will be performed to investigate if 
+there are SEFIs and if upper-bound holds 
+across complex designs (e.g., embedded 
+processors); and higher LET.
+46
+100 DSP48 multiply-accumulate DSP 
+blocks @ 100 MHz.  Includes stage 
+coefficients.
+1 GTX channel with Aurora 
+protocol@ 3.125 GHz
+200 counters@ 50 MHz
+To be presented by Melanie D. Berg at the NASA Electronic Parts and Packaging Program (NEPP) Electronics Technology 
+Workshop (ETW), NASA Goddard Space Flight Center in Greenbelt, MD, June 15-18, 2020 and published on nepp.nasa.gov.
+• If the survivability analysis proves the design implementation does not satisfy 
+mission requirements, user-inserted mitigation might be necessary.
+– This will change the design and its essential-bit count.
+– Essential-bit upper-bounds cannot be used to measu
+
+=== CHUNK 69 ===
+nserted mitigation might be necessary.
+– This will change the design and its essential-bit count.
+– Essential-bit upper-bounds cannot be used to measure the survivability of 
+applications with embedded mitigation.
+• Mitigation requires additional logic
+• Additional logic will increase the essential-bit count and consequently 
+increase the estimated σSEF.
+– RTD-MFTF testing is required to measure the efficacy of the inserted 
+mitigation.  Can’t assume mitigation performs as expected.
+– Requires the development team to perform SEU testing.
+• Should analyze the design with-mitigation and without-mitigation (when 
+possible)… used as another metric for the fidelity of the inserted mitigation.
+Mitigation Analysis
+47
+TMR Voter
+To be presented by Melanie D. Berg at the NASA Electronic Parts and Pa
+
+=== CHUNK 70 ===
+c for the fidelity of the inserted mitigation.
+Mitigation Analysis
+47
+TMR Voter
+To be presented by Melanie D. Berg at the NASA Electronic Parts and Packaging Program (NEPP) Electronics Technology 
+Workshop (ETW), NASA Goddard Space Flight Center in Greenbelt, MD, June 15-18, 2020 and published on nepp.nasa.gov.
+• Purpose of the work is to improve SEU data-handling for survivability analysis.
+• Generic SEU data obtained from testing simple structures (e.g., shift registers) 
+are no longer adequate (on their own) for SEU characterization of FPGA 
+designs.  However provide good information for a first look analysis.
+• An approach is presented that combines investigating simple and complex (test-
+as-you-fly) test structures:
+– Investigates the efficacy of using configuration SEU data with desi
+
+=== CHUNK 71 ===
+at combines investigating simple and complex (test-
+as-you-fly) test structures:
+– Investigates the efficacy of using configuration SEU data with design 
+specific information for survivability analysis (𝜎𝜎(𝐿𝐿𝐿𝐿𝐿𝐿)Essential_𝑏𝑏𝑐𝑐𝑐𝑐).
+– Goal is to reduce the necessity of performing SEU testing on every design; 
+by use of upper-bounding.
+– Use of 𝜎𝜎(𝐿𝐿𝐿𝐿𝐿𝐿)Essential_𝑏𝑏𝑐𝑐𝑐𝑐 as a bound must be validated. 
+– MFTF testing of complex structures is required to validate the approach (per 
+SRAM-based FPGA family of devices).
+• Xilinx Kintex-UltraScale data are presented:
+– Data suggest that essential-bit SEU cross-sections might be a reliable data-
+set for survivability analysis.  
+– Additional testing is required and will be performed… yet initial results are 
+promising.
+– Eventually, this approach c
+
+=== CHUNK 72 ===
+or survivability analysis.  
+– Additional testing is required and will be performed… yet initial results are 
+promising.
+– Eventually, this approach can reduce the need for testing by the end-user.
+• If mitigation is required, 𝜎𝜎(𝐿𝐿𝐿𝐿𝐿𝐿)SEF RTD-MFTF testing is required to be 
+performed/orchestrated by the end-user.
+Summary: Data Handling and 
+Survivability/Error Rate Prediction 
+Techniques
+48
+To be presented by Melanie D. Berg at the NASA Electronic Parts and Packaging Program (NEPP) Electronics Technology 
+Workshop (ETW), NASA Goddard Space Flight Center in Greenbelt, MD, June 15-18, 2020 and published on nepp.nasa.gov.
+• Intel SRAM-based FPGAs
+– Configuration susceptibility cannot be directly measured.  However, BRAM 
+susceptibility can be measured.
+– Essential bit counts are not provide
+
+=== CHUNK 73 ===
+GAs
+– Configuration susceptibility cannot be directly measured.  However, BRAM 
+susceptibility can be measured.
+– Essential bit counts are not provided by the manufacturer.
+– At this point, The RTD/MFTF method is the most reliable (only) means for 
+SEE characterization.
+• Microsemi Flash and SONOS
+– Configuration is SEE immune.
+– Microsemi’s new line of FPGA devices might not contain embedded TMR 
+(check before you use).
+– Device complexity has grown such that RTD/MFTF testing should be 
+performed.
+• Mitigation in any device:
+– RTD/MFTF testing is a must.
+Survivability/Error-rate Prediction and 
+Other FPGAs
+49
+To be presented by Melanie D. Berg at the NASA Electronic Parts and Packaging Program (NEPP) Electronics Technology 
+Workshop (ETW), NASA Goddard Space Flight Center in Greenbelt, MD
+
+=== CHUNK 74 ===
+rg at the NASA Electronic Parts and Packaging Program (NEPP) Electronics Technology 
+Workshop (ETW), NASA Goddard Space Flight Center in Greenbelt, MD, June 15-18, 2020 and published on nepp.nasa.gov.
+NEPP Future Work
+SEE in FPGA Devices
+To be presented by Melanie D. Berg at the NASA Electronic Parts and Packaging Program (NEPP) Electronics Technology 
+Workshop (ETW), NASA Goddard Space Flight Center in Greenbelt, MD, June 15-18, 2020 and published on nepp.nasa.gov. 50
+To be presented by Melanie D. Berg at the NASA Electronic Parts and Packaging Program (NEPP) Electronics Technology 
+Workshop (ETW), NASA Goddard Space Flight Center in Greenbelt, MD, June 15-18, 2020 and published on nepp.nasa.gov.
+• Investigation of Lattice 28 nm CrossLink-NX (FD-SOI) SRAM-based FPGA
+– Proton
+– TID
+• Furth
+
+=== CHUNK 75 ===
+lt, MD, June 15-18, 2020 and published on nepp.nasa.gov.
+• Investigation of Lattice 28 nm CrossLink-NX (FD-SOI) SRAM-based FPGA
+– Proton
+– TID
+• Further SEE investigation of 28 nm NV-based PolarFire ®
+– Proton
+– Heavy-ion
+– Test-as-you-fly
+• Xilinx SRAM-based MPSoC 16nm FinFET ruggedized (and non-ruggedized) package
+– Proton
+– Heavy-ion
+– Test-as-you-fly (NASA-specific)
+• Intel SRAM-based Stratix-10 SoC 14 nm FinFET
+– Proton
+– Heavy-ion
+– Test-as-you-fly 
+• Xilinx SRAM-based Kintex-Ultrascale 20 nm 
+– Will be driven by The Aerospace Corporation (David Meshel)
+– Heavy-ion
+– Test-as-you-fly
+Potentially In the Works…
+51
+To be presented by Melanie D. Berg at the NASA Electronic Parts and Packaging Program (NEPP) Electronics Technology 
+Workshop (ETW), NASA Goddard Space Flight Center in Greenb
+
+=== CHUNK 76 ===
+e D. Berg at the NASA Electronic Parts and Packaging Program (NEPP) Electronics Technology 
+Workshop (ETW), NASA Goddard Space Flight Center in Greenbelt, MD, June 15-18, 2020 and published on nepp.nasa.gov. 52
+Thank You
+Questions?
+This work was funded in part by the NASA Electronic Parts and 
+Packaging (NEPP) Program and the Trusted & Assured 
+Microelectronics Program Under Interagency Agreement SAA5-18-4-
+U28631
+
